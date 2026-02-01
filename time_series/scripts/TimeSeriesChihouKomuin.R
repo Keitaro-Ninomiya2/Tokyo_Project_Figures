@@ -7,7 +7,13 @@ library(scales)
 library(ggplot2)
 
 # 1. Load the data
-DATA_PATH <- "C:/Users/yoko1/Box/Processed_Data/merged_data_cleaned.csv"
+data_paths <- c(
+  "Keitaro Ninomiya" = "C:/Users/Keitaro Ninomiya/Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Jobs/Processed_Data",
+  "yoko1" = "C:/Users/yoko1/Box/Processed_Data"
+)
+data_dir <- data_paths[Sys.info()["user"]]
+DATA_PATH<- file.path(data_dir, "merged_data_cleaned.csv")
+
 df <- read_csv(
   DATA_PATH,
   locale = locale(encoding = "UTF-8"),
@@ -24,202 +30,139 @@ df <- read_csv(
 
 names(df) <- tolower(names(df))
 
-# ---------------------------
-# 2. Title patterns
-# ---------------------------
+names(df) <- tolower(names(df))
 
-# 「地方（自治体）」っぽい職名
-civil_pat2 <- paste(
-  "係長|課長|局長|所長|區長|区長",
-  "書記|主事|事務官|地方事務官|労働事務官|勞働事務官",
-  "吏員|事務員|属|屬",
-  "技師|技手",
-  "教員|教諭|助教諭|視學|視学",
+# ==============================================================================
+# 2. Define Strict Taxonomy
+# ==============================================================================
+
+# --- A. 官吏 (National / Elite) Definition ---
+# User Rule: Only 主事, 技師, and Chief roles (*長).
+base_national_pat <- paste(
+  "主事",  # Shuji
+  "技師",  # Gishi
+  "長$",   # Any role ending in "Chief/Head" (Cho)
   sep="|"
 )
 
-civil_pat3 <- paste(
-  civil_pat2,
-  "監督|監視|巡視",
-  "醫員|医員|看護|保健婦|藥劑員|薬剤|助産",
-  "清掃|運輸|機關手|機関手|船長",
-  "授業員|講師|體力指導員|体力指導員",
-  "掛長",
+# --- B. Exclusions (Safety Filter) ---
+# We must exclude "Chiefs" in female-dominated field roles to prevent the
+# "Head Nurse" (看護婦長) or "Head Nanny" (保母長) artifact from returning.
+exclude_pat <- paste(
+  "看護",   # Nurse
+  "保母",   # Nanny
+  "保健婦", # Public Health Nurse
+  "婦長",   # Head Nurse (specific term)
+  "巡視",   # Patrol
+  "雇",     # Employment/Temporary (just in case "雇長" exists)
   sep="|"
 )
 
-# Reflect Nino-kun's comments that 官吏（国家公務員）っぽいもの
-# - 「◯◯長」はほとんど官吏
-# - 主事・技師は国家公務員として入庁した人が多い
-national_pat <- paste(
-  "係長|課長|局長|所長|區長|区長|部長|長$",
-  "主事|技師",
-  sep="|"
-)
-
-# 雇（雇員系）は非公務員側へ（baseline）
-yatoi_pat <- "^雇|雇$|雇"  
-
-# ---------------------------
-# 3. Build groups (3-series)
-# ---------------------------
+# ==============================================================================
+# 3. Classification Logic
+# ==============================================================================
 df_for_plot <- df %>%
   mutate(
+    # Clean text
     position_clean   = str_squish(final_position),
     position_clean   = str_remove(position_clean, "^[○●◇■]+"),
     position_nospace = str_replace_all(position_clean, "\\s+", ""),
     
-    is_national = str_detect(position_nospace, national_pat),
-    is_yatoi    = str_detect(position_nospace, yatoi_pat),
-    is_local    = str_detect(position_nospace, civil_pat3),
+    # Check flags
+    matches_national_base = str_detect(position_nospace, base_national_pat),
+    matches_exclusion     = str_detect(position_nospace, exclude_pat),
     
-    # ★3分類（優先順位：国家 → 地方 → 非公務員）
-    # - 国家に当たれば国家（placebo）
-    # - それ以外で地方辞書に当たれば地方（treated）
-    # - 残り（雇＋その他）は非公務員（baseline）
-    job_group3 = case_when(
-      is_national ~ "国家公務員（placebo）",
-      is_local    ~ "地方公務員（treated）",
-      TRUE        ~ "非公務員（baseline）"
+    # --- BINARY TAXONOMY ---
+    # Rule: If it matches (主事|技師|*長) AND is not (Nurse/Nanny) -> 官吏
+    #       Everything else -> 公吏
+    job_group = if_else(
+      matches_national_base & !matches_exclusion, 
+      "官吏", 
+      "公吏"
     )
+    
   ) %>%
   mutate(year = as.integer(year)) %>%
-  filter(!is.na(year), year < 1960)   # 1960は落とす
+  filter(!is.na(year), year < 1960)
 
-# ---------------------------
-# 4. Time series counts
-# ---------------------------
+# ==============================================================================
+# 4. Aggregate Data
+# ==============================================================================
 ts_gender <- df_for_plot %>%
-  filter(!is.na(gender), !is.na(job_group3)) %>%
-  count(year, gender, job_group3, name = "n") %>%
+  filter(!is.na(gender), !is.na(job_group)) %>%
+  count(year, gender, job_group, name = "n") %>%
   mutate(gender = factor(gender, levels = c("female", "male")))
 
-# Plot params
-ww2_start <- 1939
+# Plot Parameters
+ww2_start <- 1937
 ww2_end   <- 1945
 major_by  <- 5
 minor_by  <- 1
+x_min     <- min(ts_gender$year)
+x_max     <- max(ts_gender$year)
 
-x_min <- min(ts_gender$year)
-x_max <- max(ts_gender$year)
+# Colors: Red for Elite (National), Green for Local (Everything else)
+binary_colors <- c(
+  "官吏" = "#d73027",  # Red
+  "公吏" = "#1a9850"   # Green
+)
 
-# ---------------------------
-# 5. Plots (separate by gender)
-# ---------------------------
+# ==============================================================================
+# 5. Generate Plots
+# ==============================================================================
+
+# --- Female Plot ---
 p_female <- ggplot(filter(ts_gender, gender == "female"),
-                   aes(x = year, y = n, color = job_group3, group = job_group3)) +
+                   aes(x = year, y = n, color = job_group, group = job_group)) +
   annotate("rect", xmin = ww2_start, xmax = ww2_end, ymin = -Inf, ymax = Inf,
            alpha = 0.15, fill = "grey50") +
   geom_vline(xintercept = 1950, linetype = "dashed") +
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
-  scale_x_continuous(
-    breaks = seq(x_min, x_max, by = major_by),
-    minor_breaks = seq(x_min, x_max, by = minor_by)
-  ) +
+  scale_color_manual(values = binary_colors) +
+  scale_x_continuous(breaks = seq(x_min, x_max, by = major_by),
+                     minor_breaks = seq(x_min, x_max, by = minor_by)) +
   theme_minimal() +
   theme(
     panel.grid.major.x = element_line(),
     panel.grid.minor.x = element_line(),
-    panel.grid.minor.y = element_blank()
+    panel.grid.minor.y = element_blank(),
+    legend.position = "bottom"
   ) +
   labs(
-    title = "Female headcount: Treated (Local) vs Placebo (National) vs Baseline (Non-public)",
-    x = "Year", y = "Count", color = "Job group"
+    title = "Female Headcount: 官吏 (Ranked/Chiefs) vs 公吏 (Others)",
+    subtitle = "Taxonomy: 官吏 = 主事, 技師, *長 (Excluding Nurses). 公吏 = All others.",
+    x = "Year", y = "Count", color = "Rank"
   )
 
+# --- Male Plot ---
 p_male <- ggplot(filter(ts_gender, gender == "male"),
-                 aes(x = year, y = n, color = job_group3, group = job_group3)) +
+                 aes(x = year, y = n, color = job_group, group = job_group)) +
   annotate("rect", xmin = ww2_start, xmax = ww2_end, ymin = -Inf, ymax = Inf,
            alpha = 0.15, fill = "grey50") +
   geom_vline(xintercept = 1950, linetype = "dashed") +
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
-  scale_x_continuous(
-    breaks = seq(x_min, x_max, by = major_by),
-    minor_breaks = seq(x_min, x_max, by = minor_by)
-  ) +
+  scale_color_manual(values = binary_colors) +
+  scale_x_continuous(breaks = seq(x_min, x_max, by = major_by),
+                     minor_breaks = seq(x_min, x_max, by = minor_by)) +
   theme_minimal() +
   theme(
     panel.grid.major.x = element_line(),
     panel.grid.minor.x = element_line(),
-    panel.grid.minor.y = element_blank()
+    panel.grid.minor.y = element_blank(),
+    legend.position = "bottom"
   ) +
   labs(
-    title = "Male headcount: Treated (Local) vs Placebo (National) vs Baseline (Non-public)",
-    x = "Year", y = "Count", color = "Job group"
+    title = "Male Headcount: 官吏 (Ranked/Chiefs) vs 公吏 (Others)",
+    subtitle = "Taxonomy: 官吏 = 主事, 技師, *長. 公吏 = All others.",
+    x = "Year", y = "Count", color = "Rank"
   )
 
-p_female
-p_male
+# Print and Save
+print(p_female)
+print(p_male)
 
-
-# if you want to save these figures, here it is 
-ggsave("figure_female_headcount.png", p_female, width = 7, height = 4.5, dpi = 300)
-ggsave("figure_male_headcount.png",   p_male,   width = 7, height = 4.5, dpi = 300)
-
-
-
-
-# here is the 2nd step that we have 公務員（国家＋地方） vs 非公務員
-
-ts_gender_public <- ts_gender %>%
-  mutate(
-    job_group2 = if_else(
-      job_group3 %in% c("国家公務員（placebo）", "地方公務員（treated）"),
-      "公務員（国家＋地方）",
-      "非公務員"
-    )
-  ) %>%
-  group_by(year, gender, job_group2) %>%
-  summarise(n = sum(n), .groups = "drop")
-
-p_female2 <- ggplot(filter(ts_gender_public, gender == "female"),
-                    aes(x = year, y = n, color = job_group2, group = job_group2)) +
-  annotate("rect", xmin = ww2_start, xmax = ww2_end, ymin = -Inf, ymax = Inf,
-           alpha = 0.15, fill = "grey50") +
-  geom_vline(xintercept = 1950, linetype = "dashed") +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2) +
-  scale_x_continuous(
-    breaks = seq(x_min, x_max, by = major_by),
-    minor_breaks = seq(x_min, x_max, by = minor_by)
-  ) +
-  theme_minimal() +
-  theme(
-    panel.grid.major.x = element_line(),
-    panel.grid.minor.x = element_line(),
-    panel.grid.minor.y = element_blank()
-  ) +
-  labs(
-    title = "Female headcount: Public (National+Local) vs Non-public",
-    x = "Year", y = "Count", color = "Job group"
-  )
-
-p_male2 <- ggplot(filter(ts_gender_public, gender == "male"),
-                    aes(x = year, y = n, color = job_group2, group = job_group2)) +
-  annotate("rect", xmin = ww2_start, xmax = ww2_end, ymin = -Inf, ymax = Inf,
-           alpha = 0.15, fill = "grey50") +
-  geom_vline(xintercept = 1950, linetype = "dashed") +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2) +
-  scale_x_continuous(
-    breaks = seq(x_min, x_max, by = major_by),
-    minor_breaks = seq(x_min, x_max, by = minor_by)
-  ) +
-  theme_minimal() +
-  theme(
-    panel.grid.major.x = element_line(),
-    panel.grid.minor.x = element_line(),
-    panel.grid.minor.y = element_blank()
-  ) +
-  labs(
-    title = "Male headcount: Public (National+Local) vs Non-public",
-    x = "Year", y = "Count", color = "Job group"
-  )
-
-
-p_female2
-p_male2
-
+ggsave("figure_female_binary_strict.png", p_female, width = 8, height = 5, dpi = 300)
+ggsave("figure_male_binary_strict.png",   p_male,   width = 8, height = 5, dpi = 300)
 
