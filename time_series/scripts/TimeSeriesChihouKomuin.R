@@ -7,16 +7,17 @@ library(ggplot2)
 # ==============================================================================
 # 1. Load Data
 # ==============================================================================
-DATA_PATH <- "C:/Users/Keitaro Ninomiya/Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data/Tokyo_Personnel_Master_1937_1960.csv"
+DATA_PATH <- here::here("Box", "Research Notes (keitaro2@illinois.edu)", "Tokyo_Gender", "Processed_Data", "Tokyo_Personnel_Master_All_Years_v2.csv")
 
-df <- read_csv(DATA_PATH, locale = locale(encoding = "UTF-8"), show_col_types = FALSE)
+df <- read_csv(DATA_PATH, locale = locale(encoding = "UTF-8"), show_col_types = FALSE) %>% 
+  filter(is_name == TRUE)
 names(df) <- tolower(names(df))
-
+colnames(df)
 # ==============================================================================
 # 2. Classification Logic
 # ==============================================================================
 female_kanji_pat  <- "[子枝江代紀美恵美貴]$|婦$|^[小]?[佐]?[美]"
-surname_blocklist <- "金子|増子|尼子|砂子|白子|呼子|舞子|神子" 
+surname_blocklist <- "^(金子|増子|尼子|砂子|白子|呼子|舞子|神子)$" 
 prewar_elite_pat  <- "^主事$|^技師$|^視学$|^理事$"
 
 df_clean <- df %>%
@@ -105,3 +106,4 @@ p_log_strong <- ggplot() +
   )
 
 print(p_log_strong)
+
