@@ -7,9 +7,16 @@ library(ggplot2)
 # ==============================================================================
 # 1. Load Data
 # ==============================================================================
-DATA_PATH <- here::here("Box", "Research Notes (keitaro2@illinois.edu)", "Tokyo_Gender", "Processed_Data", "Tokyo_Personnel_Master_All_Years_v2.csv")
+# Use tilde (~) to represent C:/Users/Keitaro Ninomiya/
+# 1. Define the User Path dynamically
+user_path <- Sys.getenv("USERPROFILE") # Gets "C:/Users/Keitaro Ninomiya"
 
-df <- read_csv(DATA_PATH, locale = locale(encoding = "UTF-8"), show_col_types = FALSE) %>% 
+# 2. Build the path to the Box data
+DATA_ROOT <- file.path(user_path, "Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data")
+FILE_PATH <- file.path(DATA_ROOT, "Tokyo_Personnel_Master_All_Years_v2.csv")
+
+# 3. Load the data
+df <- read_csv(FILE_PATH, locale = locale(encoding = "UTF-8"), show_col_types = FALSE) %>%
   filter(is_name == TRUE)
 names(df) <- tolower(names(df))
 colnames(df)
@@ -107,3 +114,36 @@ p_log_strong <- ggplot() +
 
 print(p_log_strong)
 
+# ==============================================================================
+# 5. Export for Beamer (Save to Downloads)
+# ==============================================================================
+
+# 1. Define the Downloads path dynamically (Windows)
+downloads_path <- file.path(Sys.getenv("USERPROFILE"), "Downloads")
+
+# 2. Define the filename (PDF is best for Beamer/LaTeX)
+output_filename <- "Tokyo_Female_Employment_Beamer.pdf"
+full_save_path  <- file.path(downloads_path, output_filename)
+
+# 3. Save the plot
+# width=8, height=5 is optimal for slides (makes text appear relatively larger)
+ggsave(
+  filename = full_save_path,
+  plot = p_log_strong,
+  device = "pdf",
+  width = 8,
+  height = 5,
+  units = "in"
+)
+
+# Optional: Save a PNG version as well (for quick previewing outside LaTeX)
+ggsave(
+  filename = file.path(downloads_path, "Tokyo_Female_Employment_Slide.png"),
+  plot = p_log_strong,
+  width = 8,
+  height = 5,
+  units = "in",
+  dpi = 300
+)
+
+message(paste("Figure saved to:", full_save_path))
