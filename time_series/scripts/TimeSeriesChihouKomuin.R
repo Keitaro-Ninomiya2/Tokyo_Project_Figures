@@ -23,9 +23,7 @@ colnames(df)
 # ==============================================================================
 # 2. Classification Logic
 # ==============================================================================
-female_kanji_pat  <- "[子枝江代紀美恵美貴]$|婦$|^[小]?[佐]?[美]"
-surname_blocklist <- "^(金子|増子|尼子|砂子|白子|呼子|舞子|神子)$" 
-prewar_elite_pat  <- "^主事$|^技師$|^視学$|^理事$"
+prewar_elite_pat  <- "^\u4e3b\u4e8b$|^\u6280\u5e2b$|^\u8996\u5b66$|^\u7406\u4e8b$"
 
 df_clean <- df %>%
   filter(!is.na(year)) %>%
@@ -34,21 +32,18 @@ df_clean <- df %>%
     pos_norm    = str_replace_all(position, "\\s+", ""),
     year_num    = as.numeric(year),
     
-    # --- Gender Logic ---
-    gender = case_when(
-      str_detect(name_clean, female_kanji_pat) & !str_detect(name_clean, surname_blocklist) ~ "female",
-      TRUE ~ "male"
-    ),
+    gender = gender_modern,
     
     # --- Dynamic Rank Logic ---
     is_elite_title = case_when(
       year_num <= 1945 ~ str_detect(pos_norm, prewar_elite_pat),
-      year_num > 1945  ~ str_detect(pos_norm, "長"),
+      year_num > 1945  ~ str_detect(pos_norm, "\u9577"),
       TRUE ~ FALSE
     ),
     
     rank_category = if_else(is_elite_title, "官吏 (Elite)", "公吏 (Clerk/Local)")
   )
+
 
 # ==============================================================================
 # 3. Aggregate Data
@@ -61,6 +56,11 @@ ts_combined <- df_clean %>%
   filter(year_num != 1945) %>%
   arrange(year_num)
 
+# Replace zero with 0.5 so points are visible at the bottom of the log scale
+ts_plot <- ts_combined %>%
+  mutate(n_plot = if_else(n == 0L, 0.5, as.double(n)))
+
+
 # ==============================================================================
 # 4. Generate Plot (Corrected Label Position)
 # ==============================================================================
@@ -69,10 +69,10 @@ cols <- c("官吏 (Elite)" = "#d73027", "公吏 (Clerk/Local)" = "#1a9850")
 p_log_strong <- ggplot() +
   
   # --- 1. Background Rectangles ---
-  geom_rect(aes(xmin = -Inf, xmax = 1945.5, ymin = 0, ymax = Inf),
+  geom_rect(aes(xmin = -Inf, xmax = 1945.5, ymin = 0.5, ymax = Inf),
             fill = "#ffcccc", alpha = 0.6) + 
   
-  geom_rect(aes(xmin = 1949.5, xmax = Inf, ymin = 0, ymax = Inf),
+  geom_rect(aes(xmin = 1949.5, xmax = Inf, ymin = 0.5, ymax = Inf),
             fill = "#cceeff", alpha = 0.6) + 
   
   # --- 2. Era Text Labels (MOVED LEFT) ---
@@ -84,8 +84,8 @@ p_log_strong <- ggplot() +
            label = "Post-Reform\n(1950+)", size = 4.5, fontface = "bold", color = "#00008b") +
   
   # --- 3. Data Lines ---
-  geom_line(data = ts_combined, aes(x = year_num, y = n, color = rank_category), linewidth = 1.2) + 
-  geom_point(data = ts_combined, aes(x = year_num, y = n, color = rank_category), size = 3) +
+  geom_line(data = ts_plot, aes(x = year_num, y = n_plot, color = rank_category), size = 1.2) + 
+  geom_point(data = ts_plot, aes(x = year_num, y = n_plot, color = rank_category), size = 3) +
   
   # --- 4. Scales & Theme ---
   scale_color_manual(values = cols) +
@@ -115,35 +115,43 @@ p_log_strong <- ggplot() +
 print(p_log_strong)
 
 # ==============================================================================
-# 5. Export for Beamer (Save to Downloads)
+# 5. Export for LaTeX (Save to Tokyo_Project/Results)
 # ==============================================================================
 
-# 1. Define the Downloads path dynamically (Windows)
-downloads_path <- file.path(Sys.getenv("USERPROFILE"), "Downloads")
+# 1. Define the output path dynamically (Windows)
+output_dir_candidates <- c(
+  file.path(Sys.getenv("USERPROFILE"), "Documents/GitHub/Tokyo_Project (Draft)/Results"),
+  file.path(Sys.getenv("USERPROFILE"), "Documents/GitHub/Tokyo_Project/Results")
+)
+output_dirs <- output_dir_candidates[dir.exists(output_dir_candidates)]
+if (length(output_dirs) == 0) {
+  stop("No valid output directory found under Documents/GitHub.")
+}
 
-# 2. Define the filename (PDF is best for Beamer/LaTeX)
-output_filename <- "Tokyo_Female_Employment_Beamer.pdf"
-full_save_path  <- file.path(downloads_path, output_filename)
-
-# 3. Save the plot
+# 2. Define the filename (PDF is best for LaTeX)
+output_filename <- "TimeSeriesChihouKomuin.pdf"
+# 3. Save the plot to all detected project outputs
 # width=8, height=5 is optimal for slides (makes text appear relatively larger)
-ggsave(
-  filename = full_save_path,
-  plot = p_log_strong,
-  device = "pdf",
-  width = 8,
-  height = 5,
-  units = "in"
-)
+for (output_dir in output_dirs) {
+  full_save_path <- file.path(output_dir, output_filename)
+  ggsave(
+    filename = full_save_path,
+    plot = p_log_strong,
+    device = "pdf",
+    width = 8,
+    height = 5,
+    units = "in"
+  )
 
-# Optional: Save a PNG version as well (for quick previewing outside LaTeX)
-ggsave(
-  filename = file.path(downloads_path, "Tokyo_Female_Employment_Slide.png"),
-  plot = p_log_strong,
-  width = 8,
-  height = 5,
-  units = "in",
-  dpi = 300
-)
+  # Optional: Save a PNG version as well (for quick previewing outside LaTeX)
+  ggsave(
+    filename = file.path(output_dir, "TimeSeriesChihouKomuin.png"),
+    plot = p_log_strong,
+    width = 8,
+    height = 5,
+    units = "in",
+    dpi = 300
+  )
 
-message(paste("Figure saved to:", full_save_path))
+  message(paste("Figure saved to:", full_save_path))
+}

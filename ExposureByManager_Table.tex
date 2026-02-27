@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{threeparttable}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Wartime Female Exposure and Postwar Female Inclusion in Kakari}
+\label{tab:exposure-manager}
+\small
+\begin{tabular}{l*{6}{c}}
+\toprule
+ & \multicolumn{3}{c}{Has Female (Binary)} & \multicolumn{3}{c}{Number of Females} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+ & Kakaricho & Kakaricho & Kacho & Kakaricho & Kakaricho & Kacho \\
+ & (Max) & (Mean) & (Max) & (Max) & (Mean) & (Max) \\
+\midrule
+Kakaricho Exposure (Max) & 0.418$^{***}$ & & & 1.165$^{**}$ & & \\
+ & (0.092) & & & (0.374) & & \\[4pt]
+Kakaricho Exposure (Mean) & & 0.715$^{***}$ & & & 1.810$^{**}$ & \\
+ & & (0.141) & & & (0.563) & \\[4pt]
+Kacho Exposure (Max) & & & 0.242 & & & $-$0.485 \\
+ & & & (0.200) & & & (0.743) \\[4pt]
+Engineer Share (Ka) & 0.015 & 0.019 & 0.309$^{***}$ & $-$0.381$^{**}$ & $-$0.374$^{**}$ & $-$0.449 \\
+ & (0.040) & (0.040) & (0.091) & (0.136) & (0.137) & (0.637) \\[4pt]
+No.\ Kakaricho (Ka) & 0.018$^{***}$ & 0.018$^{***}$ & 0.016$^{***}$ & $-$0.036 & $-$0.036 & $-$0.096$^{*}$ \\
+ & (0.003) & (0.003) & (0.004) & (0.027) & (0.027) & (0.045) \\[4pt]
+Kakari Size & 0.006$^{***}$ & 0.006$^{***}$ & 0.005$^{***}$ & 0.061$^{***}$ & 0.061$^{***}$ & 0.076$^{***}$ \\
+ & (0.001) & (0.001) & (0.001) & (0.014) & (0.014) & (0.014) \\
+\midrule
+Kyoku FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Clustering & Office & Office & Office & Office & Office & Office \\
+Observations & 2,324 & 2,324 & 613 & 2,324 & 2,324 & 613 \\
+$R^2$ (within) & 0.174 & 0.177 & 0.247 & 0.502 & 0.502 & 0.562 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Columns 1--3 estimate a linear probability model for $I[\mathrm{Female}_{j,t} > 0]$; columns 4--6 estimate OLS for the number of females. Unit of observation is kakari $\times$ year (postwar, 1947--). Exposure is the share of females in the manager's wartime (1937--1945) position $\times$ kakari $\times$ year cell, aggregated as maximum (cols.\ 1, 3, 4, 6) or mean (cols.\ 2, 5) across wartime years. Kakaricho = subsection chief; Kacho = section chief. Controls include engineer share, number of kakaricho, and kakari size. Standard errors clustered at office level in parentheses. $^{*}$~$p<0.10$, $^{**}$~$p<0.05$, $^{***}$~$p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\end{document}

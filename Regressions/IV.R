@@ -1,6 +1,5 @@
 ################################################################################
-# COMBINED IV REGRESSION: Wartime Female Share (instrumented by draft intensity)
-# on Post‑1950 Female Managerial Appointments
+# Direct Draft Shock IV: Wartime Exposure → Postwar Female Integration (Kakari)
 ################################################################################
 
 library(tidyverse)
@@ -11,253 +10,460 @@ library(here)
 # 0. LOAD DATA
 # ============================================================
 
-DATA_PATH <- here::here(
+DATA_PATH <- file.path(
+  Sys.getenv("USERPROFILE"),
   "Box", "Research Notes (keitaro2@illinois.edu)",
   "Tokyo_Gender", "Processed_Data",
   "Tokyo_Personnel_Master_All_Years_v2.csv"
 )
 
-# Load named staff (for transitions, outcomes)
 df <- read_csv(DATA_PATH,
                locale = locale(encoding = "UTF-8"),
                show_col_types = FALSE) %>%
   filter(is_name == TRUE) %>%
   mutate(
-    year_num  = as.numeric(year),
-    is_female = gender_modern == "female",
-    pos_norm  = str_replace_all(position, "\\s+", "")
+    year_num   = as.numeric(year),
+    is_female  = gender_modern == "female",
+    pos_norm   = str_replace_all(position, "\\s+", ""),
+    is_kakacho = str_detect(pos_norm, "係長")
   )
 
-# Load full master (for draft counts)
-df_all <- read_csv(DATA_PATH,
-                   locale = locale(encoding = "UTF-8"),
-                   show_col_types = FALSE) %>%
-  mutate(
-    year_num  = as.numeric(year),
-    is_female = gender_modern == "female",
-    pos_norm  = str_replace_all(position, "\\s+", "")
-  )
+wartime_start <- 1937
+wartime_end   <- 1945
+postwar_start <- 1947
 
 # ============================================================
-# 1. WARTIME VARIABLES: Female share & Draft intensity
-#    (following Drafting_Hiring.R, but aggregated to office-year)
+# 1. WARTIME POSITION-LEVEL EXPOSURE + DRAFT SHOCK
 # ============================================================
 
-years_wartime <- 1937:1945
-
-# ---- Cumulative male baseline (pre-war stock) ----
-cat("Calculating cumulative male baselines...\n")
-cumul_male_stock <- map_dfr(years_wartime, function(yr) {
-  df %>%
-    filter(year_num < yr, !is_female) %>%
-    group_by(office_id, pos_norm) %>%
-    summarise(
-      cumul_n_male = n_distinct(staff_id),
-      .groups = "drop"
-    ) %>%
-    mutate(year_num = yr)
-})
-
-# ---- Draft counts (male) ----
-draft_counts <- df_all %>%
-  filter(year_num %in% years_wartime, drafted == TRUE) %>%
-  group_by(office_id, pos_norm, year_num) %>%
-  summarise(
-    n_drafted_male = sum(!is_female, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-# ---- Merge to get draft share ----
-wartime_panel <- cumul_male_stock %>%
-  left_join(draft_counts, by = c("office_id", "pos_norm", "year_num")) %>%
-  mutate(
-    n_drafted_male = replace_na(n_drafted_male, 0),
-    male_draft_share = ifelse(cumul_n_male > 0, n_drafted_male / cumul_n_male, 0)
-  ) %>%
-  select(office_id, pos_norm, year_num, cumul_n_male, n_drafted_male, male_draft_share)
-
-# ---- Female share during war ----
-wartime_female_share <- df %>%
-  filter(year_num %in% years_wartime) %>%
-  group_by(office_id, pos_norm, year_num) %>%
+wartime_pos_kakari_female <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
+  group_by(office_id, ka, kakari, pos_norm, year_num) %>%
   summarise(
     female_share = mean(is_female, na.rm = TRUE),
+    n_female     = sum(is_female, na.rm = TRUE),
     .groups = "drop"
   )
 
-# Combine both measures
-wartime_measures <- wartime_panel %>%
-  left_join(wartime_female_share, by = c("office_id", "pos_norm", "year_num")) %>%
-  mutate(female_share = replace_na(female_share, 0))
+wartime_pos_kakari_drafts <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
+  group_by(office_id, ka, kakari, pos_norm, year_num) %>%
+  summarise(
+    n_male         = sum(!is_female, na.rm = TRUE),
+    n_drafted_male = sum(drafted == TRUE & !is_female, na.rm = TRUE),
+    draft_share    = ifelse(n_male > 0, n_drafted_male / n_male, 0),
+    .groups = "drop"
+  )
 
-# ============================================================
-# 2. IDENTIFY MANAGERS (課長) AND THEIR WARTIME POSITIONS
-#    (following ExposureByManager.R)
-# ============================================================
+staff_wartime_cells <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
+  select(staff_id, office_id, ka, kakari, pos_norm, year_num) %>%
+  inner_join(wartime_pos_kakari_female,
+             by = c("office_id", "ka", "kakari", "pos_norm", "year_num")) %>%
+  left_join(wartime_pos_kakari_drafts,
+            by = c("office_id", "ka", "kakari", "pos_norm", "year_num"))
 
-df <- df %>%
-  mutate(is_kacho = str_detect(pos_norm, "課長"))
-
-# Managers active post‑war (1944+ to capture those who appear after war)
-kacho_post <- df %>%
-  filter(is_kacho, year_num >= 1944) %>%
-  select(staff_id, office_id, kyoku, year_num)
-
-# Keep only managers who also appear during wartime (to have exposure)
-wartime_ids <- df %>%
-  filter(year_num <= 1945) %>%
+wartime_staff_ids <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
   distinct(staff_id)
 
-kacho_wartime <- df %>%
-  filter(year_num %in% years_wartime, staff_id %in% wartime_ids$staff_id) %>%
-  select(staff_id, office_id, year_num, pos_norm)
-
-# Merge wartime measures (female share and draft share) to each manager-year
-kacho_wartime_merged <- kacho_wartime %>%
-  left_join(wartime_measures,
-            by = c("office_id", "pos_norm", "year_num"))
-
-# Summarise at manager level: average exposure and average draft intensity
-manager_exposure <- kacho_wartime_merged %>%
-  group_by(staff_id) %>%
-  summarise(
-    mgr_exposure         = mean(female_share, na.rm = TRUE),
-    mgr_draft_intensity  = mean(male_draft_share, na.rm = TRUE),
-    mgr_any_exposure     = as.integer(any(female_share > 0)),
-    mgr_wartime          = 1L,   # all these managers served during war
-    .groups = "drop"
-  ) %>%
-  mutate(across(c(mgr_exposure, mgr_draft_intensity), ~ replace_na(., 0)))
-
-cat("Managers with wartime exposure data:", nrow(manager_exposure), "\n")
+cat("Staff with wartime observation:", nrow(wartime_staff_ids), "\n")
 
 # ============================================================
-# 3. POST‑1950 OUTCOMES (female managerial appointments)
+# 2. POSTWAR KAKARI PANEL (wartime survivors only)
 # ============================================================
 
-outcome <- df %>%
-  mutate(
-    is_elite = case_when(
-      year_num <= 1945 ~ str_detect(pos_norm, "^主事$|^技師$|^視学$|^理事$"),
-      year_num >  1945 ~ str_detect(pos_norm, "長"),
-      TRUE ~ FALSE
-    )
-  ) %>%
-  filter(year_num >= 1950) %>%
-  group_by(office_id, year_num) %>%
+postwar_staff <- df %>%
+  filter(year_num >= postwar_start,
+         staff_id %in% wartime_staff_ids$staff_id)
+
+kakari_outcome <- postwar_staff %>%
+  group_by(office_id, ka, kakari, year_num) %>%
   summarise(
-    n_kanri          = sum(is_elite),
-    n_female_kanri   = sum(is_elite & is_female),
-    has_female_kanri = as.integer(n_female_kanri > 0),
+    has_female  = as.integer(any(is_female, na.rm = TRUE)),
+    n_female    = sum(is_female, na.rm = TRUE),
+    kakari_size = n(),
     .groups = "drop"
   )
 
-# ============================================================
-# 4. OFFICE‑LEVEL CONTROLS (post‑1950)
-# ============================================================
-
-office_controls <- df %>%
-  filter(year_num >= 1950) %>%
-  group_by(office_id, year_num) %>%
+ka_controls <- postwar_staff %>%
+  group_by(office_id, ka, year_num) %>%
   summarise(
-    office_size      = n(),
-    female_share_all = mean(is_female, na.rm = TRUE),
-    n_engineer       = sum(str_detect(pos_norm, "技師|技手|技術"), na.rm = TRUE),
-    engineer_share   = n_engineer / office_size,
+    ka_size        = n(),
+    n_engineer     = sum(str_detect(pos_norm, "技師|技手|技術"), na.rm = TRUE),
+    engineer_share = n_engineer / ka_size,
+    n_kakacho_ka   = sum(is_kakacho, na.rm = TRUE),
     .groups = "drop"
-  ) %>%
-  mutate(log_office_size = log(office_size))
+  )
 
-# Modal kyoku for each office (post‑1950)
-office_kyoku <- df %>%
-  filter(year_num >= 1950) %>%
-  count(office_id, kyoku) %>%
-  group_by(office_id) %>%
+ka_kyoku <- postwar_staff %>%
+  count(office_id, ka, kyoku) %>%
+  group_by(office_id, ka) %>%
   slice_max(n, n = 1, with_ties = FALSE) %>%
   ungroup() %>%
-  select(office_id, kyoku_modal = kyoku)
+  select(office_id, ka, kyoku_modal = kyoku)
+
+kakari_pos <- postwar_staff %>%
+  count(office_id, ka, kakari, year_num, pos_norm) %>%
+  group_by(office_id, ka, kakari, year_num) %>%
+  slice_max(n, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  select(office_id, ka, kakari, year_num, pos_modal = pos_norm)
+
+postwar_kakari_staff <- postwar_staff %>%
+  select(staff_id, office_id, ka, kakari, year_num) %>%
+  distinct()
 
 # ============================================================
-# 5. BUILD OFFICE‑YEAR MANAGER PANEL WITH INSTRUMENT
+# 3. EXPOSURE VARIANTS + IV (DIRECT DRAFT SHOCK)
 # ============================================================
 
-# Managers active post‑1950
-post1950_kacho <- kacho_post %>%
-  filter(year_num >= 1950) %>%
-  left_join(manager_exposure, by = "staff_id")
+# ---- 3a. Conditioned on kakari-cho wartime offices ----
+kakari_cho_postwar <- postwar_staff %>%
+  filter(is_kakacho) %>%
+  select(staff_id, office_id, ka, kakari, year_num) %>%
+  distinct()
 
-# Aggregate to office‑year: average exposure and average instrument
-manager_panel <- post1950_kacho %>%
-  group_by(office_id, year_num) %>%
-  summarise(
-    mgr_exposure        = mean(mgr_exposure, na.rm = TRUE),
-    mgr_draft_intensity = mean(mgr_draft_intensity, na.rm = TRUE),
-    mgr_any_exposure    = mean(mgr_any_exposure, na.rm = TRUE),
-    mgr_wartime         = mean(mgr_wartime, na.rm = TRUE),  # should be 1 for all
-    n_managers          = n(),
-    .groups = "drop"
+kakari_cho_wartime_offices <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end,
+         staff_id %in% kakari_cho_postwar$staff_id) %>%
+  select(staff_id, wartime_office_id = office_id) %>%
+  distinct()
+
+kakari_cho_office_set <- kakari_cho_postwar %>%
+  select(post_office_id = office_id, ka, kakari, year_num, staff_id) %>%
+  left_join(kakari_cho_wartime_offices, by = "staff_id") %>%
+  filter(!is.na(wartime_office_id)) %>%
+  distinct(post_office_id, ka, kakari, year_num, wartime_office_id)
+
+cond_cells <- postwar_kakari_staff %>%
+  rename(
+    post_office_id = office_id,
+    post_ka = ka,
+    post_kakari = kakari,
+    post_year = year_num
   ) %>%
-  left_join(outcome, by = c("office_id", "year_num")) %>%
-  left_join(office_controls, by = c("office_id", "year_num")) %>%
-  left_join(office_kyoku, by = "office_id") %>%
-  mutate(
-    log_n_kanri = log(pmax(n_kanri, 1)),
-    # Fill missing values (offices without managers in a given year)
-    across(c(mgr_exposure, mgr_draft_intensity, mgr_any_exposure, mgr_wartime),
-           ~ replace_na(., 0))
+  left_join(kakari_cho_office_set,
+            by = c("post_office_id", "post_ka" = "ka",
+                   "post_kakari" = "kakari", "post_year" = "year_num")) %>%
+  inner_join(staff_wartime_cells,
+             by = c("staff_id", "wartime_office_id" = "office_id"))
+
+cond_staff_exp <- cond_cells %>%
+  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
+  summarise(
+    exp_mean  = mean(female_share, na.rm = TRUE),
+    exp_count = sum(n_female, na.rm = TRUE),
+    .groups = "drop"
   )
 
-cat("Office‑years in panel:", nrow(manager_panel), "\n")
-cat("Unique kyoku:", n_distinct(manager_panel$kyoku_modal), "\n")
+cond_staff_iv <- cond_cells %>%
+  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
+  summarise(
+    z_draft_mean = mean(draft_share, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+cond_kakari <- cond_staff_exp %>%
+  left_join(cond_staff_iv,
+            by = c("post_office_id", "post_ka", "post_kakari", "post_year", "staff_id")) %>%
+  group_by(post_office_id, post_ka, post_kakari, post_year) %>%
+  summarise(
+    exp_mean_cond      = mean(exp_mean, na.rm = TRUE),
+    exp_count_cond     = mean(exp_count, na.rm = TRUE),
+    z_draft_mean_cond  = mean(z_draft_mean, na.rm = TRUE),
+    n_staff_cond       = n(),
+    .groups = "drop"
+  )
+
+# ---- 3b. Unconditioned: offices with any wartime survivor ----
+survivor_ids <- postwar_staff %>%
+  distinct(staff_id)
+
+survivor_wartime_offices <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end,
+         staff_id %in% survivor_ids$staff_id) %>%
+  distinct(office_id)
+
+staff_wartime_survivor_offices <- staff_wartime_cells %>%
+  filter(office_id %in% survivor_wartime_offices$office_id)
+
+uncond_cells <- postwar_kakari_staff %>%
+  rename(
+    post_office_id = office_id,
+    post_ka = ka,
+    post_kakari = kakari,
+    post_year = year_num
+  ) %>%
+  inner_join(staff_wartime_survivor_offices, by = "staff_id")
+
+uncond_staff_exp <- uncond_cells %>%
+  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
+  summarise(
+    exp_mean  = mean(female_share, na.rm = TRUE),
+    exp_count = sum(n_female, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+uncond_staff_iv <- uncond_cells %>%
+  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
+  summarise(
+    z_draft_mean = mean(draft_share, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+uncond_kakari <- uncond_staff_exp %>%
+  left_join(uncond_staff_iv,
+            by = c("post_office_id", "post_ka", "post_kakari", "post_year", "staff_id")) %>%
+  group_by(post_office_id, post_ka, post_kakari, post_year) %>%
+  summarise(
+    exp_mean_uncond     = mean(exp_mean, na.rm = TRUE),
+    exp_count_uncond    = mean(exp_count, na.rm = TRUE),
+    z_draft_mean_uncond = mean(z_draft_mean, na.rm = TRUE),
+    n_staff_uncond      = n(),
+    .groups = "drop"
+  )
 
 # ============================================================
-# 6. INSTRUMENTAL VARIABLES REGRESSIONS
+# 4. PANEL ASSEMBLY
 # ============================================================
 
-# ---- First stage: mgr_exposure ~ mgr_draft_intensity + FE ----
-first_stage <- feols(
-  mgr_exposure ~ mgr_draft_intensity + log_n_kanri + log_office_size + engineer_share
-  | kyoku_modal + year_num,
-  data = manager_panel,
-  cluster = ~office_id
-)
-cat("\n===== FIRST STAGE =====\n")
-etable(first_stage)
+kakari_panel <- kakari_outcome %>%
+  left_join(cond_kakari,
+            by = c("office_id" = "post_office_id",
+                   "ka" = "post_ka",
+                   "kakari" = "post_kakari",
+                   "year_num" = "post_year")) %>%
+  left_join(uncond_kakari,
+            by = c("office_id" = "post_office_id",
+                   "ka" = "post_ka",
+                   "kakari" = "post_kakari",
+                   "year_num" = "post_year")) %>%
+  left_join(kakari_pos, by = c("office_id", "ka", "kakari", "year_num")) %>%
+  left_join(ka_controls, by = c("office_id", "ka", "year_num")) %>%
+  left_join(ka_kyoku, by = c("office_id", "ka"))
 
-# ---- Reduced form: outcome ~ instrument + FE ----
-reduced_form <- feols(
-  has_female_kanri ~ mgr_draft_intensity + log_n_kanri + log_office_size + engineer_share
-  | kyoku_modal + year_num,
-  data = manager_panel,
-  cluster = ~office_id
-)
-cat("\n===== REDUCED FORM =====\n")
-etable(reduced_form)
+cat("\n--- Panel diagnostics ---\n")
+cat("Total kakari-years:", nrow(kakari_panel), "\n")
+cat("With conditioned exposure:", sum(!is.na(kakari_panel$exp_mean_cond)), "\n")
+cat("With unconditioned exposure:", sum(!is.na(kakari_panel$exp_mean_uncond)), "\n")
+cat("With conditioned draft shock:", sum(!is.na(kakari_panel$z_draft_mean_cond)), "\n")
+cat("With unconditioned draft shock:", sum(!is.na(kakari_panel$z_draft_mean_uncond)), "\n")
 
-# ---- IV (2SLS) ----
-iv_model <- feols(
-  has_female_kanri ~ log_n_kanri + log_office_size + engineer_share
-  | kyoku_modal + year_num
-  | mgr_exposure ~ mgr_draft_intensity,
-  data = manager_panel,
-  cluster = ~office_id
-)
-cat("\n===== IV (2SLS) =====\n")
-etable(iv_model)
+# ============================================================
+# 5. FIRST STAGE + IV (DIRECT DRAFT SHOCK)
+# ============================================================
 
-# ---- Compare with OLS (as in ExposureByManager.R) ----
-ols_model <- feols(
-  has_female_kanri ~ mgr_exposure + log_n_kanri + log_office_size + engineer_share
-  | kyoku_modal + year_num,
-  data = manager_panel,
-  cluster = ~office_id
-)
-cat("\n===== OLS (for comparison) =====\n")
-etable(ols_model)
+est_cond <- kakari_panel %>%
+  filter(!is.na(exp_mean_cond), !is.na(exp_count_cond), !is.na(z_draft_mean_cond))
 
-# ---- Output all together ----
-cat("\n========== SUMMARY ==========\n")
-etable(first_stage, reduced_form, iv_model, ols_model,
-       headers = c("First Stage", "Reduced Form", "IV (2SLS)", "OLS"),
-       se.below = TRUE,
-       fitstat = c("ivf", "ivwald", "ar"))
+est_uncond <- kakari_panel %>%
+  filter(!is.na(exp_mean_uncond), !is.na(exp_count_uncond), !is.na(z_draft_mean_uncond))
+
+cat("Conditioned est. sample:", nrow(est_cond), "\n")
+cat("Unconditioned est. sample:", nrow(est_uncond), "\n")
+
+fs_cond <- feols(
+  exp_mean_cond ~ z_draft_mean_cond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal + pos_modal,
+  data = est_cond, cluster = ~office_id
+)
+
+fs_uncond <- feols(
+  exp_mean_uncond ~ z_draft_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal + pos_modal,
+  data = est_uncond, cluster = ~office_id
+)
+
+iv_cond <- feols(
+  n_female ~ engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal |
+    exp_mean_cond ~ z_draft_mean_cond,
+  data = est_cond, cluster = ~office_id
+)
+
+iv_uncond <- feols(
+  n_female ~ engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal |
+    exp_mean_uncond ~ z_draft_mean_uncond,
+  data = est_uncond, cluster = ~office_id
+)
+
+cat("\n========== FIRST STAGE ==========\n")
+etable(
+  fs_cond, fs_uncond,
+  headers = c("Cond", "Uncond"),
+  se.below = TRUE,
+  fitstat = ~ n + r2 + wald
+)
+
+cat("\n========== IV: NUMBER OF FEMALES ==========\n")
+etable(
+  iv_cond, iv_uncond,
+  headers = c("Cond", "Uncond"),
+  se.below = TRUE,
+  fitstat = ~ n + ivf + ivwald
+)
+
+# ============================================================
+# 6. CONTROL FUNCTION (POISSON FIRST STAGE)
+# ============================================================
+
+fs_pois_cond <- fepois(
+  exp_mean_cond ~ z_draft_mean_cond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal + pos_modal,
+  data = est_cond, cluster = ~office_id
+)
+
+fs_pois_uncond <- fepois(
+  exp_mean_uncond ~ z_draft_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal + pos_modal,
+  data = est_uncond, cluster = ~office_id
+)
+
+fs_pois_count_cond <- fepois(
+  exp_count_cond ~ z_draft_mean_cond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal + pos_modal,
+  data = est_cond, cluster = ~office_id
+)
+
+fs_pois_count_uncond <- fepois(
+  exp_count_uncond ~ z_draft_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal + pos_modal,
+  data = est_uncond, cluster = ~office_id
+)
+
+est_cond <- est_cond %>%
+  mutate(
+    cf_pred_mean = predict(fs_pois_cond, newdata = est_cond, type = "response"),
+    cf_resid_mean = exp_mean_cond - cf_pred_mean,
+    cf_pred_count = predict(fs_pois_count_cond, newdata = est_cond, type = "response"),
+    cf_resid_count = exp_count_cond - cf_pred_count
+  )
+
+est_uncond <- est_uncond %>%
+  mutate(
+    cf_pred_mean = predict(fs_pois_uncond, newdata = est_uncond, type = "response"),
+    cf_resid_mean = exp_mean_uncond - cf_pred_mean,
+    cf_pred_count = predict(fs_pois_count_uncond, newdata = est_uncond, type = "response"),
+    cf_resid_count = exp_count_uncond - cf_pred_count
+  )
+
+cf_cond <- feols(
+  n_female ~ exp_mean_cond + cf_resid_mean + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal,
+  data = est_cond, cluster = ~office_id
+)
+
+cf_uncond <- feols(
+  n_female ~ exp_mean_uncond + cf_resid_mean + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal,
+  data = est_uncond, cluster = ~office_id
+)
+
+cf_count_cond <- feols(
+  n_female ~ exp_count_cond + cf_resid_count + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal,
+  data = est_cond, cluster = ~office_id
+)
+
+cf_count_uncond <- feols(
+  n_female ~ exp_count_uncond + cf_resid_count + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal,
+  data = est_uncond, cluster = ~office_id
+)
+
+cat("\n========== CONTROL FUNCTION (POISSON FIRST STAGE) ==========\n")
+etable(
+  fs_pois_cond, fs_pois_uncond,
+  headers = c("Cond FS", "Uncond FS"),
+  se.below = TRUE,
+  fitstat = ~ n + r2 + wald
+)
+
+etable(
+  cf_cond, cf_uncond,
+  headers = c("Cond CF", "Uncond CF"),
+  se.below = TRUE
+)
+
+cat("\n========== CONTROL FUNCTION (POISSON FS, COUNT EXPOSURE) ==========\n")
+etable(
+  fs_pois_count_cond, fs_pois_count_uncond,
+  headers = c("Cond FS (Count)", "Uncond FS (Count)"),
+  se.below = TRUE,
+  fitstat = ~ n + r2 + wald
+)
+
+etable(
+  cf_count_cond, cf_count_uncond,
+  headers = c("Cond CF (Count)", "Uncond CF (Count)"),
+  se.below = TRUE
+)
+
+# ============================================================
+# 7. EXPORT LaTeX SUMMARY (Single Table)
+# ============================================================
+
+ols_cond <- feols(
+  n_female ~ exp_mean_cond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal,
+  data = est_cond, cluster = ~office_id
+)
+
+ols_uncond <- feols(
+  n_female ~ exp_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
+    year_num + kyoku_modal,
+  data = est_uncond, cluster = ~office_id
+)
+
+dict_table <- c(
+  exp_mean_cond     = "Exposure (cond)",
+  exp_mean_uncond   = "Exposure (uncond)",
+  fit_exp_mean_cond = "Exposure (cond)",
+  fit_exp_mean_uncond = "Exposure (uncond)",
+  engineer_share    = "Engineer share",
+  n_kakacho_ka      = "No. Kakari-cho",
+  kakari_size       = "Kakari size",
+  z_draft_mean_cond   = "Draft shock (cond)",
+  z_draft_mean_uncond = "Draft shock (uncond)"
+)
+
+panel_a <- etable(
+  ols_cond, ols_uncond, iv_cond, iv_uncond,
+  headers = c("OLS (Cond)", "OLS (Uncond)", "IV (Cond)", "IV (Uncond)"),
+  order = c("Exposure", "Engineer", "Kakari-cho", "Kakari size"),
+  dict = dict_table,
+  se.below = TRUE,
+  fitstat = ~ n + r2 + ivf,
+  tex = TRUE,
+  label = "tab:panel_a",
+  title = "Panel A: Second stage (Dep. var.: N females)"
+)
+
+panel_b <- etable(
+  fs_cond, fs_uncond,
+  headers = c("Cond", "Uncond"),
+  order = c("Draft", "Engineer", "Kakari-cho", "Kakari size"),
+  dict = dict_table,
+  se.below = TRUE,
+  fitstat = ~ n + r2,
+  tex = TRUE,
+  label = "tab:panel_b",
+  title = "Panel B: First stage (Dep. var.: Exposure)"
+)
+
+tex_out <- c(
+  "\\documentclass[11pt]{article}",
+  "\\usepackage{booktabs}",
+  "\\usepackage{geometry}",
+  "\\geometry{margin=1in}",
+  "\\begin{document}",
+  "\\section*{Direct Draft Shock: OLS vs IV}",
+  panel_a,
+  "\\vspace{1em}",
+  panel_b,
+  "\\end{document}"
+)
+
+writeLines(tex_out, "IV_ControlFunction_Results.tex")

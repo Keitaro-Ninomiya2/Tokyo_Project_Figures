@@ -37,11 +37,24 @@ wartime_pos_kakari_female <- df %>%
   group_by(office_id, ka, kakari, pos_norm, year_num) %>%
   summarise(female_share = mean(is_female, na.rm = TRUE), .groups = "drop")
 
+# Draft shock at position level (male drafts / male baseline)
+wartime_pos_kakari_drafts <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
+  group_by(office_id, ka, kakari, pos_norm, year_num) %>%
+  summarise(
+    n_male        = sum(!is_female, na.rm = TRUE),
+    n_drafted_male = sum(drafted == TRUE & !is_female, na.rm = TRUE),
+    draft_share   = ifelse(n_male > 0, n_drafted_male / n_male, 0),
+    .groups = "drop"
+  )
+
 staff_wartime_cells <- df %>%
   filter(year_num >= wartime_start, year_num <= wartime_end) %>%
   select(staff_id, office_id, ka, kakari, pos_norm, year_num) %>%
   inner_join(wartime_pos_kakari_female,
-             by = c("office_id", "ka", "kakari", "pos_norm", "year_num"))
+             by = c("office_id", "ka", "kakari", "pos_norm", "year_num")) %>%
+  left_join(wartime_pos_kakari_drafts,
+            by = c("office_id", "ka", "kakari", "pos_norm", "year_num"))
 
 staff_exposure <- staff_wartime_cells %>%
   group_by(staff_id) %>%
