@@ -6,8 +6,8 @@ library(here)
 # 0. LOAD DATA
 # ============================================================
 
-DATA_PATH <- here::here(
-  "Box", "Research Notes (keitaro2@illinois.edu)",
+DATA_PATH <- file.path(
+  Sys.getenv("USERPROFILE"), "Box", "Research Notes (keitaro2@illinois.edu)",
   "Tokyo_Gender", "Processed_Data",
   "Tokyo_Personnel_Master_All_Years_v2.csv"
 )
@@ -17,263 +17,180 @@ df <- read_csv(DATA_PATH,
                show_col_types = FALSE) %>%
   filter(is_name == TRUE) %>%
   mutate(
-    year_num  = as.numeric(year),
-    is_female = gender_modern == "female",
-    pos_norm  = str_replace_all(position, "\\s+", "")
+    year_num   = as.numeric(year),
+    is_female  = gender_modern == "female",
+    pos_norm   = str_replace_all(position, "\\s+", ""),
+    is_kakacho = str_detect(pos_norm, "係長"),
+    is_kacho   = str_detect(pos_norm, "課長")
   )
 
-# ============================================================
-# 1. IDENTIFY 課長
-# ============================================================
-
-df <- df %>%
-  mutate(
-    is_kacho = str_detect(pos_norm, "課長")
-  )
-
-kacho_year_post <- df %>%
-  filter(is_kacho, year >= 1944) %>%
-  select(staff_id, office_id, kyoku, year_num)
-
-cat("Unique 課長 Post war:", n_distinct(kacho_year_post$staff_id), "\n")
+wartime_start <- 1937
+wartime_end   <- 1945
+postwar_start <- 1947
 
 # ============================================================
-# 2. BUILD POST-1950 OUTCOME (Female 管理職)
+# 1. WARTIME FEMALE EXPOSURE (position x kakari x year)
 # ============================================================
 
-outcome <- df %>%
-  mutate(
-    is_elite = case_when(
-      year_num <= 1945 ~ str_detect(pos_norm, "^主事$|^技師$|^視学$|^理事$"),
-      year_num >  1945 ~ str_detect(pos_norm, "長"),
-      TRUE ~ FALSE
-    )
-  ) %>%
-  filter(year_num >= 1950) %>%
-  group_by(office_id, year_num) %>%
-  summarise(
-    n_kanri          = sum(is_elite),
-    n_female_kanri   = sum(is_elite & is_female),
-    has_female_kanri = as.integer(n_female_kanri > 0),
-    .groups = "drop"
-  )
+wartime_pos_kakari_female <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
+  group_by(office_id, ka, kakari, pos_norm, year_num) %>%
+  summarise(female_share = mean(is_female, na.rm = TRUE), .groups = "drop")
 
-# ============================================================
-# 3a. CONSTRUCT WARTIME EXPOSURE FOR EACH 課長
-# ============================================================
+staff_wartime_cells <- df %>%
+  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
+  select(staff_id, office_id, ka, kakari, pos_norm, year_num) %>%
+  inner_join(wartime_pos_kakari_female,
+             by = c("office_id", "ka", "kakari", "pos_norm", "year_num"))
 
-wartime_female_share <- df %>%
-  filter(year_num >= 1937, year_num <= 1945) %>%
-  group_by(office_id, year_num, pos_norm) %>%
-  summarise(
-    female_share = mean(is_female, na.rm = TRUE),
-    female_sum = sum(is_female, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-kacho_wartime <- df %>%
-  filter(year_num >= 1937, year_num <= 1945) %>%
-  select(staff_id, office_id, year_num, pos_norm) %>%
-  inner_join(wartime_female_share, by = c("office_id", "year_num", 'pos_norm'))
-
-kacho_exposure <- kacho_wartime %>%
+staff_exposure <- staff_wartime_cells %>%
   group_by(staff_id) %>%
   summarise(
-    mgr_exposure     = mean(female_share, na.rm = TRUE),
-    mgr_exposure_sum = mean(female_sum, na.rm = TRUE),
-    mgr_any_exposure = as.integer(any(female_share > 0)),
+    exposure_max  = max(female_share, na.rm = TRUE),
+    exposure_mean = mean(female_share, na.rm = TRUE),
     .groups = "drop"
   )
 
-cat("Managers with wartime exposure data:", nrow(kacho_exposure), "\n")
-
-wartime_ids <- df %>%
-  filter(year_num <= 1945) %>%
-  distinct(staff_id)
+cat("Staff with wartime exposure data:", nrow(staff_exposure), "\n")
 
 # ============================================================
-# 3b. OFFICE-LEVEL CONTROLS (post-1950)
+# 2. POSTWAR KAKARI PANEL
 # ============================================================
 
-office_controls <- df %>%
-  filter(year_num >= 1950) %>%
-  group_by(office_id, year_num) %>%
+kakari_outcome <- df %>%
+  filter(year_num >= postwar_start) %>%
+  group_by(office_id, ka, kakari, year_num) %>%
   summarise(
-    office_size      = n(),
-    female_share_all = mean(is_female, na.rm = TRUE),
-    n_engineer       = sum(str_detect(pos_norm, "技師|技手|技術"), na.rm = TRUE),
-    engineer_share   = n_engineer / office_size,
-    is_eng_office    = as.integer(engineer_share > 0.1),
+    has_female  = as.integer(any(is_female, na.rm = TRUE)),
+    n_female    = sum(is_female, na.rm = TRUE),
+    kakari_size = n(),
     .groups = "drop"
-  ) %>%
-  mutate(
-    log_office_size = log(office_size)
   )
 
-# ============================================================
-# 3c. OFFICE-TO-KYOKU MAPPING (modal kyoku per office in post-1950)
-# ============================================================
+ka_controls <- df %>%
+  filter(year_num >= postwar_start) %>%
+  group_by(office_id, ka, year_num) %>%
+  summarise(
+    ka_size        = n(),
+    n_engineer     = sum(str_detect(pos_norm, "技師|技手|技術"), na.rm = TRUE),
+    engineer_share = n_engineer / ka_size,
+    n_kakacho_ka   = sum(is_kakacho, na.rm = TRUE),
+    .groups = "drop"
+  )
 
-office_kyoku <- df %>%
-  filter(year_num >= 1950) %>%
-  count(office_id, kyoku) %>%
-  group_by(office_id) %>%
+# Kakaricho exposure (aggregated to kakari level)
+kakacho_exp_kakari <- df %>%
+  filter(is_kakacho, year_num >= postwar_start) %>%
+  select(staff_id, office_id, ka, kakari, year_num) %>%
+  left_join(staff_exposure, by = "staff_id") %>%
+  group_by(office_id, ka, kakari, year_num) %>%
+  summarise(
+    kakacho_exp_max  = mean(exposure_max, na.rm = TRUE),
+    kakacho_exp_mean = mean(exposure_mean, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Kacho exposure (aggregated to ka level, applied to all kakari)
+kacho_exp_ka <- df %>%
+  filter(is_kacho, year_num >= postwar_start) %>%
+  select(staff_id, office_id, ka, year_num) %>%
+  left_join(staff_exposure, by = "staff_id") %>%
+  group_by(office_id, ka, year_num) %>%
+  summarise(
+    kacho_exp_max  = mean(exposure_max, na.rm = TRUE),
+    kacho_exp_mean = mean(exposure_mean, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+ka_kyoku <- df %>%
+  filter(year_num >= postwar_start) %>%
+  count(office_id, ka, kyoku) %>%
+  group_by(office_id, ka) %>%
   slice_max(n, n = 1, with_ties = FALSE) %>%
   ungroup() %>%
-  select(office_id, kyoku_modal = kyoku)
+  select(office_id, ka, kyoku_modal = kyoku)
+
+kakari_panel <- kakari_outcome %>%
+  left_join(kakacho_exp_kakari,
+            by = c("office_id", "ka", "kakari", "year_num")) %>%
+  left_join(kacho_exp_ka,
+            by = c("office_id", "ka", "year_num")) %>%
+  left_join(ka_controls, by = c("office_id", "ka", "year_num")) %>%
+  left_join(ka_kyoku, by = c("office_id", "ka"))
+
+cat("\n--- Panel diagnostics ---\n")
+cat("Total kakari-years:", nrow(kakari_panel), "\n")
+cat("With kakaricho exposure (max):", sum(!is.na(kakari_panel$kakacho_exp_max)), "\n")
+cat("With kacho exposure (max):", sum(!is.na(kakari_panel$kacho_exp_max)), "\n")
 
 # ============================================================
-# 4. BUILD POST-1950 OFFICE-YEAR MANAGER PANEL
+# 3. REGRESSIONS
 # ============================================================
 
-post1950_kacho <- kacho_year_post %>%
-  filter(year_num >= 1950) %>%
-  left_join(kacho_exposure, by = "staff_id") %>%
-  mutate(
-    mgr_wartime      = as.integer(staff_id %in% wartime_ids$staff_id),
-    mgr_exposure     = replace_na(mgr_exposure, 0),
-    mgr_any_exposure = replace_na(mgr_any_exposure, 0)
-  )
+est_kakacho <- kakari_panel %>% filter(!is.na(kakacho_exp_max))
+est_kacho   <- kakari_panel %>% filter(!is.na(kacho_exp_max))
 
-manager_panel <- post1950_kacho %>%
-  group_by(office_id, year_num) %>%
-  summarise(
-    mgr_exposure     = mean(mgr_exposure),
-    mgr_any_exposure = mean(mgr_any_exposure),
-    mgr_wartime      = mean(mgr_wartime),
-    .groups = "drop"
-  ) %>%
-  left_join(outcome, by = c("office_id", "year_num")) %>%
-  left_join(office_controls, by = c("office_id", "year_num")) %>%
-  left_join(office_kyoku, by = "office_id") %>%
-  mutate(
-    log_n_kanri = log(pmax(n_kanri, 1))
-  )
+cat("Kakaricho est. sample:", nrow(est_kakacho), "\n")
+cat("Kacho est. sample:",     nrow(est_kacho), "\n")
 
-cat("Office-years with manager data:", nrow(manager_panel), "\n")
-cat("Unique kyoku:", n_distinct(manager_panel$kyoku_modal), "\n")
-
-# Diagnostics
-cat("\n--- Descriptive stats ---\n")
-
-postwar_mgrs_with_wartime_exp <- post1950_kacho %>%
-  filter(mgr_wartime == 1) %>%
-  summarise(n_unique_mgrs = n_distinct(staff_id))
-print(postwar_mgrs_with_wartime_exp)
-
-share_analysis <- post1950_kacho %>%
-  summarise(
-    total_postwar_mgrs   = n_distinct(staff_id),
-    wartime_veteran_mgrs = n_distinct(staff_id[mgr_wartime == 1]),
-    share_veterans       = (wartime_veteran_mgrs / total_postwar_mgrs) * 100
-  )
-print(share_analysis)
-
-# Within-kyoku variation in exposure
-within_var_kyoku <- manager_panel %>%
-  group_by(kyoku_modal) %>%
-  summarise(
-    n_offices = n_distinct(office_id),
-    sd_exp    = sd(mgr_exposure, na.rm = TRUE),
-    .groups   = "drop"
-  )
-cat("\nWithin-kyoku SD of mgr_exposure:\n")
-print(summary(within_var_kyoku$sd_exp))
-
-# ============================================================
-# 5. REGRESSIONS
-# ============================================================
-
-# --- Original specs ---
-
-mgr_ols1 <- feols(
-  has_female_kanri ~ mgr_exposure | year_num + kyoku_modal,
-  data = manager_panel, cluster = ~office_id
+# Col 1: kakaricho max exposure
+lpm1 <- feols(
+  has_female ~ kakacho_exp_max + engineer_share +
+    n_kakacho_ka + kakari_size |
+    kyoku_modal,
+  data = est_kakacho, cluster = ~office_id
 )
 
-mgr_ols2 <- feols(
-  has_female_kanri ~ mgr_exposure + log_n_kanri | year_num + kyoku_modal,
-  data = manager_panel, cluster = ~office_id
+# Col 2: kakaricho mean exposure
+lpm2 <- feols(
+  has_female ~ kakacho_exp_mean + engineer_share +
+    n_kakacho_ka + kakari_size |
+    kyoku_modal,
+  data = est_kakacho, cluster = ~office_id
 )
 
-mgr_ols3 <- feols(
-  has_female_kanri ~ mgr_any_exposure + log_n_kanri | year_num + kyoku_modal,
-  data = manager_panel, cluster = ~office_id
+# Col 3: kacho max exposure
+lpm3 <- feols(
+  has_female ~ kacho_exp_max + engineer_share +
+    n_kakacho_ka + kakari_size |
+    kyoku_modal,
+  data = est_kacho, cluster = ~office_id
 )
 
-mgr_ols4 <- feols(
-  has_female_kanri ~ mgr_exposure + mgr_wartime + log_n_kanri | year_num + kyoku_modal,
-  data = manager_panel, cluster = ~office_id
+# Col 4-6: number of females as dependent variable
+lpm4 <- feols(
+  n_female ~ kakacho_exp_max + engineer_share +
+    n_kakacho_ka + kakari_size |
+    kyoku_modal,
+  data = est_kakacho, cluster = ~office_id
 )
 
-# --- Augmented specs ---
-
-# + office size
-mgr_ols5 <- feols(
-  has_female_kanri ~ mgr_exposure + mgr_wartime + log_n_kanri + log_office_size |
-    year_num + kyoku_modal,
-  data = manager_panel, cluster = ~office_id
+lpm5 <- feols(
+  n_female ~ kakacho_exp_mean + engineer_share +
+    n_kakacho_ka + kakari_size |
+    kyoku_modal,
+  data = est_kakacho, cluster = ~office_id
 )
 
-# + engineer share (continuous)
-mgr_ols6 <- feols(
-  has_female_kanri ~ mgr_exposure + mgr_wartime + log_n_kanri + log_office_size +
-    engineer_share |
-    year_num + kyoku_modal,
-  data = manager_panel, cluster = ~office_id
+lpm6 <- feols(
+  n_female ~ kacho_exp_max + engineer_share +
+    n_kakacho_ka + kakari_size |
+    kyoku_modal,
+  data = est_kacho, cluster = ~office_id
 )
 
-# + engineer office dummy
-mgr_ols7 <- feols(
-  has_female_kanri ~ mgr_exposure + mgr_wartime + log_n_kanri + log_office_size +
-    is_eng_office |
-    year_num + kyoku_modal,
-  data = manager_panel, cluster = ~office_id
-)
-
-# + contemporary female share (bad-control caveat — robustness only)
-mgr_ols8 <- feols(
-  has_female_kanri ~ mgr_exposure + mgr_wartime + log_n_kanri + log_office_size +
-    engineer_share + female_share_all |
-    year_num + kyoku_modal,
-  data = manager_panel, cluster = ~kyoku_modal
-)
-
-# Kyoku FE (replaces office FE — enough cross-office variation within kyoku)
-mgr_ols9 <- feols(
-  has_female_kanri ~ mgr_exposure + mgr_wartime + log_n_kanri + log_office_size +
-    engineer_share |
-    kyoku_modal + year_num,
-  data = manager_panel, cluster = ~kyoku_modal
-)
-
-# ============================================================
-# 6. OUTPUT
-# ============================================================
-
-cat("\n========== ORIGINAL SPECIFICATIONS ==========\n")
+cat("\n========== PANEL A: HAS FEMALE (BINARY) ==========\n")
 etable(
-  mgr_ols1, mgr_ols2, mgr_ols3, mgr_ols4,
-  headers  = c("Exposure", "+Size", "Binary+Size", "+Wartime"),
+  lpm1, lpm2, lpm3,
+  headers  = c("Kakaricho (Max)", "Kakaricho (Mean)", "Kacho (Max)"),
+  order    = c("kakacho_exp_max", "kakacho_exp_mean", "kacho_exp_max"),
   se.below = TRUE
 )
 
-cat("\n========== AUGMENTED SPECIFICATIONS ==========\n")
+cat("\n========== PANEL B: NUMBER OF FEMALES ==========\n")
 etable(
-  mgr_ols4, mgr_ols5, mgr_ols6, mgr_ols7, mgr_ols8, mgr_ols9,
-  headers  = c("Baseline", "+OffSize", "+EngShare", "+EngDummy",
-               "+FemShare", "Kyoku FE"),
+  lpm4, lpm5, lpm6,
+  headers  = c("Kakaricho (Max)", "Kakaricho (Mean)", "Kacho (Max)"),
+  order    = c("kakacho_exp_max", "kakacho_exp_mean", "kacho_exp_max"),
   se.below = TRUE
 )
-
-summary(mgr_ols6)
-summary(mgr_ols9)
-
-mgr_ols9_office <- feols(
-  has_female_kanri ~ mgr_exposure + mgr_wartime + log_n_kanri + log_office_size +
-    engineer_share |
-    kyoku_modal + year_num,
-  data = manager_panel, cluster = ~office_id
-)
-
-summary(mgr_ols9_office)
