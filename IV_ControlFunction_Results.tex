@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{threeparttable}
+\geometry{margin=1in}
+\begin{document}
+\section*{Direct Draft Shock: OLS vs IV}
+\begin{table}[htbp]
+   \caption{\label{tab:panel_a} Panel A: Second stage (Dep. var.: N females)}
+   \centering
+   \begin{threeparttable}
+   \begin{tabular}{lcccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variable: & \multicolumn{4}{c}{n\_female}\\
+                                            & OLS (Cond)     & OLS (Uncond)   & IV (Cond)      & IV (Uncond) \\   
+      Model:                                & (1)            & (2)            & (3)            & (4)\\  
+      \midrule
+      Variables\\
+      Exposure (cond)                       & 1.266$^{***}$  &                & 3.846          &   \\   
+                                            & (0.2407)       &                & (16.56)        &   \\   
+      Exposure (uncond)                     &                & 1.730$^{***}$  &                & 5.033$^{*}$\\   
+                                            &                & (0.1328)       &                & (2.771)\\   
+      Engineer share                        & -0.0430        & 0.0474$^{**}$  & 0.0245         & 0.0287\\   
+                                            & (0.0751)       & (0.0192)       & (0.4474)       & (0.0262)\\   
+      No. Kakari-cho                        & 0.0063         & -0.0005        & 0.0032         & -0.0050\\   
+                                            & (0.0088)       & (0.0085)       & (0.0221)       & (0.0093)\\   
+      Kakari size                           & 0.0272$^{***}$ & 0.0304$^{***}$ & 0.0279$^{***}$ & 0.0311$^{***}$\\   
+                                            & (0.0064)       & (0.0045)       & (0.0077)       & (0.0044)\\   
+      \midrule
+      Fixed-effects\\
+      year\_num                             & Yes            & Yes            & Yes            & Yes\\  
+      kyoku\_modal                          & Yes            & Yes            & Yes            & Yes\\  
+      \midrule
+      Fit statistics\\
+      Observations                          & 2,324          & 6,662          & 2,324          & 6,662\\  
+      R$^2$                                 & 0.34083        & 0.27484        & 0.29769        & 0.20744\\  
+      F-test (1st stage), Exposure (cond)   &                &                & 0.07395        & \\  
+      F-test (1st stage), Exposure (uncond) &                &                &                & 3.1868\\  
+   \end{tabular}
+   \begin{tablenotes}[flushleft]
+   \footnotesize
+   \item Notes: $Y_{j,t}$ is the number of females in kakari $j$ in postwar year $t$ (1947--). Exposure (cond/uncond) is the mean of staff-level wartime female shares for all staff observed in kakari $j$ at year $t$, where each staff-level share is computed in that staff member's wartime position $\times$ kakari $\times$ year cell (1937--1945). ``Cond'' restricts to staff with kakari-cho wartime offices; ``Uncond'' uses all wartime survivors. OLS (cols.\ 1--2) and IV (cols.\ 3--4); instrument is the mean share of males drafted in the corresponding wartime position $\times$ kakari $\times$ year cells. Controls include engineer share, number of kakari-cho, and kakari size; FE: year and kyoku. Clustered (office\_id) standard errors in parentheses; ***: 0.01, **: 0.05, *: 0.1.
+   \end{tablenotes}
+   \end{threeparttable}
+\end{table}
+\vspace{1em}
+\begin{table}[htbp]
+   \caption{\label{tab:panel_b} Panel B: First stage (Dep. var.: Exposure)}
+   \centering
+   \begin{threeparttable}
+   \begin{tabular}{lcc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & Exposure (cond) & Exposure (uncond)\\  
+                           & Cond            & Uncond \\   
+      Model:               & (1)             & (2)\\  
+      \midrule
+      Variables\\
+      Draft shock (cond)   & -0.0051         &   \\   
+                           & (0.0189)        &   \\   
+      Draft shock (uncond) &                 & -0.0288$^{***}$\\   
+                           &                 & (0.0103)\\   
+      Engineer share       & -0.0209         & 0.0027\\   
+                           & (0.0134)        & (0.0084)\\   
+      No. Kakari-cho       & 0.0010$^{*}$    & 0.0012$^{***}$\\   
+                           & (0.0006)        & (0.0004)\\   
+      Kakari size          & -0.0001         & -0.0004$^{***}$\\   
+                           & (0.0002)        & (0.0001)\\   
+      \midrule
+      Fixed-effects\\
+      year\_num            & Yes             & Yes\\  
+      kyoku\_modal         & Yes             & Yes\\  
+      pos\_modal           & Yes             & Yes\\  
+      \midrule
+      Fit statistics\\
+      Observations         & 2,324           & 6,661\\  
+      R$^2$                & 0.06393         & 0.07881\\  
+   \end{tabular}
+   \begin{tablenotes}[flushleft]
+   \footnotesize
+   \item Notes: Panel B reports the first stage for Exposure with draft shock and controls. ``Cond'' conditions on kakari-cho wartime offices; ``Uncond'' uses all wartime survivors. Controls include engineer share, number of kakari-cho, and kakari size; FE: year, kyoku, position. Clustered (office\_id) standard errors in parentheses; ***: 0.01, **: 0.05, *: 0.1.
+   \end{tablenotes}
+   \end{threeparttable}
+\end{table}
+\end{document}
