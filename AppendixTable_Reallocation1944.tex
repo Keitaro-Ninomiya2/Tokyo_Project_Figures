@@ -1,0 +1,41 @@
+\begin{table}[htbp]
+\centering
+\caption{Worker Reallocation in Response to Military Drafting (1944 Only)}
+\label{tab:reallocation-1944}
+\small
+\begin{threeparttable}
+\begingroup
+\centering
+\begin{tabular}{lcccccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables: & n\_transfers\_in & n\_transfers\_same\_ka & n\_transfers\_diff\_ka & n\_transfers\_dist2 & n\_transfers\_dist3 & \multicolumn{3}{c}{n\_new\_hires}\\
+                                       & \makecell{Transfers\\In}    & \makecell{Same Ka\\Transfers}    & \makecell{Diff Ka\\Transfers}    & \makecell{Same Kyoku\\Transfers}    & \makecell{Diff Kyoku\\Transfers}    & \makecell{New\\Hires}    & \makecell{New Hires\\(adj kakari)}    & \makecell{New Hires\\(adj occ)} \\      
+   Model:                              & (1)                         & (2)                              & (3)                              & (4)                                 & (5)                                 & (6)                      & (7)                                   & (8)\\  
+   \midrule
+   \emph{Variables}\\
+   Own drafts (male)                   & 0.0367$^{***}$              & 0.0024                           & 0.0368$^{***}$                   & 0.0274$^{**}$                       & 0.0382$^{***}$                      & 0.0374$^{***}$           &                                       &   \\   
+                                       & (0.0038)                    & (0.0119)                         & (0.0038)                         & (0.0112)                            & (0.0040)                            & (0.0054)                 &                                       &   \\   
+   log(Male baseline + 1)              & -0.0927                     &                                  & -0.0920                          & -8.800$^{***}$                      & -0.0473                             & 0.4073$^{***}$           & 0.3736$^{***}$                        & 0.2756$^{***}$\\   
+                                       & (0.1038)                    &                                  & (0.1035)                         & (0.4304)                            & (0.0993)                            & (0.0996)                 & (0.0953)                              & (0.1052)\\   
+   Adj. drafts (diff kakari, same occ) &                             &                                  &                                  &                                     &                                     &                          & 0.0095$^{***}$                        &   \\   
+                                       &                             &                                  &                                  &                                     &                                     &                          & (0.0034)                              &   \\   
+   Adj. drafts (diff occ, same kakari) &                             &                                  &                                  &                                     &                                     &                          &                                       & 0.0104$^{***}$\\   
+                                       &                             &                                  &                                  &                                     &                                     &                          &                                       & (0.0019)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   kyoku                               & Yes                         & Yes                              & Yes                              & Yes                                 & Yes                                 & Yes                      & Yes                                   & Yes\\  
+   pos\_norm                           & Yes                         & Yes                              & Yes                              & Yes                                 & Yes                                 & Yes                      & Yes                                   & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                        & 802                         & 60                               & 802                              & 184                                 & 802                                 & 768                      & 768                                   & 768\\  
+   \midrule \midrule
+   \multicolumn{9}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{9}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Poisson regressions restricted to 1944. Unit of observation: position $\times$ kakari. Column specifications mirror Table~\ref{tab:reallocation}. All specifications include kyoku and position fixed effects. Standard errors clustered at the office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,66 @@
+% Table 3B: Destination Office Gender Balance (OLS)
+% Dep. var.: Avg. female share of worker's office-position across 1946-1953.
+% Sample: Non-drafted workers observed in 1944 who appear postwar.
+% Panel A: Ka (Office) Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{4}{c}{avg\_female\_share\_dest}\\
+    & \multicolumn{3}{c}{All} & Male \\ 
+   Model:                       & (1)      & (2)      & (3)      & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Any drafted (=1)             & -0.0017  &          &          &   \\   
+                                & (0.0044) &          &          &   \\   
+   Draft share                  &          & -0.0069  & -0.0089  & -0.0076\\   
+                                &          & (0.0067) & (0.0065) & (0.0065)\\   
+   Female (=1)                  &          &          & 0.0052   &   \\   
+                                &          &          & (0.0447) &   \\   
+   Draft share $\times$ Female  &          &          & 0.2355   &   \\   
+                                &          &          & (0.1578) &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   ka\_id                       & Yes      & Yes      & Yes      & Yes\\  
+   pos\_norm                    & Yes      & Yes      & Yes      & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                 & 488      & 488      & 488      & 482\\  
+   R$^2$                        & 0.17784  & 0.17870  & 0.31182  & 0.19076\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+% Panel B: Kyoku (Department) Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{4}{c}{avg\_female\_share\_dest}\\
+    & \multicolumn{3}{c}{All} & Male \\ 
+   Model:                       & (1)      & (2)      & (3)      & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Any drafted (=1)             & 0.0004   &          &          &   \\   
+                                & (0.0030) &          &          &   \\   
+   Draft share                  &          & -0.0022  & -0.0087  & -0.0082\\   
+                                &          & (0.0064) & (0.0056) & (0.0056)\\   
+   Female (=1)                  &          &          & 0.0119   &   \\   
+                                &          &          & (0.0414) &   \\   
+   Draft share $\times$ Female  &          &          & 0.2166   &   \\   
+                                &          &          & (0.1479) &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   kyoku                        & Yes      & Yes      & Yes      & Yes\\  
+   pos\_norm                    & Yes      & Yes      & Yes      & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                 & 523      & 523      & 523      & 517\\  
+   R$^2$                        & 0.06831  & 0.06850  & 0.20229  & 0.06721\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup

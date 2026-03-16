@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "name": "Tokyo_Project_Figures",
+      "path": "."
+    },
+    {
+      "name": "Tokyo_Project (Draft)",
+      "path": "../Tokyo_Project"
+    },
+    {
+      "name": "Tokyo_Project_Slides",
+      "path": "../Tokyo_Project_Slides"
+    }
+  ],
+  "settings": {
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.suggest.preview": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.inlayHints.enabled": "off",
+    "cursor.completions.enabled": false,
+    "cursor.tab.enabled": false,
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.snippetSuggestions": "none",
+    "[latex]": {
+      "editor.inlineSuggest.enabled": false,
+      "editor.inlineSuggest.suppressSuggestions": true,
+      "editor.suggest.preview": false,
+      "editor.wordBasedSuggestions": "off",
+      "editor.inlayHints.enabled": "off",
+      "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+      },
+      "editor.suggestOnTriggerCharacters": false,
+      "editor.snippetSuggestions": "none"
+    }
+  }
+}

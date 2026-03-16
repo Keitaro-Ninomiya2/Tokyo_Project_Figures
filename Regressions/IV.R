@@ -1,5 +1,7 @@
 ################################################################################
 # Direct Draft Shock IV: Wartime Exposure → Postwar Female Integration (Kakari)
+# Manager-linked: exposure/draft shock from ALL wartime workers in kakari-cho's
+# wartime workplace (no survivorship bias)
 ################################################################################
 
 library(tidyverse)
@@ -33,7 +35,7 @@ wartime_end   <- 1945
 postwar_start <- 1947
 
 # ============================================================
-# 1. WARTIME POSITION-LEVEL EXPOSURE + DRAFT SHOCK
+# 1. WARTIME KAKARI-LEVEL MEASURES (ALL wartime workers, no survivorship)
 # ============================================================
 
 wartime_pos_kakari_female <- df %>%
@@ -55,27 +57,24 @@ wartime_pos_kakari_drafts <- df %>%
     .groups = "drop"
   )
 
-staff_wartime_cells <- df %>%
-  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
-  select(staff_id, office_id, ka, kakari, pos_norm, year_num) %>%
-  inner_join(wartime_pos_kakari_female,
-             by = c("office_id", "ka", "kakari", "pos_norm", "year_num")) %>%
+# Aggregate to wartime kakari level (all workers in cell, no survivor filter)
+wartime_kakari_measures <- wartime_pos_kakari_female %>%
   left_join(wartime_pos_kakari_drafts,
-            by = c("office_id", "ka", "kakari", "pos_norm", "year_num"))
-
-wartime_staff_ids <- df %>%
-  filter(year_num >= wartime_start, year_num <= wartime_end) %>%
-  distinct(staff_id)
-
-cat("Staff with wartime observation:", nrow(wartime_staff_ids), "\n")
+            by = c("office_id", "ka", "kakari", "pos_norm", "year_num")) %>%
+  group_by(office_id, ka, kakari) %>%
+  summarise(
+    exp_mean  = mean(female_share, na.rm = TRUE),
+    exp_count = mean(n_female, na.rm = TRUE),
+    z_draft   = mean(draft_share, na.rm = TRUE),
+    .groups = "drop"
+  )
 
 # ============================================================
-# 2. POSTWAR KAKARI PANEL (wartime survivors only)
+# 2. POSTWAR KAKARI PANEL (all postwar staff for outcomes/controls)
 # ============================================================
 
 postwar_staff <- df %>%
-  filter(year_num >= postwar_start,
-         staff_id %in% wartime_staff_ids$staff_id)
+  filter(year_num >= postwar_start)
 
 kakari_outcome <- postwar_staff %>%
   group_by(office_id, ka, kakari, year_num) %>%
@@ -110,117 +109,40 @@ kakari_pos <- postwar_staff %>%
   ungroup() %>%
   select(office_id, ka, kakari, year_num, pos_modal = pos_norm)
 
-postwar_kakari_staff <- postwar_staff %>%
-  select(staff_id, office_id, ka, kakari, year_num) %>%
-  distinct()
-
 # ============================================================
-# 3. EXPOSURE VARIANTS + IV (DIRECT DRAFT SHOCK)
+# 3. MANAGER-LINKED EXPOSURE (kakari-cho's wartime kakari, ALL workers)
 # ============================================================
 
-# ---- 3a. Conditioned on kakari-cho wartime offices ----
+# Postwar kakari-cho
 kakari_cho_postwar <- postwar_staff %>%
   filter(is_kakacho) %>%
   select(staff_id, office_id, ka, kakari, year_num) %>%
   distinct()
 
-kakari_cho_wartime_offices <- df %>%
+# Kakari-cho's wartime (office, ka, kakari) - where they worked DURING war
+kakari_cho_wartime_cells <- df %>%
   filter(year_num >= wartime_start, year_num <= wartime_end,
          staff_id %in% kakari_cho_postwar$staff_id) %>%
-  select(staff_id, wartime_office_id = office_id) %>%
+  select(staff_id, wartime_office_id = office_id, wartime_ka = ka,
+         wartime_kakari = kakari) %>%
   distinct()
 
-kakari_cho_office_set <- kakari_cho_postwar %>%
-  select(post_office_id = office_id, ka, kakari, year_num, staff_id) %>%
-  left_join(kakari_cho_wartime_offices, by = "staff_id") %>%
+# Link postwar kakari -> kakari-cho -> wartime kakari measures
+# Use ALL wartime workers in those cells (no survivorship)
+manager_linked <- kakari_cho_postwar %>%
+  left_join(kakari_cho_wartime_cells, by = "staff_id") %>%
   filter(!is.na(wartime_office_id)) %>%
-  distinct(post_office_id, ka, kakari, year_num, wartime_office_id)
-
-cond_cells <- postwar_kakari_staff %>%
-  rename(
-    post_office_id = office_id,
-    post_ka = ka,
-    post_kakari = kakari,
-    post_year = year_num
-  ) %>%
-  left_join(kakari_cho_office_set,
-            by = c("post_office_id", "post_ka" = "ka",
-                   "post_kakari" = "kakari", "post_year" = "year_num")) %>%
-  inner_join(staff_wartime_cells,
-             by = c("staff_id", "wartime_office_id" = "office_id"))
-
-cond_staff_exp <- cond_cells %>%
-  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
+  left_join(wartime_kakari_measures,
+            by = c("wartime_office_id" = "office_id",
+                   "wartime_ka" = "ka",
+                   "wartime_kakari" = "kakari")) %>%
+  filter(!is.na(exp_mean), !is.na(z_draft)) %>%
+  group_by(office_id, ka, kakari, year_num) %>%
   summarise(
-    exp_mean  = mean(female_share, na.rm = TRUE),
-    exp_count = sum(n_female, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-cond_staff_iv <- cond_cells %>%
-  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
-  summarise(
-    z_draft_mean = mean(draft_share, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-cond_kakari <- cond_staff_exp %>%
-  left_join(cond_staff_iv,
-            by = c("post_office_id", "post_ka", "post_kakari", "post_year", "staff_id")) %>%
-  group_by(post_office_id, post_ka, post_kakari, post_year) %>%
-  summarise(
-    exp_mean_cond      = mean(exp_mean, na.rm = TRUE),
-    exp_count_cond     = mean(exp_count, na.rm = TRUE),
-    z_draft_mean_cond  = mean(z_draft_mean, na.rm = TRUE),
-    n_staff_cond       = n(),
-    .groups = "drop"
-  )
-
-# ---- 3b. Unconditioned: offices with any wartime survivor ----
-survivor_ids <- postwar_staff %>%
-  distinct(staff_id)
-
-survivor_wartime_offices <- df %>%
-  filter(year_num >= wartime_start, year_num <= wartime_end,
-         staff_id %in% survivor_ids$staff_id) %>%
-  distinct(office_id)
-
-staff_wartime_survivor_offices <- staff_wartime_cells %>%
-  filter(office_id %in% survivor_wartime_offices$office_id)
-
-uncond_cells <- postwar_kakari_staff %>%
-  rename(
-    post_office_id = office_id,
-    post_ka = ka,
-    post_kakari = kakari,
-    post_year = year_num
-  ) %>%
-  inner_join(staff_wartime_survivor_offices, by = "staff_id")
-
-uncond_staff_exp <- uncond_cells %>%
-  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
-  summarise(
-    exp_mean  = mean(female_share, na.rm = TRUE),
-    exp_count = sum(n_female, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-uncond_staff_iv <- uncond_cells %>%
-  group_by(post_office_id, post_ka, post_kakari, post_year, staff_id) %>%
-  summarise(
-    z_draft_mean = mean(draft_share, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-uncond_kakari <- uncond_staff_exp %>%
-  left_join(uncond_staff_iv,
-            by = c("post_office_id", "post_ka", "post_kakari", "post_year", "staff_id")) %>%
-  group_by(post_office_id, post_ka, post_kakari, post_year) %>%
-  summarise(
-    exp_mean_uncond     = mean(exp_mean, na.rm = TRUE),
-    exp_count_uncond    = mean(exp_count, na.rm = TRUE),
-    z_draft_mean_uncond = mean(z_draft_mean, na.rm = TRUE),
-    n_staff_uncond      = n(),
+    exp_mean_cond     = mean(exp_mean, na.rm = TRUE),
+    exp_count_cond    = mean(exp_count, na.rm = TRUE),
+    z_draft_mean_cond = mean(z_draft, na.rm = TRUE),
+    n_kakacho_linked  = n(),
     .groups = "drop"
   )
 
@@ -229,26 +151,15 @@ uncond_kakari <- uncond_staff_exp %>%
 # ============================================================
 
 kakari_panel <- kakari_outcome %>%
-  left_join(cond_kakari,
-            by = c("office_id" = "post_office_id",
-                   "ka" = "post_ka",
-                   "kakari" = "post_kakari",
-                   "year_num" = "post_year")) %>%
-  left_join(uncond_kakari,
-            by = c("office_id" = "post_office_id",
-                   "ka" = "post_ka",
-                   "kakari" = "post_kakari",
-                   "year_num" = "post_year")) %>%
+  left_join(manager_linked,
+            by = c("office_id", "ka", "kakari", "year_num")) %>%
   left_join(kakari_pos, by = c("office_id", "ka", "kakari", "year_num")) %>%
   left_join(ka_controls, by = c("office_id", "ka", "year_num")) %>%
   left_join(ka_kyoku, by = c("office_id", "ka"))
 
-cat("\n--- Panel diagnostics ---\n")
-cat("Total kakari-years:", nrow(kakari_panel), "\n")
-cat("With conditioned exposure:", sum(!is.na(kakari_panel$exp_mean_cond)), "\n")
-cat("With unconditioned exposure:", sum(!is.na(kakari_panel$exp_mean_uncond)), "\n")
-cat("With conditioned draft shock:", sum(!is.na(kakari_panel$z_draft_mean_cond)), "\n")
-cat("With unconditioned draft shock:", sum(!is.na(kakari_panel$z_draft_mean_uncond)), "\n")
+cat("\n--- Panel diagnostics (manager-linked, wartime workers only) ---\n")
+cat("Total postwar kakari-years:", nrow(kakari_panel), "\n")
+cat("With manager-linked exposure:", sum(!is.na(kakari_panel$exp_mean_cond)), "\n")
 
 # ============================================================
 # 5. FIRST STAGE + IV (DIRECT DRAFT SHOCK)
@@ -257,22 +168,12 @@ cat("With unconditioned draft shock:", sum(!is.na(kakari_panel$z_draft_mean_unco
 est_cond <- kakari_panel %>%
   filter(!is.na(exp_mean_cond), !is.na(exp_count_cond), !is.na(z_draft_mean_cond))
 
-est_uncond <- kakari_panel %>%
-  filter(!is.na(exp_mean_uncond), !is.na(exp_count_uncond), !is.na(z_draft_mean_uncond))
-
-cat("Conditioned est. sample:", nrow(est_cond), "\n")
-cat("Unconditioned est. sample:", nrow(est_uncond), "\n")
+cat("Estimation sample (postwar kakari with kakari-cho wartime link):", nrow(est_cond), "\n")
 
 fs_cond <- feols(
   exp_mean_cond ~ z_draft_mean_cond + engineer_share + n_kakacho_ka + kakari_size |
     year_num + kyoku_modal + pos_modal,
   data = est_cond, cluster = ~office_id
-)
-
-fs_uncond <- feols(
-  exp_mean_uncond ~ z_draft_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
-    year_num + kyoku_modal + pos_modal,
-  data = est_uncond, cluster = ~office_id
 )
 
 iv_cond <- feols(
@@ -282,25 +183,16 @@ iv_cond <- feols(
   data = est_cond, cluster = ~office_id
 )
 
-iv_uncond <- feols(
-  n_female ~ engineer_share + n_kakacho_ka + kakari_size |
-    year_num + kyoku_modal |
-    exp_mean_uncond ~ z_draft_mean_uncond,
-  data = est_uncond, cluster = ~office_id
-)
-
-cat("\n========== FIRST STAGE ==========\n")
+cat("\n========== FIRST STAGE (manager-linked) ==========\n")
 etable(
-  fs_cond, fs_uncond,
-  headers = c("Cond", "Uncond"),
+  fs_cond,
   se.below = TRUE,
   fitstat = ~ n + r2 + wald
 )
 
-cat("\n========== IV: NUMBER OF FEMALES ==========\n")
+cat("\n========== IV: NUMBER OF FEMALES (manager-linked) ==========\n")
 etable(
-  iv_cond, iv_uncond,
-  headers = c("Cond", "Uncond"),
+  iv_cond,
   se.below = TRUE,
   fitstat = ~ n + ivf + ivwald
 )
@@ -315,22 +207,10 @@ fs_pois_cond <- fepois(
   data = est_cond, cluster = ~office_id
 )
 
-fs_pois_uncond <- fepois(
-  exp_mean_uncond ~ z_draft_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
-    year_num + kyoku_modal + pos_modal,
-  data = est_uncond, cluster = ~office_id
-)
-
 fs_pois_count_cond <- fepois(
   exp_count_cond ~ z_draft_mean_cond + engineer_share + n_kakacho_ka + kakari_size |
     year_num + kyoku_modal + pos_modal,
   data = est_cond, cluster = ~office_id
-)
-
-fs_pois_count_uncond <- fepois(
-  exp_count_uncond ~ z_draft_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
-    year_num + kyoku_modal + pos_modal,
-  data = est_uncond, cluster = ~office_id
 )
 
 est_cond <- est_cond %>%
@@ -341,24 +221,10 @@ est_cond <- est_cond %>%
     cf_resid_count = exp_count_cond - cf_pred_count
   )
 
-est_uncond <- est_uncond %>%
-  mutate(
-    cf_pred_mean = predict(fs_pois_uncond, newdata = est_uncond, type = "response"),
-    cf_resid_mean = exp_mean_uncond - cf_pred_mean,
-    cf_pred_count = predict(fs_pois_count_uncond, newdata = est_uncond, type = "response"),
-    cf_resid_count = exp_count_uncond - cf_pred_count
-  )
-
 cf_cond <- feols(
   n_female ~ exp_mean_cond + cf_resid_mean + engineer_share + n_kakacho_ka + kakari_size |
     year_num + kyoku_modal,
   data = est_cond, cluster = ~office_id
-)
-
-cf_uncond <- feols(
-  n_female ~ exp_mean_uncond + cf_resid_mean + engineer_share + n_kakacho_ka + kakari_size |
-    year_num + kyoku_modal,
-  data = est_uncond, cluster = ~office_id
 )
 
 cf_count_cond <- feols(
@@ -367,37 +233,27 @@ cf_count_cond <- feols(
   data = est_cond, cluster = ~office_id
 )
 
-cf_count_uncond <- feols(
-  n_female ~ exp_count_uncond + cf_resid_count + engineer_share + n_kakacho_ka + kakari_size |
-    year_num + kyoku_modal,
-  data = est_uncond, cluster = ~office_id
-)
-
 cat("\n========== CONTROL FUNCTION (POISSON FIRST STAGE) ==========\n")
 etable(
-  fs_pois_cond, fs_pois_uncond,
-  headers = c("Cond FS", "Uncond FS"),
+  fs_pois_cond,
   se.below = TRUE,
   fitstat = ~ n + r2 + wald
 )
 
 etable(
-  cf_cond, cf_uncond,
-  headers = c("Cond CF", "Uncond CF"),
+  cf_cond,
   se.below = TRUE
 )
 
 cat("\n========== CONTROL FUNCTION (POISSON FS, COUNT EXPOSURE) ==========\n")
 etable(
-  fs_pois_count_cond, fs_pois_count_uncond,
-  headers = c("Cond FS (Count)", "Uncond FS (Count)"),
+  fs_pois_count_cond,
   se.below = TRUE,
   fitstat = ~ n + r2 + wald
 )
 
 etable(
-  cf_count_cond, cf_count_uncond,
-  headers = c("Cond CF (Count)", "Uncond CF (Count)"),
+  cf_count_cond,
   se.below = TRUE
 )
 
@@ -411,27 +267,18 @@ ols_cond <- feols(
   data = est_cond, cluster = ~office_id
 )
 
-ols_uncond <- feols(
-  n_female ~ exp_mean_uncond + engineer_share + n_kakacho_ka + kakari_size |
-    year_num + kyoku_modal,
-  data = est_uncond, cluster = ~office_id
-)
-
 dict_table <- c(
-  exp_mean_cond     = "Exposure (cond)",
-  exp_mean_uncond   = "Exposure (uncond)",
-  fit_exp_mean_cond = "Exposure (cond)",
-  fit_exp_mean_uncond = "Exposure (uncond)",
+  exp_mean_cond     = "Exposure (manager-linked)",
+  fit_exp_mean_cond = "Exposure (manager-linked)",
   engineer_share    = "Engineer share",
   n_kakacho_ka      = "No. Kakari-cho",
   kakari_size       = "Kakari size",
-  z_draft_mean_cond   = "Draft shock (cond)",
-  z_draft_mean_uncond = "Draft shock (uncond)"
+  z_draft_mean_cond = "Draft shock (manager-linked)"
 )
 
 panel_a <- etable(
-  ols_cond, ols_uncond, iv_cond, iv_uncond,
-  headers = c("OLS (Cond)", "OLS (Uncond)", "IV (Cond)", "IV (Uncond)"),
+  ols_cond, iv_cond,
+  headers = c("OLS", "IV"),
   order = c("Exposure", "Engineer", "Kakari-cho", "Kakari size"),
   dict = dict_table,
   se.below = TRUE,
@@ -442,8 +289,7 @@ panel_a <- etable(
 )
 
 panel_b <- etable(
-  fs_cond, fs_uncond,
-  headers = c("Cond", "Uncond"),
+  fs_cond,
   order = c("Draft", "Engineer", "Kakari-cho", "Kakari size"),
   dict = dict_table,
   se.below = TRUE,
@@ -459,11 +305,12 @@ tex_out <- c(
   "\\usepackage{geometry}",
   "\\geometry{margin=1in}",
   "\\begin{document}",
-  "\\section*{Direct Draft Shock: OLS vs IV}",
+  "\\section*{Direct Draft Shock: OLS vs IV (Manager-Linked, Wartime Workers)}",
+  "\\vspace{0.5em}",
   panel_a,
   "\\vspace{1em}",
   panel_b,
   "\\end{document}"
 )
 
-writeLines(tex_out, "IV_ControlFunction_Results.tex")
+writeLines(tex_out, here("IV_ControlFunction_Results.tex"))

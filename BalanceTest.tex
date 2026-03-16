@@ -1,0 +1,51 @@
+\begin{table}[htbp]
+\centering
+\caption{Balance Test: Pre-War Characteristics (1937--1942) by Future Drafting Status (1944)}
+\label{tab:balance}
+\small
+\begin{threeparttable}
+
+\textbf{Panel A: Unconditional Comparison}
+\medskip
+
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{Drafted in 1944} & \multicolumn{2}{c}{Not Drafted} & & \\
+ & Mean & SD & Mean & SD & Diff & $p$-value \\
+\midrule
+Female Share & 0.027 & 0.106 & 0.172 & 0.305 & -0.145 & $<$0.001 \\
+New Hire Share & 0.335 & 0.366 & 0.152 & 0.258 & 0.183 & $<$0.001 \\
+Promoted Share & 0.021 & 0.105 & 0.017 & 0.093 & 0.004 & 0.754 \\
+Ext. Transfer Share & 0.217 & 0.308 & 0.228 & 0.343 & -0.011 & 0.744 \\
+N Workers & 38.682 & 120.591 & 27.200 & 72.530 & 11.482 & 0.163 \\
+Avg Rank & 2.154 & 0.833 & 2.052 & 0.577 & 0.102 & 0.099 \\
+\midrule
+Offices & \multicolumn{2}{c}{28} & \multicolumn{2}{c}{21} & & \\
+Obs (kakari $\times$ pos $\times$ year) & \multicolumn{2}{c}{512} & \multicolumn{2}{c}{135} & & \\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+\textbf{Panel B: Conditional Comparison (Ka + Occupation + Year FE)}
+\medskip
+
+\begin{tabular}{lccccc}
+\toprule
+ & Coef & SE & $t$-stat & $p$-value & $N$ \\
+\midrule
+Female Share & 0.0018 & 0.0166 & 0.11 & 0.916 & 626 \\
+New Hire Share & --- & --- & --- & --- & --- \\
+Promoted Share & -0.0251 & 0.0232 & -1.08 & 0.287 & 319 \\
+Ext. Transfer Share & -0.0843 & 0.2199 & -0.38 & 0.703 & 626 \\
+N Workers & 9.7028 & 16.7093 & 0.58 & 0.564 & 626 \\
+Avg Rank & -0.0837 & 0.0675 & -1.24 & 0.221 & 626 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Sample restricted to offices observable in both the pre-war period (1937--1942) and in 1944. Unit of observation: kakari $\times$ position $\times$ year, matching the regression panel. Panel~A reports unconditional means split by whether the office experienced any military drafting in 1944. Panel~B reports coefficients from OLS regressions of each characteristic on a drafted-in-1944 indicator, with ka, occupation, and year fixed effects. Standard errors clustered at the office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

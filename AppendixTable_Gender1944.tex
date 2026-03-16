@@ -1,0 +1,44 @@
+\begin{table}[htbp]
+\centering
+\caption{Gender Composition of Hiring and Workforce (1944 Only)}
+\label{tab:gender-1944}
+\small
+\begin{threeparttable}
+\begingroup
+\centering
+\begin{tabular}{lcccccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables: & n\_new\_female & n\_new\_male & n\_new\_female & n\_new\_male & \multicolumn{2}{c}{female\_share\_all} & \multicolumn{2}{c}{female\_share\_new}\\
+                               & \makecell{Female\\Hires}    & \makecell{Male\\Hires}    & \makecell{Female\\Hires}    & \makecell{Male\\Hires}    & \makecell{Fem. Share\\(All, R1)}    & \makecell{Fem. Share\\(All, R2)}    & \makecell{Fem. Share\\(New, R1)}    & \makecell{Fem. Share\\(New, R2)} \\      
+   Model:                      & (1)                         & (2)                       & (3)                         & (4)                       & (5)                                 & (6)                                 & (7)                                 & (8)\\  
+                               &  Poisson                    & Poisson                   & Poisson                     & Poisson                   & OLS                                 & OLS                                 & OLS                                 & OLS\\  
+   \midrule
+   \emph{Variables}\\
+   Own drafts (male)           & 0.0382$^{**}$               & 0.0353$^{***}$            & 0.0374$^{**}$               & 0.0338$^{***}$            &                                     &                                     &                                     &   \\   
+                               & (0.0179)                    & (0.0066)                  & (0.0187)                    & (0.0067)                  &                                     &                                     &                                     &   \\   
+   log(Male baseline + 1)      & -0.4911$^{***}$             & 0.2378$^{***}$            & -0.5366$^{***}$             & 0.2069$^{**}$             &                                     &                                     &                                     &   \\   
+                               & (0.1375)                    & (0.0731)                  & (0.1876)                    & (0.0836)                  &                                     &                                     &                                     &   \\   
+   Own drafts $\times$ Rank 1  &                             &                           & 0.0181                      & 0.0530$^{***}$            &                                     &                                     &                                     &   \\   
+                               &                             &                           & (0.0499)                    & (0.0198)                  &                                     &                                     &                                     &   \\   
+   Any drafted (=1)            &                             &                           &                             &                           & -0.3113                             & -0.0115                             &                                     & -0.0562\\   
+                               &                             &                           &                             &                           & (0.2051)                            & (0.0142)                            &                                     & (0.0386)\\   
+   Male baseline               &                             &                           &                             &                           & $-7.31\times 10^{-5}$               & -0.0009$^{*}$                       & $-1.16\times 10^{-5}$               & -0.0031$^{*}$\\   
+                               &                             &                           &                             &                           & ($7.13\times 10^{-5}$)              & (0.0005)                            & ($2.32\times 10^{-5}$)              & (0.0018)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   ka                          & Yes                         & Yes                       & Yes                         & Yes                       & Yes                                 & Yes                                 & Yes                                 & Yes\\  
+   pos\_norm                   & Yes                         & Yes                       & Yes                         & Yes                       & Yes                                 & Yes                                 & Yes                                 & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                & 232                         & 370                       & 232                         & 370                       & 45                                  & 1,246                               & 4                                   & 148\\  
+   \midrule \midrule
+   \multicolumn{9}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{9}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Restricted to 1944. Column specifications mirror Table~\ref{tab:gender}. Poisson regressions for hire counts; OLS for female shares. All specifications include ka and position fixed effects. Standard errors clustered at the office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

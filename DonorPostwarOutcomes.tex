@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+\centering
+\caption{Postwar Outcomes of Remaining Workers in Donor vs.\ Non-Donor Offices}
+\label{tab:donor_postwar}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+    & \multicolumn{2}{c}{Tenure} & \multicolumn{2}{c}{Promotion} \\ 
+   Model:                 & (1)      & (2)             & (3)             & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Donor office (=1)      & -0.2545  & -0.2152         & -0.3553$^{***}$ & -0.3612$^{***}$\\   
+                          & (0.2147) & (0.2243)        & (0.0860)        & (0.0856)\\   
+   Female (=1)            &          & -0.5768$^{***}$ &                 & -0.2237$^{*}$\\   
+                          &          & (0.0932)        &                 & (0.1216)\\   
+   Donor $\times$ Female  &          & -0.3234$^{*}$   &                 &   \\   
+                          &          & (0.1887)        &                 &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   ka\_id                 & Yes      & Yes             & Yes             & Yes\\  
+   pos\_norm              & Yes      & Yes             & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations           & 3,385    & 3,385           & 1,276           & 1,276\\  
+   R$^2$                  & 0.09040  & 0.09689         & 0.42694         & 0.42793\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Sample: non-drafted workers observed in 1944. Columns (1)--(2): dependent variable is postwar tenure (count of years appearing 1946--1955). Columns (3)--(4): dependent variable is z-scored rank change (postwar avg.\ minus 1944 rank). A \emph{donor} office had at least one worker transfer out during 1938--1945. The comparison group is same-ka offices (kakari $\times$ position) that did not have transfers out. All specifications include ka and position fixed effects from 1944 and control for log cumulative male stock (not shown). Standard errors clustered at the office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

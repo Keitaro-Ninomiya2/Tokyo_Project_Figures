@@ -1,0 +1,37 @@
+\begin{table}[htbp]
+\centering
+\caption{Worker Reallocation: Transfers In}
+\label{tab:reallocation}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+                                  & Baseline      & $\times$ Rank  & $\times$ Eng.  & $\times$ Gender \\    
+   Model:                         & (1)           & (2)            & (3)            & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   No. drafted workers            & 0.1466$^{**}$ & 0.1341$^{***}$ & 0.2079         & 0.1741$^{***}$\\   
+                                  & (0.0599)      & (0.0359)       & (0.1440)       & (0.0619)\\   
+   No. drafted $\times$ Rank 1    &               & 0.1538         &                &   \\   
+                                  &               & (0.2452)       &                &   \\   
+   No. drafted $\times$ Rank 3    &               & 0.8616$^{**}$  &                &   \\   
+                                  &               & (0.4210)       &                &   \\   
+   No. drafted $\times$ Engineer  &               &                & -0.0865        &   \\   
+                                  &               &                & (0.1356)       &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                      & Yes           & Yes            & Yes            & Yes\\  
+   ka\_id                         & Yes           & Yes            & Yes            & Yes\\  
+   pos\_norm                      & Yes           & Yes            & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 7,409         & 7,409          & 7,409          & 7,409\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Unit of observation: position $\times$ kakari $\times$ year (1938--1945). Dependent variable: number of workers who transferred in from a different bureau group. Transfers are defined as workers whose normalized bureau (kyoku) group changed from the prior year, using a crosswalk that accounts for the 1943 Tokyo-Fu/Shi to Tokyo-To merger. Column~(2) interacts the treatment with rank indicators (rank~1 = \emph{yatoi}/\emph{shokutaku}; rank~3 = \emph{shuji}/\emph{gishi}; rank~2 is the omitted category). Column~(3) interacts with an engineer indicator. Column~(4) interacts with the position's female employment share. Rank and engineer main effects are absorbed by position fixed effects. All specifications include year, ka, and position fixed effects, and control for log cumulative male baseline (not shown). Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -11,6 +11,7 @@ library(ggplot2)
 # 1. Define the User Path dynamically
 user_path <- Sys.getenv("USERPROFILE") # Gets "C:/Users/Keitaro Ninomiya"
 
+
 # 2. Build the path to the Box data
 DATA_ROOT <- file.path(user_path, "Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data")
 FILE_PATH <- file.path(DATA_ROOT, "Tokyo_Personnel_Master_All_Years_v2.csv")
@@ -24,6 +25,7 @@ colnames(df)
 # 2. Classification Logic
 # ==============================================================================
 prewar_elite_pat  <- "^\u4e3b\u4e8b$|^\u6280\u5e2b$|^\u8996\u5b66$|^\u7406\u4e8b$"
+cutoff_year <- 1947
 
 df_clean <- df %>%
   filter(!is.na(year)) %>%
@@ -36,12 +38,15 @@ df_clean <- df %>%
     
     # --- Dynamic Rank Logic ---
     is_elite_title = case_when(
-      year_num <= 1945 ~ str_detect(pos_norm, prewar_elite_pat),
-      year_num > 1945  ~ str_detect(pos_norm, "\u9577"),
+      year_num <= cutoff_year ~ str_detect(pos_norm, prewar_elite_pat),
+      year_num > cutoff_year  ~ str_detect(pos_norm, "\u9577"),
       TRUE ~ FALSE
     ),
     
-    rank_category = if_else(is_elite_title, "官吏 (Elite)", "公吏 (Clerk/Local)")
+    rank_category = factor(
+      if_else(is_elite_title, "elite", "non_elite"),
+      levels = c("elite", "non_elite")
+    )
   )
 
 
@@ -58,34 +63,63 @@ ts_combined <- df_clean %>%
 
 # Replace zero with 0.5 so points are visible at the bottom of the log scale
 ts_plot <- ts_combined %>%
-  mutate(n_plot = if_else(n == 0L, 0.5, as.double(n)))
+  mutate(
+    n_plot = if_else(n == 0L, 0.5, as.double(n)),
+    category_label = case_when(
+      year_num <= cutoff_year & rank_category == "elite" ~ "Kanri",
+      year_num <= cutoff_year & rank_category == "non_elite" ~ "Kouri",
+      year_num > cutoff_year & rank_category == "elite" ~ "Manager",
+      year_num > cutoff_year & rank_category == "non_elite" ~ "Non-manager",
+      TRUE ~ NA_character_
+    ),
+    category_label = factor(category_label, levels = c("Kanri", "Kouri", "Manager", "Non-manager"))
+  )
+
+# --- Okuyama-san comment: drop 1954 (data-cleaning issue), connect 1953–1955 with dashed line ---
+ts_plot_solid <- ts_plot %>%
+  mutate(n_plot = if_else(year_num == 1954, NA_real_, n_plot))  # NA creates gap in line
+ts_plot_dashed <- ts_plot %>% filter(year_num %in% c(1953, 1955))  # for dashed 1953–1955 connection
+ts_plot_points <- ts_plot %>% filter(year_num != 1954)  # exclude 1954 from points
 
 
 # ==============================================================================
 # 4. Generate Plot (Corrected Label Position)
 # ==============================================================================
-cols <- c("官吏 (Elite)" = "#d73027", "公吏 (Clerk/Local)" = "#1a9850")
+cols <- c(
+  "Kanri" = "#b2182b",
+  "Kouri" = "#1a9850",
+  "Manager" = "#2166ac",
+  "Non-manager" = "#f4a582"
+)
 
 p_log_strong <- ggplot() +
   
   # --- 1. Background Rectangles ---
   geom_rect(aes(xmin = -Inf, xmax = 1945.5, ymin = 0.5, ymax = Inf),
-            fill = "#ffcccc", alpha = 0.6) + 
+            fill = "#ffe0e0", alpha = 0.6) + 
   
-  geom_rect(aes(xmin = 1949.5, xmax = Inf, ymin = 0.5, ymax = Inf),
-            fill = "#cceeff", alpha = 0.6) + 
+  geom_rect(aes(xmin = 1945.5, xmax = 1946.5, ymin = 0.5, ymax = Inf),
+            fill = "#f5f5f5", alpha = 0.8) + 
+  
+  geom_rect(aes(xmin = 1946.5, xmax = Inf, ymin = 0.5, ymax = Inf),
+            fill = "#e0f0ff", alpha = 0.6) + 
   
   # --- 2. Era Text Labels (MOVED LEFT) ---
   annotate("text", x = 1941, y = 3, 
-           label = "War Era\n(Pre-1945)", size = 4.5, fontface = "bold", color = "#8b0000") +
+           label = "War Era\n(through 1945)", size = 4.5, fontface = "bold", color = "#8b0000") +
+  
+  annotate("text", x = 1946, y = 3, 
+           label = "Transition\n(1945–46)", size = 4.5, fontface = "bold", color = "#444444") +
   
   # CHANGED X FROM 1955 -> 1953 to prevent hiding
   annotate("text", x = 1953, y = 3, 
-           label = "Post-Reform\n(1950+)", size = 4.5, fontface = "bold", color = "#00008b") +
+           label = "Post-Reform\n(1947+)", size = 4.5, fontface = "bold", color = "#00008b") +
   
-  # --- 3. Data Lines ---
-  geom_line(data = ts_plot, aes(x = year_num, y = n_plot, color = rank_category), size = 1.2) + 
-  geom_point(data = ts_plot, aes(x = year_num, y = n_plot, color = rank_category), size = 3) +
+  # --- 3. Data Lines (1954 dropped; dashed line connects 1953–1955) ---
+  geom_line(data = ts_plot_solid, aes(x = year_num, y = n_plot, color = category_label), size = 1.2) +
+  geom_line(data = ts_plot_dashed, aes(x = year_num, y = n_plot, color = category_label),
+            size = 1.2, linetype = "dashed") +
+  geom_point(data = ts_plot_points, aes(x = year_num, y = n_plot, color = category_label), size = 3) +
   
   # --- 4. Scales & Theme ---
   scale_color_manual(values = cols) +
@@ -106,10 +140,10 @@ p_log_strong <- ggplot() +
   
   labs(
     title = "Female Employment in Tokyo (Log Scale)",
-    subtitle = "Gap represents the occupation/transition period (1946-1949)",
+    subtitle = "Breaks at 1945 and 1947 (1945–46 transition)",
     x = "Year",
     y = "Total Headcount (Log Scale)",
-    color = "Rank Category"
+    color = "Category"
   )
 
 print(p_log_strong)

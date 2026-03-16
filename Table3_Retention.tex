@@ -1,0 +1,66 @@
+% Table 3: Retention of 1944 Colleagues in Postwar (LPM)
+% Dep. var.: Retained (=1 if appears in 1947-1951 data).
+% Sample: Non-drafted workers observed in 1944.
+% Panel A: Ka (Office) Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{5}{c}{retained}\\
+    & \multicolumn{3}{c}{All} & Female & Male \\ 
+   Model:                       & (1)      & (2)      & (3)             & (4)      & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   Any drafted (=1)             & 0.0188   &          &                 &          &   \\   
+                                & (0.0222) &          &                 &          &   \\   
+   Draft share                  &          & 0.0107   & 0.0110          & -0.0065  & 0.0136\\   
+                                &          & (0.0402) & (0.0393)        & (0.0177) & (0.0398)\\   
+   Female (=1)                  &          &          & -0.1788$^{***}$ &          &   \\   
+                                &          &          & (0.0285)        &          &   \\   
+   Draft share $\times$ Female  &          &          & 0.0798          &          &   \\   
+                                &          &          & (0.0750)        &          &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   ka\_id                       & Yes      & Yes      & Yes             & Yes      & Yes\\  
+   pos\_norm                    & Yes      & Yes      & Yes             & Yes      & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                 & 2,648    & 2,648    & 2,648           & 143      & 2,486\\  
+   R$^2$                        & 0.08814  & 0.08787  & 0.09599         & 0.12989  & 0.08909\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+% Panel B: Kyoku (Department) Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{5}{c}{retained}\\
+    & \multicolumn{3}{c}{All} & Female & Male \\ 
+   Model:                       & (1)      & (2)      & (3)             & (4)      & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   Any drafted (=1)             & 0.0160   &          &                 &          &   \\   
+                                & (0.0188) &          &                 &          &   \\   
+   Draft share                  &          & 0.0098   & 0.0093          & 0.0487   & 0.0101\\   
+                                &          & (0.0329) & (0.0330)        & (0.0314) & (0.0330)\\   
+   Female (=1)                  &          &          & -0.1716$^{***}$ &          &   \\   
+                                &          &          & (0.0179)        &          &   \\   
+   Draft share $\times$ Female  &          &          & 0.0616          &          &   \\   
+                                &          &          & (0.0566)        &          &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   kyoku                        & Yes      & Yes      & Yes             & Yes      & Yes\\  
+   pos\_norm                    & Yes      & Yes      & Yes             & Yes      & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                 & 2,731    & 2,731    & 2,731           & 164      & 2,565\\  
+   R$^2$                        & 0.03088  & 0.03056  & 0.03976         & 0.09963  & 0.03048\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup

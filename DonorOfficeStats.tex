@@ -1,0 +1,44 @@
+\begin{table}[htbp]
+\centering
+\caption{Characteristics of Donor Offices (Offices with Transfers Out)}
+\label{tab:donor}
+\small
+\begin{threeparttable}
+
+\textbf{Panel A: Unconditional Comparison}
+\medskip
+
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{Donor} & \multicolumn{2}{c}{Non-Donor} & & \\
+ & Mean & SD & Mean & SD & Diff & $p$-value \\
+\midrule
+Has New Hire (=1) & 0.769 & 0.427 & 0.613 & 0.487 & 0.156 & 0.028 \\
+No. New Hires & 15.949 & 22.369 & 5.262 & 14.413 & 10.687 & 0.005 \\
+Avg Tenure (years) & 2.452 & 0.901 & 2.559 & 1.559 & -0.106 & 0.469 \\
+Female Share & 0.037 & 0.095 & 0.044 & 0.142 & -0.007 & 0.654 \\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+\textbf{Panel B: Conditional Comparison (Ka + Position + Year FE)}
+\medskip
+
+\begin{tabular}{lccccc}
+\toprule
+ & Coef & SE & $t$-stat & $p$-value & $N$ \\
+\midrule
+Has New Hire (=1) & 0.1197$^{*}$ & 0.0695 & 1.72 & 0.085 & 7,409 \\
+No. New Hires & 8.1539$^{*}$ & 4.8527 & 1.68 & 0.093 & 7,409 \\
+Avg Tenure (years) & -0.0715 & 0.1131 & -0.63 & 0.527 & 7,409 \\
+Female Share & 0.0037 & 0.0212 & 0.17 & 0.862 & 7,409 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Sample: kakari $\times$ position $\times$ year (1938--1945). A \emph{donor} office is one that had at least one worker transfer out in that year. Panel~A reports unconditional means. Panel~B reports coefficients from OLS regressions of each characteristic on a donor indicator, with ka, position, and year fixed effects. Standard errors clustered at the office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

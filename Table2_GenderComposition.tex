@@ -1,0 +1,63 @@
+% Table 2: Drafting -> Gender Composition (OLS)
+% Dep. var.: Female share. Sample excludes kanri (官吏) positions.
+% Panel A: Ka (Office) Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables:  & female\_share\_new      & female\_share\_all      & female\_share\_new      & female\_share\_all\\    
+                         & New Hires               & All Workers             & New Hires               & All Workers \\   
+   Model:                & (1)                     & (2)                     & (3)                     & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Any drafted (=1)      & 0.0135                  & -0.0111                 &                         &   \\   
+                         & (0.0160)                & (0.0094)                &                         &   \\   
+   Male baseline (count) & $-7.72\times 10^{-5}$   & $-7.12\times 10^{-5}$   & $-7.32\times 10^{-5}$   & $-7.4\times 10^{-5}$\\    
+                         & ($6.44\times 10^{-5}$)  & ($4.87\times 10^{-5}$)  & ($6.35\times 10^{-5}$)  & ($4.88\times 10^{-5}$)\\    
+   Draft share           &                         &                         & 0.0257                  & -0.0216\\   
+                         &                         &                         & (0.0316)                & (0.0166)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num             & Yes                     & Yes                     & Yes                     & Yes\\  
+   ka\_id                & Yes                     & Yes                     & Yes                     & Yes\\  
+   pos\_norm             & Yes                     & Yes                     & Yes                     & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations          & 2,454                   & 8,229                   & 2,454                   & 8,229\\  
+   R$^2$                 & 0.28714                 & 0.43831                 & 0.28700                 & 0.43831\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+% Panel B: Kyoku (Department) Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables:  & female\_share\_new      & female\_share\_all           & female\_share\_new      & female\_share\_all\\    
+                         & New Hires               & All Workers                  & New Hires               & All Workers \\   
+   Model:                & (1)                     & (2)                          & (3)                     & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Any drafted (=1)      & 0.0107                  & -0.0141$^{*}$                &                         &   \\   
+                         & (0.0133)                & (0.0077)                     &                         &   \\   
+   Male baseline (count) & $-1.87\times 10^{-5}$   & $-6.43\times 10^{-5}$$^{*}$  & $-1.62\times 10^{-5}$   & $-6.88\times 10^{-5}$$^{*}$\\    
+                         & ($4.58\times 10^{-5}$)  & ($3.59\times 10^{-5}$)       & ($4.59\times 10^{-5}$)  & ($3.63\times 10^{-5}$)\\    
+   Draft share           &                         &                              & -0.0007                 & -0.0205\\   
+                         &                         &                              & (0.0432)                & (0.0132)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num             & Yes                     & Yes                          & Yes                     & Yes\\  
+   kyoku                 & Yes                     & Yes                          & Yes                     & Yes\\  
+   pos\_norm             & Yes                     & Yes                          & Yes                     & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations          & 2,575                   & 8,421                        & 2,575                   & 8,421\\  
+   R$^2$                 & 0.12829                 & 0.26098                      & 0.12803                 & 0.26078\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup

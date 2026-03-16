@@ -1,0 +1,29 @@
+% Table 1: Drafting -> New Hiring (Poisson)
+% Ka Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lcccccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables:   & All            & Female         & Male           & Transfers      & All            & Female         & Male           & Transfers\\  
+   Model:                 & (1)            & (2)            & (3)            & (4)            & (5)            & (6)            & (7)            & (8)\\  
+   \midrule
+   \emph{Variables}\\
+   Own drafts             & 0.0352$^{***}$ & 0.0324         & 0.0359$^{***}$ & 0.0501$^{***}$ & 0.0425$^{***}$ & 0.0322         & 0.0438$^{***}$ & 0.0492$^{***}$\\   
+                          & (0.0069)       & (0.0211)       & (0.0067)       & (0.0099)       & (0.0106)       & (0.0200)       & (0.0099)       & (0.0113)\\   
+   log(Male baseline + 1) & 0.4508$^{***}$ & 0.3742$^{***}$ & 0.4551$^{***}$ & 0.1941$^{***}$ & 0.4475$^{***}$ & 0.3748$^{***}$ & 0.4517$^{***}$ & 0.1834$^{***}$\\   
+                          & (0.0317)       & (0.0827)       & (0.0305)       & (0.0467)       & (0.0315)       & (0.0832)       & (0.0303)       & (0.0383)\\   
+   Adjacent drafts        &                &                &                &                & 0.0153$^{**}$  & -0.0025        & 0.0163$^{**}$  & 0.0269\\   
+                          &                &                &                &                & (0.0078)       & (0.0112)       & (0.0075)       & (0.0246)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num              & Yes            & Yes            & Yes            & Yes            & Yes            & Yes            & Yes            & Yes\\  
+   ka\_id                 & Yes            & Yes            & Yes            & Yes            & Yes            & Yes            & Yes            & Yes\\  
+   pos\_norm              & Yes            & Yes            & Yes            & Yes            & Yes            & Yes            & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations           & 6,497          & 3,556          & 6,482          & 8,818          & 6,497          & 3,556          & 6,482          & 8,818\\  
+   \midrule \midrule
+   \multicolumn{9}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{9}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup

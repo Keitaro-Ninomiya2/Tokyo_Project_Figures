@@ -1,0 +1,29 @@
+% Table 1b: Second-order — Hiring at offices that lost workers to poaching
+% Sample: positions with NO own drafting. Treatment: workers transferred out.
+% Ka Fixed Effects
+\begingroup
+\centering
+\begin{tabular}{lccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables:   & All                    & Female         & Male\\  
+                          & All                    & Female         & Male \\   
+   Model:                 & (1)                    & (2)            & (3)\\  
+   \midrule
+   \emph{Variables}\\
+   Workers poached away   & $-8.16\times 10^{-6}$  & 0.0001         & $-1.46\times 10^{-6}$\\    
+                          & (0.0001)               & (0.0005)       & (0.0001)\\   
+   log(Male baseline + 1) & 0.4596$^{***}$         & 0.3767$^{***}$ & 0.4634$^{***}$\\   
+                          & (0.0342)               & (0.0916)       & (0.0328)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num              & Yes                    & Yes            & Yes\\  
+   ka\_id                 & Yes                    & Yes            & Yes\\  
+   pos\_norm              & Yes                    & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations           & 6,035                  & 3,248          & 6,023\\  
+   \midrule \midrule
+   \multicolumn{4}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup

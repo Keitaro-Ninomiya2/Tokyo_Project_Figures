@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+\centering
+\caption{New Hiring in Response to Adjacent Military Drafting}
+\label{tab:reallocation-adjacent}
+\begin{threeparttable}
+\begin{tabular}{lccc}
+   \tabularnewline \midrule \midrule
+                                       & Own Drafts     & Adj: Diff Kakari & Adj: Diff Occ \\   
+   Model:                              & (1)            & (2)              & (3)\\  
+   \midrule
+   \emph{Variables}\\
+   No. drafted workers                 & 0.6736$^{***}$ &                  &   \\   
+                                       & (0.1172)       &                  &   \\   
+   Adj. drafts (diff kakari, same occ) &                & 0.0746           &   \\   
+                                       &                & (0.0718)         &   \\   
+   Adj. drafts (diff occ, same kakari) &                &                  & 0.0062\\   
+                                       &                &                  & (0.0942)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                           & Yes            & Yes              & Yes\\  
+   Ka                                  & Yes            & Yes              & Yes\\  
+   pos\_norm                           & Yes            & Yes              & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                        & 7,409          & 7,409            & 7,409\\  
+   \midrule \midrule
+   \multicolumn{4}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Unit of observation: position $\times$ kakari $\times$ year (1938--1945). OLS regressions. Dependent variable: number of new hires. Column (1) uses own-position drafts as treatment. Column (2) uses drafts at different kakari within the same occupation. Column (3) uses drafts at different occupation within the same kakari. All specifications include year, ka, and position fixed effects, and control for log cumulative male baseline. Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

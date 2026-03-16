@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\caption{Transfer Decomposition by Organizational Distance}
+\label{tab:transfer-decomposition}
+\scriptsize
+\begin{threeparttable}
+\begin{tabular}{lccccccccc}
+   \tabularnewline \midrule \midrule
+ & \multicolumn{3}{c}{Same ka \& kyoku} & \multicolumn{3}{c}{Same kyoku, diff.\ ka} & \multicolumn{3}{c}{Different kyoku} \\
+\midrule
+                                  & Base     & $\times$ Rank  & $\times$ Eng.  & Base           & $\times$ Rank   & $\times$ Eng.  & Base          & $\times$ Rank  & $\times$ Eng. \\    
+   Model:                         & (1)      & (2)            & (3)            & (4)            & (5)             & (6)            & (7)           & (8)            & (9)\\  
+   \midrule
+   \emph{Variables}\\
+   No. drafted workers            & -0.0205  & -0.0134        & -0.0419        & 0.2910$^{***}$ & 0.3462$^{***}$  & 0.1492         & 0.1466$^{**}$ & 0.1341$^{***}$ & 0.2079\\   
+                                  & (0.0148) & (0.0156)       & (0.0281)       & (0.0838)       & (0.0722)        & (0.1336)       & (0.0599)      & (0.0359)       & (0.1440)\\   
+   No. drafted $\times$ Rank 1    &          & -0.0722        &                &                & -0.6017$^{***}$ &                &               & 0.1538         &   \\   
+                                  &          & (0.0497)       &                &                & (0.1517)        &                &               & (0.2452)       &   \\   
+   No. drafted $\times$ Rank 3    &          & 0.4560$^{*}$   &                &                & 1.047$^{**}$    &                &               & 0.8616$^{**}$  &   \\   
+                                  &          & (0.2421)       &                &                & (0.5159)        &                &               & (0.4210)       &   \\   
+   No. drafted $\times$ Engineer  &          &                & 0.0302         &                &                 & 0.1998         &               &                & -0.0865\\   
+                                  &          &                & (0.0345)       &                &                 & (0.1372)       &               &                & (0.1356)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                      & Yes      & Yes            & Yes            & Yes            & Yes             & Yes            & Yes           & Yes            & Yes\\  
+   ka\_id                         & Yes      & Yes            & Yes            & Yes            & Yes             & Yes            & Yes           & Yes            & Yes\\  
+   pos\_norm                      & Yes      & Yes            & Yes            & Yes            & Yes             & Yes            & Yes           & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 7,409    & 7,409          & 7,409          & 7,409          & 7,409           & 7,409          & 7,409         & 7,409          & 7,409\\  
+   \midrule \midrule
+   \multicolumn{10}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{10}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Unit of observation: position $\times$ kakari $\times$ year (1938--1945). Dependent variable: number of workers arriving from each organizational distance. Columns~(1)--(3): workers who transferred from a different kakari within the same ka and kyoku (bureau) group. Columns~(4)--(6): workers from the same kyoku group but a different ka (section). Columns~(7)--(9): workers from a different kyoku group entirely. Kyoku groups use a crosswalk that accounts for the 1943 Tokyo-Fu/Shi to Tokyo-To merger. Rank and engineer main effects are absorbed by position fixed effects. All specifications include year, ka, and position fixed effects, and control for log cumulative male baseline (not shown). Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

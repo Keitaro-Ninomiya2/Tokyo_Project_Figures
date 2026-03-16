@@ -197,6 +197,8 @@ m7 <- fepois(
 # ============================================================
 
 dict <- c(
+  n_new_hires            = "New hires (count)",
+  n_new_hires_female     = "New female hires (count)",
   n_drafted_male         = "Own drafts",
   adj_kakari_across_occ  = "Adj. (係, across occ)",
   adj_ka_within_occ      = "Adj. (課, within occ)",
@@ -212,13 +214,13 @@ etable(
   m1, m2, m2_5, m3, m4, m5, m7,
   dict = dict,
   headers = c(
-    "(1)\nNew hires",
-    "(2)\nFemale",
-    "(2.5)\nFemale OLS",
-    "(3)\nNew hires\n係 across",
-    "(4)\nFemale\n係 across",
-    "(5)\nNew hires\n課 within",
-    "(6)\nNew x Eng."
+    "(1)\nTotal new hires",
+    "(2)\nNew female hires",
+    "(2.5)\nNew female hires (OLS)",
+    "(3)\nTotal new hires\n(係 across)",
+    "(4)\nNew female hires\n(係 across)",
+    "(5)\nTotal new hires\n(課 within)",
+    "(6)\nTotal new hires\n× Engineer"
   ),
   se.below = TRUE,
   fitstat = "n"

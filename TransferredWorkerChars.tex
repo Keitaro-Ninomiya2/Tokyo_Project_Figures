@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+\centering
+\caption{Characteristics of Transferred Workers}
+\label{tab:transferred_chars}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+                   & Female   & Tenure   & Rank     & All \\   
+   Model:          & (1)      & (2)      & (3)      & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Female (=1)     & 0.0196   &          &          & 0.0200\\   
+                   & (0.0142) &          &          & (0.0136)\\   
+   Tenure (years)  &          & 0.0008   &          & 0.0012\\   
+                   &          & (0.0011) &          & (0.0011)\\   
+   Rank (enriched) &          &          & -0.0104  & -0.0112\\   
+                   &          &          & (0.0114) & (0.0114)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num       & Yes      & Yes      & Yes      & Yes\\  
+   lag\_ka\_id     & Yes      & Yes      & Yes      & Yes\\  
+   lag\_pos        & Yes      & Yes      & Yes      & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations    & 49,036   & 49,036   & 49,036   & 49,036\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (lag\_office) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions (linear probability model). Dependent variable: transferred (=1 if worker moved to a different unit from prior year). Unit of observation: individual worker $\times$ year (1938--1945), restricted to workers with prior-year records. Rank is an enriched 1--5 scale serving as a productivity proxy. All specifications include year, ka (prior-year), and position (prior-year) fixed effects. Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

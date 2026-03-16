@@ -1,0 +1,42 @@
+\begin{table}[htbp]
+\centering
+\caption{Short-Run Promotion in Response to Drafting}
+\label{tab:promotion}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+\multicolumn{5}{l}{\textit{Dep.\ var: Promoted (=1 if rank increased from $t{-}1$ to $t$)}} \\
+                                  & Baseline      & $\times$ Gender  & $\times$ Rank  & $\times$ Engineer \\    
+   Model:                         & (1)           & (2)              & (3)            & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   No. drafted workers (office)   & 0.0881$^{**}$ & 0.0891$^{**}$    & 0.0820$^{**}$  & 0.0923$^{**}$\\   
+                                  & (0.0400)      & (0.0399)         & (0.0356)       & (0.0381)\\   
+   No. drafted $\times$ Female    &               & 0.0279$^{***}$   &                &   \\   
+                                  &               & (0.0079)         &                &   \\   
+   Female                         &               & -0.0220          &                &   \\   
+                                  &               & (0.0183)         &                &   \\   
+   No. drafted $\times$ Rank 1    &               &                  & 0.0353         &   \\   
+                                  &               &                  & (0.0516)       &   \\   
+   No. drafted $\times$ Rank 3    &               &                  & -0.0240        &   \\   
+                                  &               &                  & (0.0268)       &   \\   
+   No. drafted $\times$ Engineer  &               &                  &                & -0.0425$^{***}$\\   
+                                  &               &                  &                & (0.0111)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                      & Yes           & Yes              & Yes            & Yes\\  
+   Ka                             & Yes           & Yes              & Yes            & Yes\\  
+   pos\_norm                      & Yes           & Yes              & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 8,754         & 8,754            & 8,754          & 8,754\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions (linear probability model). Dependent variable: promoted (=1 if worker's position rank increased from year $t{-}1$ to $t$). Sample: non-drafted workers present in the same office in consecutive years. Treatment: total number of male workers drafted from the same office in year $t$ (office-level variation). Column~2 interacts treatment with a female indicator; Column~3 interacts with rank indicators (rank~2 is the omitted category; rank~1 = temporary \emph{yatoi/shokutaku}, rank~3 = supervisory \emph{shiji/gishi}); Column~4 interacts with an engineer indicator (positions containing \begin{CJK}{UTF8}{min}技\end{CJK}). Rank and engineer main effects are absorbed by position fixed effects. All specifications include year, ka, and position fixed effects, and control for log cumulative male baseline (not shown). Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -74,9 +74,9 @@ kakari_outcome <- df %>%
   filter(year_num >= postwar_start) %>%
   group_by(office_id, ka, kakari, year_num) %>%
   summarise(
-    has_female  = as.integer(any(is_female, na.rm = TRUE)),
-    n_female    = sum(is_female, na.rm = TRUE),
-    kakari_size = n(),
+    n_female     = sum(is_female, na.rm = TRUE),
+    kakari_size  = n(),
+    female_share = n_female / n(),  # share of females in kakari
     .groups = "drop"
   )
 
@@ -146,64 +146,45 @@ est_kacho   <- kakari_panel %>% filter(!is.na(kacho_exp_max))
 cat("Kakaricho est. sample:", nrow(est_kakacho), "\n")
 cat("Kacho est. sample:",     nrow(est_kacho), "\n")
 
+# Share-to-share: female_share (postwar) ~ manager wartime exposure
+
 # Col 1: kakaricho max exposure
-lpm1 <- feols(
-  has_female ~ kakacho_exp_max + engineer_share +
+share1 <- feols(
+  female_share ~ kakacho_exp_max + engineer_share +
     n_kakacho_ka + kakari_size |
     kyoku_modal,
   data = est_kakacho, cluster = ~office_id
 )
 
 # Col 2: kakaricho mean exposure
-lpm2 <- feols(
-  has_female ~ kakacho_exp_mean + engineer_share +
+share2 <- feols(
+  female_share ~ kakacho_exp_mean + engineer_share +
     n_kakacho_ka + kakari_size |
     kyoku_modal,
   data = est_kakacho, cluster = ~office_id
 )
 
 # Col 3: kacho max exposure
-lpm3 <- feols(
-  has_female ~ kacho_exp_max + engineer_share +
+share3 <- feols(
+  female_share ~ kacho_exp_max + engineer_share +
     n_kakacho_ka + kakari_size |
     kyoku_modal,
   data = est_kacho, cluster = ~office_id
 )
 
-# Col 4-6: number of females as dependent variable
-lpm4 <- feols(
-  n_female ~ kakacho_exp_max + engineer_share +
-    n_kakacho_ka + kakari_size |
-    kyoku_modal,
-  data = est_kakacho, cluster = ~office_id
-)
-
-lpm5 <- feols(
-  n_female ~ kakacho_exp_mean + engineer_share +
-    n_kakacho_ka + kakari_size |
-    kyoku_modal,
-  data = est_kakacho, cluster = ~office_id
-)
-
-lpm6 <- feols(
-  n_female ~ kacho_exp_max + engineer_share +
-    n_kakacho_ka + kakari_size |
-    kyoku_modal,
-  data = est_kacho, cluster = ~office_id
-)
-
-cat("\n========== PANEL A: HAS FEMALE (BINARY) ==========\n")
+cat("\n========== SHARE-TO-SHARE: FEMALE SHARE ~ MANAGER WARTIME EXPOSURE ==========\n")
 etable(
-  lpm1, lpm2, lpm3,
+  share1, share2, share3,
   headers  = c("Kakaricho (Max)", "Kakaricho (Mean)", "Kacho (Max)"),
   order    = c("kakacho_exp_max", "kakacho_exp_mean", "kacho_exp_max"),
   se.below = TRUE
 )
 
-cat("\n========== PANEL B: NUMBER OF FEMALES ==========\n")
-etable(
-  lpm4, lpm5, lpm6,
-  headers  = c("Kakaricho (Max)", "Kakaricho (Mean)", "Kacho (Max)"),
-  order    = c("kakacho_exp_max", "kakacho_exp_mean", "kacho_exp_max"),
-  se.below = TRUE
-)
+# Elasticity: beta * (X_mean / Y_mean) = (dY/dX) * (X/Y)
+cat("\n--- Elasticity at sample means ---\n")
+with(est_kakacho, cat("Kakaricho: X_mean =", round(mean(kakacho_exp_max, na.rm = TRUE), 4),
+    "  Y_mean =", round(mean(female_share, na.rm = TRUE), 4),
+    "  elasticity = beta * (X/Y) =", round(coef(share1)["kakacho_exp_max"] * mean(kakacho_exp_max, na.rm = TRUE) / mean(female_share, na.rm = TRUE), 4), "\n"))
+with(est_kacho, cat("Kacho:     X_mean =", round(mean(kacho_exp_max, na.rm = TRUE), 4),
+    "  Y_mean =", round(mean(female_share, na.rm = TRUE), 4),
+    "  elasticity = beta * (X/Y) =", round(coef(share3)["kacho_exp_max"] * mean(kacho_exp_max, na.rm = TRUE) / mean(female_share, na.rm = TRUE), 4), "\n"))

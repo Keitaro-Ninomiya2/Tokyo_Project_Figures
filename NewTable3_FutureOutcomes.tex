@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\caption{Postwar Outcomes of 1944 Colleagues (1946--1955)}
+\label{tab:future}
+\small
+\begin{threeparttable}
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables: & \multicolumn{2}{c}{rank\_z\_change} & \multicolumn{2}{c}{avg\_female\_share\_dest}\\
+    & \multicolumn{2}{c}{Promotion} & \multicolumn{2}{c}{Dest. F.Share} \\ 
+   Model:                       & (1)      & (2)      & (3)      & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Draft share                  & -0.0919  & -0.0929  & -0.0018  & -0.0018\\   
+                                & (0.1438) & (0.1457) & (0.0070) & (0.0059)\\   
+   Female (=1)                  &          & -0.2087  &          & 0.1283$^{***}$\\   
+                                &          & (0.1482) &          & (0.0477)\\   
+   Draft share $\times$ Female  &          & 0.0047   &          & 0.0310\\   
+                                &          & (0.7866) &          & (0.1611)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   ka\_id\_1944                 & Yes      & Yes      & Yes      & Yes\\  
+   pos\_norm\_1944              & Yes      & Yes      & Yes      & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                 & 1,281    & 1,281    & 1,281    & 1,281\\  
+   R$^2$                        & 0.46085  & 0.46163  & 0.09966  & 0.24099\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (office\_id\_1944) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Sample: non-drafted workers observed in 1944. Columns (1)--(2): dependent variable is z-scored rank change (postwar avg.\ minus 1944 rank, standardized within era). Column (2) includes gender interaction. Columns (3)--(4): dependent variable is average female share of the worker's office-position across postwar years. Column (4) includes gender interaction. All specifications include ka and position fixed effects from 1944 and control for log cumulative male stock. Standard errors clustered at the office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

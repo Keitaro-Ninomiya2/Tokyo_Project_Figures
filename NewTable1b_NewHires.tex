@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\caption{New Hiring in Response to Military Drafting}
+\label{tab:reallocation-newhires}
+\scriptsize
+\begin{threeparttable}
+\begin{tabular}{lccccccccc}
+   \tabularnewline \midrule \midrule
+ & \multicolumn{3}{c}{No.\ new hires} & \multicolumn{3}{c}{No.\ new female} & \multicolumn{3}{c}{No.\ new male} \\
+\midrule
+                                  & Baseline      & $\times$ Rank  & $\times$ Eng.  & All      & Rank 1   & Rank 2+       & All      & Rank 1   & Rank 2+ \\   
+   Model:                         & (1)           & (2)            & (3)            & (4)      & (5)      & (6)           & (7)      & (8)      & (9)\\  
+   \midrule
+   \emph{Variables}\\
+   No. drafted workers            & 0.2171$^{**}$ & 0.2513$^{**}$  & 0.0959         & 0.0073   & -0.0047  & 0.0120$^{**}$ & 0.2126   & -0.0680  & 0.2806$^{**}$\\   
+                                  & (0.1091)      & (0.1042)       & (0.0869)       & (0.0061) & (0.0042) & (0.0055)      & (0.1372) & (0.0420) & (0.1104)\\   
+   No. drafted $\times$ Rank 1    &               & -0.3642$^{**}$ &                &          &          &               &          &          &   \\   
+                                  &               & (0.1444)       &                &          &          &               &          &          &   \\   
+   No. drafted $\times$ Rank 3    &               & 1.129$^{**}$   &                &          &          &               &          &          &   \\   
+                                  &               & (0.5364)       &                &          &          &               &          &          &   \\   
+   No. drafted $\times$ Engineer  &               &                & 0.1709         &          &          &               &          &          &   \\   
+                                  &               &                & (0.1486)       &          &          &               &          &          &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                      & Yes           & Yes            & Yes            & Yes      & Yes      & Yes           & Yes      & Yes      & Yes\\  
+   ka\_id                         & Yes           & Yes            & Yes            & Yes      & Yes      & Yes           & Yes      & Yes      & Yes\\  
+   pos\_norm                      & Yes           & Yes            & Yes            & Yes      & Yes      & Yes           & Yes      & Yes      & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 7,409         & 7,409          & 7,409          & 7,409    & 7,409    & 7,409         & 7,409    & 7,409    & 7,409\\  
+   \midrule \midrule
+   \multicolumn{10}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{10}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Unit of observation: position $\times$ kakari $\times$ year (1938--1945). Columns~(1)--(3): dependent variable is total new hires. Columns~(4)--(6): new female hires (all, rank~1, rank~2+). Columns~(7)--(9): new male hires (all, rank~1, rank~2+). Column~(2) interacts the treatment with rank indicators (rank~1 = \emph{yatoi}/\emph{shokutaku}; rank~3 = \emph{shuji}/\emph{gishi}; rank~2 is the omitted category). Column~(3) interacts with an engineer indicator. Rank and engineer main effects are absorbed by position fixed effects. All specifications include year, ka, and position fixed effects, and control for log cumulative male baseline (not shown). Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
