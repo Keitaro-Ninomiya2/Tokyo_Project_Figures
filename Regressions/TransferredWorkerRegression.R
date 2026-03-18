@@ -222,6 +222,16 @@ indiv_b <- workers_1944 %>%
     promoted = as.integer(!is.na(max_rank_e) & max_rank_e > rank_e_1944)
   )
 
+# Count workers per kakari x position in 1944 (size control)
+kakari_pos_size <- df %>%
+  filter(year_num == 1944) %>%
+  group_by(office_id, kakari, pos_norm) %>%
+  summarise(n_kakari_pos = n(), .groups = "drop")
+
+indiv_b <- indiv_b %>%
+  left_join(kakari_pos_size, by = c("office_id", "kakari", "pos_norm")) %>%
+  mutate(n_kakari_pos = replace_na(n_kakari_pos, 1))
+
 indiv_b_ka <- indiv_b %>% filter(!is.na(ka_id))
 indiv_b_pw <- indiv_b_ka %>% filter(!is.na(avg_rank_e))  # appeared postwar
 
@@ -233,22 +243,22 @@ cat("  In donor offices:", sum(indiv_b_ka$ever_donor), "\n\n")
 # --- Regressions ---
 
 # B1: Postwar tenure ~ donor office
-b1 <- feols(tenure_postwar ~ ever_donor + log(cumul_n_male + 1) |
+b1 <- feols(tenure_postwar ~ ever_donor + log(cumul_n_male + 1) + n_kakari_pos |
               ka_id + pos_norm,
             data = indiv_b_ka, cluster = ~office_id)
 
 # B2: Postwar tenure by gender
-b2 <- feols(tenure_postwar ~ ever_donor * is_female + log(cumul_n_male + 1) |
+b2 <- feols(tenure_postwar ~ ever_donor * is_female + log(cumul_n_male + 1) + n_kakari_pos |
               ka_id + pos_norm,
             data = indiv_b_ka, cluster = ~office_id)
 
 # B3: Promotion (rank change) ~ donor office
-b3 <- feols(rank_z_change ~ ever_donor + log(cumul_n_male + 1) |
+b3 <- feols(rank_z_change ~ ever_donor + log(cumul_n_male + 1) + n_kakari_pos |
               ka_id + pos_norm,
             data = indiv_b_pw, cluster = ~office_id)
 
 # B4: Promotion by gender
-b4 <- feols(rank_z_change ~ ever_donor * is_female + log(cumul_n_male + 1) |
+b4 <- feols(rank_z_change ~ ever_donor * is_female + log(cumul_n_male + 1) + n_kakari_pos |
               ka_id + pos_norm,
             data = indiv_b_pw, cluster = ~office_id)
 
@@ -331,7 +341,7 @@ dict_b <- c(
 
 tex_b <- etable(b1, b2, b3, b4,
                 dict = dict_b,
-                drop = "log",
+                drop = "log|n_kakari",
                 headers = c("Tenure", "Tenure", "Promotion", "Promotion"),
                 se.below = TRUE, fitstat = ~n + r2, tex = TRUE)
 
@@ -351,7 +361,7 @@ tex_out_b <- c(
          "Columns (3)--(4): dependent variable is z-scored rank change (postwar avg.\\ minus 1944 rank). ",
          "A \\emph{donor} office had at least one worker transfer out during 1938--1945. ",
          "The comparison group is same-ka offices (kakari $\\times$ position) that did not have transfers out. ",
-         "All specifications include ka and position fixed effects from 1944 and control for log cumulative male stock (not shown). ",
+         "All specifications include ka and position fixed effects from 1944 and control for log cumulative male stock and kakari $\\times$ position headcount (not shown). ",
          "Standard errors clustered at the office level. ",
          "$^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$."),
   "\\end{tablenotes}",
