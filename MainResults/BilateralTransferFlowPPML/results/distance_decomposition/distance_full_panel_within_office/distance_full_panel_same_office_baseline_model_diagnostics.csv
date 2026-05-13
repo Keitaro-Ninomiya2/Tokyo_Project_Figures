@@ -1,0 +1,7 @@
+model,status,nobs,pseudo_r2,dispersion,warnings,errors
+col1_dist_full_year_fe,estimated,4445908,0.33326301136991443,2.612385223306213,,
+col2_dist_full_year_occ_fe,estimated,2684319,0.4155909572115801,2.8505221447118294,,
+col3_dist_full_origin_kyoku_fe,estimated,4406699,0.35177772795696827,2.8672650755938007,,
+col4_dist_full_destination_kyoku_fe,estimated,3590943,0.3571090758179969,2.026435058539356,,
+col5_dist_full_origin_ka_fe,estimated,2778413,0.38949615288453665,3.7390824525944315,,
+col6_dist_full_destination_ka_fe,estimated,1420716,0.41041401386039755,2.407338189189712,,

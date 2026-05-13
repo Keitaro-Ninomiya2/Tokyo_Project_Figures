@@ -1,0 +1,6 @@
+gov_transition,n_transfers,share
+TokyoFu -> TokyoFu,1197,0.4381405563689605
+TokyoShi -> TokyoTo,940,0.3440702781844802
+TokyoShi -> TokyoFu,560,0.20497803806734993
+TokyoShi -> TokyoShi,33,0.012079062957540264
+TokyoFu -> TokyoShi,2,7.320644216691069e-4

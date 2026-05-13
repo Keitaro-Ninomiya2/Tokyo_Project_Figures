@@ -1,0 +1,14 @@
+Within-department hierarchical FE PPML with office x occupation sizes
+
+Sample: same-department non-draft pair-year-position tuples.
+Occupation is pos_norm. Same-occupation transfers require lag and current pos_norm equality.
+Office is cleaned kyoku x ka. Kakari is not used.
+Size variables are non-drafted lagged office x pos_norm counts.
+occ_similarity remains the office-level cosine similarity from the earlier pair panel.
+
+Tuple-year observations: 78484
+Same-occupation transfers: 1150
+Positive tuple-years: 300
+
+No model warnings captured.
+No model errors captured.

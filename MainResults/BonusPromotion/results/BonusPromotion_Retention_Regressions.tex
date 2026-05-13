@@ -1,0 +1,40 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables:                      & promoted        & salary\_raise\\   
+                                             & Promotion       & Salary raise \\   
+   Model:                                    & (1)             & (2)\\  
+   \midrule
+   \emph{Variables}\\
+   Retained                                  & 0.0976$^{***}$  & 0.4915$^{***}$\\   
+                                             & (0.0048)        & (0.0235)\\   
+   Drafted peers in prior office             & 0.0366$^{**}$   & -0.0135\\   
+                                             & (0.0151)        & (0.0160)\\   
+   High productivity                         & 0.0069$^{***}$  & -0.0377$^{***}$\\   
+                                             & (0.0020)        & (0.0036)\\   
+   Tenure                                    & 0.0010$^{***}$  & -0.0005$^{***}$\\   
+                                             & (0.0002)        & (0.0001)\\   
+   Drafted peers $\times$ High productivity  & -0.0314$^{***}$ & 0.0123\\   
+                                             & (0.0090)        & (0.0173)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                                 & Yes             & Yes\\  
+   lag\_assignment                           & Yes             & Yes\\  
+   lag\_pos\_norm                            & Yes             & Yes\\  
+   lag\_pos\_rank                            & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                              & 157,168         & 89,424\\  
+   R$^2$                                     & 0.25235         & 0.56793\\  
+   \midrule \midrule
+   \multicolumn{3}{l}{\emph{Clustered (lag\_office\_id) standard-errors in parentheses}}\\
+   \multicolumn{3}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+ 
+\par \raggedright 
+Linear probability models at the worker-year level. The sample is non-drafted workers observed in the prior year; outcomes equal one if the worker is retained and receives a rank promotion or salary raise in year t. Fixed effects: year, prior office-section assignment, prior position, and prior rank. Standard errors clustered by prior office.
+\par\endgroup
+
+

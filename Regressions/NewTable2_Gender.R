@@ -226,7 +226,7 @@ tex <- etable(c1, c2, c3, c4, c5, c6,
               order = c("No. drafted workers", "No. drafted .* Rank", "No. drafted .* Engineer"),
               headers = c("Baseline", "$\\times$ Rank", "$\\times$ Eng.",
                           "Baseline", "$\\times$ Rank", "$\\times$ Eng."),
-              se.below = TRUE, fitstat = ~n,
+              se.below = TRUE, fitstat = ~n + r2 + G,
               tex = TRUE)
 
 tc <- clean_depvar(extract_tabular(tex))
@@ -257,7 +257,7 @@ tex_out <- c(
          "Columns (2) and (5) interact draft exposure with rank indicators ",
          "(rank 1 = \\emph{yatoi}/temporary; rank 3+ = senior; rank 2 = base category, absorbed by position FE). ",
          "Columns (3) and (6) interact draft exposure with an engineer indicator ",
-         "(positions containing \\begin{CJK}{UTF8}{min}技\\end{CJK}). ",
+         "(positions with an engineering title). ",
          "All specifications include log(cumulative male baseline $+$ 1) as a control (not displayed), ",
          "as well as year, ka, and position fixed effects. ",
          "Standard errors clustered at the office level. ",

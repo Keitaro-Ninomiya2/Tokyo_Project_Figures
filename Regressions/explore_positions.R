@@ -2,7 +2,7 @@ library(tidyverse)
 DATA_PATH <- file.path(Sys.getenv("USERPROFILE"),
   "Box", "Research Notes (keitaro2@illinois.edu)",
   "Tokyo_Gender", "Processed_Data",
-  "Tokyo_Personnel_Master_All_Years_v2.csv")
+  "Tokyo_Personnel_Master_All_Years.csv")
 df <- read_csv(DATA_PATH, locale=locale(encoding="UTF-8"), show_col_types=FALSE) %>%
   filter(is_name==TRUE) %>%
   mutate(year_num=as.numeric(year), pos_norm=str_replace_all(position,"\\s+",""))

@@ -1,0 +1,38 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables:                          & promoted        & salary\_raise\\   
+                                                 & Promotion       & Salary raise \\   
+   Model:                                        & (1)             & (2)\\  
+   \midrule
+   \emph{Variables}\\
+   Destination draft office                      & -0.0443$^{***}$ & -0.0548\\   
+                                                 & (0.0110)        & (0.0447)\\   
+   High productivity                             & -0.0139$^{***}$ & -0.2459$^{***}$\\   
+                                                 & (0.0041)        & (0.0238)\\   
+   Tenure                                        & 0.0070$^{***}$  & -0.0127$^{***}$\\   
+                                                 & (0.0006)        & (0.0029)\\   
+   Destination draft $\times$ High productivity  & 0.0668$^{***}$  & 0.0984\\   
+                                                 & (0.0142)        & (0.0874)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                                     & Yes             & Yes\\  
+   donor\_assignment                             & Yes             & Yes\\  
+   lag\_pos\_norm                                & Yes             & Yes\\  
+   lag\_pos\_rank                                & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                                  & 51,760          & 3,665\\  
+   R$^2$                                         & 0.37710         & 0.54790\\  
+   \midrule \midrule
+   \multicolumn{3}{l}{\emph{Clustered (lag\_office\_id) standard-errors in parentheses}}\\
+   \multicolumn{3}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+ 
+\par \raggedright 
+Linear probability models at the internal-transfer level. Destination draft office equals one if the destination office-year had at least one male drafted worker. Fixed effects: year, donor office-section assignment, prior position, and prior rank. Standard errors clustered by donor office.
+\par\endgroup
+
+

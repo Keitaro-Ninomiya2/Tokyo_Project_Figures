@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Retention: Who Leaves to Fill a Draft-Induced Vacancy?}
+\label{tab:selection-retention}
+\footnotesize
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{(1) With salary} & \multicolumn{2}{c}{(2) With salary} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+ & Left: Draft Vac. & Left: Non-Draft & Left: Draft Vac. & Left: Non-Draft \\
+\midrule
+Decoration rank (0--8; high=better) & 0.4630$$ & 0.2125$$ & 0.4630$$ & 0.2125$$ \\
+                                    & (0.2988) & (0.1765) & (0.2988) & (0.1765) \\[3pt]
+Court rank (0--8; high=better) & 0.0309$$ & -0.0739$$ & 0.0309$$ & -0.0739$$ \\
+                               & (0.1042) & (0.0563) & (0.1042) & (0.0563) \\[3pt]
+Female & 0.5448$$ & 0.7153$^{***}$ & 0.5448$$ & 0.7153$^{***}$ \\
+       & (0.4927) & (0.2443) & (0.4927) & (0.2443) \\[3pt]
+Tenure (yrs) & -0.0107$$ & 0.0377$^{***}$ & -0.0107$$ & 0.0377$^{***}$ \\
+             & (0.0252) & (0.0118) & (0.0252) & (0.0118) \\[3pt]
+Log salary (current year) & -0.3109$^{**}$ & -0.2653$^{***}$ & -0.3109$^{**}$ & -0.2653$^{***}$ \\
+                          & (0.1473) & (0.0885) & (0.1473) & (0.0885) \\[3pt]
+\midrule
+Year FE & \multicolumn{2}{c}{Yes} & \multicolumn{2}{c}{Yes} \\
+Salary control & \multicolumn{2}{c}{Yes} & \multicolumn{2}{c}{Yes} \\
+Observations & \multicolumn{2}{c}{6,236} & \multicolumn{2}{c}{6,236} \\
+Log-likelihood & \multicolumn{2}{c}{-3349.8} & \multicolumn{2}{c}{-3349.8} \\
+AIC & \multicolumn{2}{c}{6747.7} & \multicolumn{2}{c}{6747.7} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Multinomial logit. Base category: stayed (same ka and kyoku as prior year). ``Left: Draft Vac.'' = worker moved to an office that had $\geq$1 drafted worker that year; ``Left: Non-Draft'' = moved to an office without a draft vacancy. Decoration and court rank coded 0 when unobserved. All specifications use the salary subsample and include year FE, tenure, and current-year log salary. Standard errors in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

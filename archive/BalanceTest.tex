@@ -1,0 +1,67 @@
+\begin{table}[htbp]
+\centering
+\caption{Balance Test: Pre-War Characteristics (1934--1937) by Future Drafting Status (1944)}
+\label{tab:balance}
+\small
+\begin{threeparttable}
+
+\textbf{Panel A: Unconditional Comparison}
+\medskip
+
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{Drafted in 1944} & \multicolumn{2}{c}{Not Drafted} & & \\
+ & Mean & SD & Mean & SD & Diff & $p$-value \\
+\midrule
+Female Share & 0.014 & 0.075 & 0.027 & 0.089 & -0.013 & 0.373 \\
+No. New Hires & 5.436 & 23.292 & 9.846 & 33.547 & -4.410 & 0.422 \\
+No. Promoted & 0.330 & 2.205 & 0.000 & 0.000 & 0.330 & $<$0.001 \\
+No. Internal Transfers & 91.293 & 233.354 & 110.872 & 203.717 & -19.579 & 0.565 \\
+N Workers & 104.704 & 249.954 & 127.795 & 228.190 & -23.091 & 0.543 \\
+Avg Rank & 2.146 & 0.795 & 2.103 & 0.680 & 0.043 & 0.704 \\
+\midrule
+Offices & \multicolumn{2}{c}{22} & \multicolumn{2}{c}{8} & & \\
+Obs (kakari $\times$ pos $\times$ year) & \multicolumn{2}{c}{734} & \multicolumn{2}{c}{39} & & \\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+\textbf{Panel B: Conditional Comparison (Ka + Position + Year FE)}
+\medskip
+
+\begin{tabular}{lccccc}
+\toprule
+ & Coef & SE & $t$-stat & $p$-value & $N$ \\
+\midrule
+Female Share & -0.0002 & 0.0001 & -1.50 & 0.152 & 571 \\
+No. New Hires & -0.0987 & 0.1263 & -0.78 & 0.446 & 571 \\
+No. Promoted & 0.0132 & 0.0087 & 1.53 & 0.146 & 571 \\
+No. Internal Transfers & 1.1205$^{**}$ & 0.4533 & 2.47 & 0.025 & 571 \\
+N Workers & 1.1397 & 0.8141 & 1.40 & 0.181 & 571 \\
+Avg Rank & 0.0000 & 0.0000 & 0.00 & 1.000 & 571 \\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+\textbf{Panel C: Pre-War Promotion by Future Donor Status (Ka + Occupation + Year FE)}
+\medskip
+
+\begin{tabular}{lccccc}
+\toprule
+ & Coef & SE & $t$-stat & $p$-value & $N$ \\
+\midrule
+No.\ promoted workers & 0.0042$^{***}$ & 0.0009 & 4.88 & $<$0.001 & 159 \\
+\midrule
+Future donor offices & \multicolumn{5}{l}{15 offices} \\
+Non-donor offices    & \multicolumn{5}{l}{1 offices} \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Sample restricted to offices observable in both the pre-war period (1934--1937, before any military drafting) and in 1944. Unit of observation: kakari $\times$ position $\times$ year, matching the regression panel. Panel~A reports unconditional means split by whether the office experienced any military drafting in 1944. Panel~B reports coefficients from OLS regressions of each pre-war characteristic on the 1944 male draft count (continuous, matching the treatment variable in the main regressions), with section, position, and year fixed effects, controlling for log office headcount (except when outcome is headcount). Transfer and hiring outcomes are entered in raw counts (internal transfers and new hires, not shares). Standard errors clustered at the office level (30 clusters). Panel~C reports the coefficient from an OLS regression of pre-war number of promoted workers (at the office $\times$ occupation $\times$ year level) on a future donor indicator (offices that sent at least one worker to a drafted office during 1938--1944), with section, occupation, and year fixed effects, clustered at the office level (16 clusters). $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

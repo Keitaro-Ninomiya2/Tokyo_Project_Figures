@@ -212,7 +212,7 @@ tex <- etable(c1, c2, c3, c4, c5, c6, c7, c8, c9,
               headers = c("Baseline", "$\\times$ Rank", "$\\times$ Eng.",
                           "All", "Rank 1", "Rank 2+",
                           "All", "Rank 1", "Rank 2+"),
-              se.below = TRUE, fitstat = ~n, tex = TRUE)
+              se.below = TRUE, fitstat = ~n + r2 + G, tex = TRUE)
 
 tc <- clean_depvar(extract_tabular(tex))
 

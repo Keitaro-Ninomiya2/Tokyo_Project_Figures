@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{Slack Distribution and Replacement Margins: Per-Draft Slack}
+\small
+\begin{threeparttable}
+\begin{tabular}{lccc}
+\toprule
+ & Transfers in & New hires & Transfer share \\
+\midrule
+Any slack: same section & -2.6362 & -7.5158$^{***}$ & 0.0908 \\
+  & (2.9172) & (2.7744) & (0.0713) \\[3pt]
+log(slack/draft same section + 1) & 4.5252$^{**}$ & 1.7656$^{*}$ & 0.0398 \\
+  & (2.1587) & (0.9628) & (0.0398) \\[3pt]
+log(slack/draft same dept. + 1) & -0.5057 & -0.4244 & -0.0621$^{*}$ \\
+  & (1.1404) & (0.8916) & (0.0346) \\[3pt]
+log(slack/draft diff. dept. + 1) & 0.8262 & 0.1387 & 0.0322$^{**}$ \\
+  & (0.5136) & (0.3596) & (0.0147) \\[3pt]
+No. drafted workers & 0.3447$^{***}$ & 0.2006 & -0.0012 \\
+  & (0.0803) & (0.1396) & (0.0016) \\[3pt]
+log(section size + 1) & 11.1812$^{***}$ & 6.2510$^{**}$ & -0.0356 \\
+  & (1.9322) & (2.7082) & (0.0282) \\[3pt]
+\midrule
+Observations & 257 & 257 & 238 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Unit of observation: draft-impacted destination office $\times$ section $\times$ year, 1938--1945. Slack pools are measured from the prior year and count non-drafted, non-engineer workers in origin sections with positive prior hiring activity whose exact position title matches the drafted destination seat and whose position rank is at most one step from that seat. Same-section slack uses the same section group in a different office; same-department slack uses the same department group but a different section group; different-department slack uses different department groups. The same-section margin enters both as an indicator for any nearby slack and as a logged count. All regressions include year and normalized department fixed effects and cluster standard errors by destination office.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\caption{Low-Wage Draftee Destinations and Position-Rank Boosts}
+\label{tab:rank-boost-regression-destination-wage}
+\footnotesize
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Position-rank boost} & \multicolumn{2}{c}{Position-rank change} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Low-wage draftee destination & 0.1892$^{***}$ & 0.1045$^{***}$ & 0.0846$$ & 0.0008$$ \\
+                             & (0.0697) & (0.0380) & (0.0919) & (0.0627) \\[3pt]
+Female &  & 0.0268$$ &  & -0.0360$$ \\
+       &  & (0.1226) &  & (0.1683) \\[3pt]
+Tenure (yrs) &  & -0.0055$$ &  & 0.0001$$ \\
+             &  & (0.0034) &  & (0.0047) \\[3pt]
+Baseline position rank &  & -0.5916$^{***}$ &  & -0.6746$^{***}$ \\
+                       &  & (0.0821) &  & (0.0945) \\[3pt]
+Different kyoku transfer &  & -0.0251$$ &  & -0.0029$$ \\
+                         &  & (0.0361) &  & (0.0610) \\[3pt]
+\midrule
+Controls & No & Yes & No & Yes \\
+Observations & 200 & 200 & 200 & 200 \\
+$R^2$ & 0.059 & 0.607 & 0.009 & 0.485 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Sample consists of non-drafted workers who transferred to a draft-vacancy destination office-year with observed drafted-worker salary, using the same destination wage split as Model G. Columns 1--2 estimate linear probability models for whether the transferee's position rank increased relative to baseline. Columns 3--4 estimate the level change in position rank. The omitted category is high-wage draftee destination. Controls include gender, tenure, baseline position rank, and an indicator for cross-kyoku transfer. Heteroskedasticity-robust standard errors are in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

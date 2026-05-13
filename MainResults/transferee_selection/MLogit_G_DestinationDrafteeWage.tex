@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Selection into Draft-Induced Vacancies by Destination Draftee Salary}
+\label{tab:selection-destination-draftee-wage}
+\scriptsize
+\begin{threeparttable}
+\resizebox{0.96\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{All destinations} & \multicolumn{2}{c}{High-wage draftee destination} & \multicolumn{2}{c}{Low-wage draftee destination} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+ & Draft & Non-Draft & Draft & Non-Draft & Draft & Non-Draft \\
+\midrule
+Decoration rank (0--8; high=better) & 2.6231$$ & 0.2662$$ & 9.5178$^{***}$ & 0.2666$$ & -0.4570$^{***}$ & 0.2668$$ \\
+                                    & (4.4666) & (0.1986) & (0.0000) & (0.1986) & (0.0000) & (0.1986) \\[3pt]
+Court rank (0--8; high=better) & 0.3328$$ & -0.0665$$ & 0.3011$$ & -0.0664$$ & 0.3736$$ & -0.0664$$ \\
+                               & (0.5124) & (0.0580) & (0.5242) & (0.0580) & (0.4527) & (0.0579) \\[3pt]
+Female & -0.0024$$ & 0.5876$^{**}$ & -0.3896$$ & 0.5917$^{**}$ & 0.8835$$ & 0.5912$^{**}$ \\
+       & (0.8369) & (0.2474) & (0.8970) & (0.2475) & (0.9412) & (0.2475) \\[3pt]
+Tenure (yrs) & -0.0996$^{***}$ & 0.0426$^{***}$ & -0.0958$^{**}$ & 0.0426$^{***}$ & -0.1420$^{***}$ & 0.0424$^{***}$ \\
+             & (0.0375) & (0.0124) & (0.0401) & (0.0124) & (0.0484) & (0.0123) \\[3pt]
+Log salary (current year) & -0.4397$^{**}$ & -0.2577$^{***}$ & -0.2436$$ & -0.2570$^{***}$ & -0.8526$^{***}$ & -0.2586$^{***}$ \\
+                          & (0.1947) & (0.0920) & (0.1957) & (0.0918) & (0.2335) & (0.0921) \\[3pt]
+\midrule
+Year FE & \multicolumn{6}{c}{Yes} \\
+Observations & \multicolumn{2}{c}{5,767} & \multicolumn{2}{c}{5,692} & \multicolumn{2}{c}{5,555} \\
+Log-likelihood & \multicolumn{2}{c}{-2489.4} & \multicolumn{2}{c}{-2478.5} & \multicolumn{2}{c}{-2428.2} \\
+AIC & \multicolumn{2}{c}{5026.7} & \multicolumn{2}{c}{5005.1} & \multicolumn{2}{c}{4904.4} \\
+\bottomrule
+\end{tabular}}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Multinomial logit. Sample uses the broad restricted transfer-out office-unit $\times$ year risk set and workers with observed current-year salary. Columns 1--2 split transfers into drafted and non-drafted destination office-years. Columns 3--4 keep drafted destinations whose drafted workers have at-or-above-median mean salary, plus non-drafted destinations. Columns 5--6 analogously use below-median drafted-worker salary destinations plus non-drafted destinations. Transfers to draft-vacancy office-years with missing drafted-worker salary are excluded. Base category: not selected/stayed in the same ka and kyoku. Decoration and court rank are coded 0--8, where 0 is unobserved/no rank and higher values indicate higher status. All specifications include year FE, tenure, and log current-year salary. Standard errors in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

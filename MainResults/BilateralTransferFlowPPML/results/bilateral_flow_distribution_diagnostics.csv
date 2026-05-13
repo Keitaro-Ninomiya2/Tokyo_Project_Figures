@@ -1,0 +1,2 @@
+n_pair_years,min_flow,p50_flow,p90_flow,p99_flow,max_flow,zero_flow_share,negative_flow_count,n_nonmissing_origin,n_nonmissing_destination
+326650,0,0,0,0,1007,0.9962161334761978,0,326650,326650

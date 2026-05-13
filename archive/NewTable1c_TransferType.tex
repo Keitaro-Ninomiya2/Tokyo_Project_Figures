@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\caption{Transfer Decomposition by Organizational Distance}
+\label{tab:transfer-decomposition}
+\scriptsize
+\begin{threeparttable}
+\begin{tabular}{lcccccc}
+   \tabularnewline \midrule \midrule
+ & \multicolumn{2}{c}{Retention (same section)} & \multicolumn{2}{c}{Close transfer (same bureau)} & \multicolumn{2}{c}{Distant transfer (diff.\ bureau)} \\
+\midrule
+                                  & Base           & $\times$ Eng.  & Base          & $\times$ Eng.  & Base           & $\times$ Eng. \\    
+   Model:                         & (1)            & (2)            & (3)           & (4)            & (5)            & (6)\\  
+   \midrule
+   \emph{Variables}\\
+   No. drafted workers            & 0.2269$^{***}$ & 0.1408         & 0.1001$^{**}$ & 0.0869         & 0.0809$^{***}$ & 0.0575\\   
+                                  & (0.0730)       & (0.1157)       & (0.0403)      & (0.0919)       & (0.0154)       & (0.0362)\\   
+   No. drafted $\times$ Engineer  &                & 0.1213         &               & 0.0186         &                & 0.0331\\   
+                                  &                & (0.1236)       &               & (0.0957)       &                & (0.0381)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                      & Yes            & Yes            & Yes           & Yes            & Yes            & Yes\\  
+   ka\_id                         & Yes            & Yes            & Yes           & Yes            & Yes            & Yes\\  
+   pos\_norm                      & Yes            & Yes            & Yes           & Yes            & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 7,409          & 7,409          & 7,409         & 7,409          & 7,409          & 7,409\\  
+   R$^2$                          & 0.28608        & 0.28611        & 0.28497       & 0.28497        & 0.30613        & 0.30615\\  
+   Size of the 'effective' sample & 1,192          & 1,192          & 1,192         & 1,192          & 1,192          & 1,192\\  
+   \midrule \midrule
+   \multicolumn{7}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Unit of observation: position $\times$ kakari $\times$ year (1938--1945). ``Retention'' (columns~1--2): workers remaining in the same ka group (same bureau and section). ``Close transfer'' (columns~3--4): workers from the same kyoku group but a different ka group. ``Distant transfer'' (columns~5--6): workers from a different kyoku group. Ka groups are constructed from worker flows across consecutive years: two (kyoku, ka) cells in adjacent years are linked if $\geq$40\% of workers in the source cell appear in the destination cell. Kyoku groups use a crosswalk that accounts for the 1943 Tokyo-Fu/Shi to Tokyo-To merger. Engineer main effects are absorbed by position fixed effects. All specifications include year, ka, and position fixed effects, and control for log cumulative male baseline (not shown). Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

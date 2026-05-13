@@ -1,0 +1,53 @@
+\begin{table}[htbp]
+\centering
+\caption{Characteristics of Donor Offices (Offices with Transfers Out)}
+\label{tab:donor}
+\small
+\begin{threeparttable}
+
+\textbf{Panel A: Unconditional Comparison}
+\medskip
+
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{Donor} & \multicolumn{2}{c}{Non-Donor} & & \\
+ & Mean & SD & Mean & SD & Diff & $p$-value \\
+\midrule
+No. New Hires & 9.251 & 18.899 & 3.317 & 9.719 & 5.934 & $<$0.001 \\
+Avg Tenure (years) & 2.880 & 1.301 & 2.636 & 1.516 & 0.245 & $<$0.001 \\
+Female Share & 0.026 & 0.079 & 0.044 & 0.142 & -0.019 & $<$0.001 \\
+No. Promoted & 2.131 & 5.492 & 0.799 & 4.102 & 1.332 & $<$0.001 \\
+No. Workers & 18.825 & 30.647 & 12.144 & 27.226 & 6.682 & $<$0.001 \\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+\textbf{Panel B: Conditional Comparison (Position $\times$ Year FE)}
+\medskip
+
+\begin{tabular}{lcc}
+\toprule
+ & Office FE & Dept.\ FE \\
+\midrule
+No. New Hires & 2.6272$^{***}$ & 3.9355$^{**}$ \\
+ & (0.8860) & (1.7100) \\
+Avg Tenure (years) & 0.0723$^{**}$ & 0.1218$^{***}$ \\
+ & (0.0359) & (0.0364) \\
+Female Share & -0.0090$^{**}$ & -0.0079$^{**}$ \\
+ & (0.0043) & (0.0035) \\
+No. Promoted & 0.3633 & 0.7532$^{**}$ \\
+ & (0.2532) & (0.3523) \\
+No. Workers & 4.0211$^{**}$ & 3.7014$^{*}$ \\
+ & (1.6078) & (2.0093) \\
+\midrule
+Observations & 6,507 & 6,603 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Sample: ka $\times$ position $\times$ year (1938--1945). A \emph{donor} office is one that had at least one worker transfer out in that year. Panel~A reports unconditional means. Panel~B reports coefficients from OLS regressions on a donor indicator, with position and year fixed effects plus either office (ka) or department (kyoku) fixed effects, controlling for log office headcount. Standard errors clustered at the office level (1197 clusters). $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,5 @@
+dist_type,coef,se
+n_drafted_male:dist_type::Same department,0.23602540627259322,0.09496741506619615
+n_drafted_male:dist_type::Diff. department,0.1718286114109755,0.05976459253035408
+SUM (= implied total),0.4078540176835687,0.07360859495218902
+Univariate n_transfers_in,0.4078540176821253,0.07610621969652005

@@ -1,0 +1,9 @@
+.claude/
+.cursor/
+time_series/scripts/nul
+
+# Panel .rds files exceed GitHub 100MB limit; keep on Box/cluster and regenerate from code.
+MainResults/**/*.rds
+
+# Windows / editor artifacts accidentally created under repo root
+Microsoft/

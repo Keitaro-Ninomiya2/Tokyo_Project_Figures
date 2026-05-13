@@ -1,0 +1,3 @@
+distance_category,n_cells,n_origin_destination_unit_cells,n_positive_cells,total_transfers,transfer_share,mean_flow_if_positive,median_flow_if_positive,max_flow
+diff_kyoku,32875,1828,58,468,0.7560581583198708,8.068965517241379,2,43
+same_kyoku_diff_ka,11190,507,46,151,0.24394184168012925,3.282608695652174,1,15

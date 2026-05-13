@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{Voluntary Male Exits and Female Worker Volume}
+\label{tab:voluntary-exits}
+\small
+\begin{threeparttable}
+\begin{tabular}{lccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{3}{c}{n\_female\_t}\\
+                       & Full         & Tokyo-Fu      & Tokyo-Shi \\   
+   Model:              & (1)          & (2)           & (3)\\  
+   \midrule
+   \emph{Variables}\\
+   Voluntary exit rate & 2.910$^{**}$ & 5.334$^{***}$ & 1.664\\   
+                       & (1.088)      & (1.690)       & (1.362)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num           & Yes          & Yes           & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations        & 3,031        & 1,205         & 1,641\\  
+   R$^2$               & 0.01751      & 0.02974       & 0.00743\\  
+   \midrule \midrule
+   \multicolumn{4}{l}{\emph{Clustered (kyoku\_norm) standard-errors in parentheses}}\\
+   \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Unit of observation: office $\times$ year (1937--1944). Dependent variable is the total number of female workers in the office. Treatment is the voluntary male exit rate: the share of male workers present in the office at $t-1$ who do not appear anywhere in the directory at $t$ and were not drafted. Offices with no $t-1$ presence receive an exit rate of zero. All specifications include year fixed effects. Column~(1) uses the full sample; columns~(2) and~(3) restrict to Tokyo-Fu (prefectural government) and Tokyo-Shi (city government) offices respectively. Standard errors clustered at the bureau (kyoku) level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

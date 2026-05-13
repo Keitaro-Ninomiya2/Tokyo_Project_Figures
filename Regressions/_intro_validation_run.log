@@ -1,0 +1,870 @@
+﻿=== Intro validation run 2026-03-23T14:24:55.8836097+09:00 ===
+
+
+
+########## IntroResults_Master.R ##########
+
+ΓöÇΓöÇ Attaching core tidyverse packages ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse 2.0.0 ΓöÇΓöÇ
+Γ£ö dplyr     1.1.4     Γ£ö readr     2.1.5
+Γ£ö forcats   1.0.0     Γ£ö stringr   1.5.1
+Γ£ö ggplot2   3.5.2     Γ£ö tibble    3.2.1
+Γ£ö lubridate 1.9.4     Γ£ö tidyr     1.3.1
+Γ£ö purrr     1.1.0     
+ΓöÇΓöÇ Conflicts ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse_conflicts() ΓöÇΓöÇ
+Γ£û dplyr::filter() masks stats::filter()
+Γ£û dplyr::lag()    masks stats::lag()
+Γä╣ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package 'tidyverse' was built under R version 4.5.1 
+2: package 'tidyr' was built under R version 4.5.1 
+3: package 'purrr' was built under R version 4.5.1 
+4: package 'forcats' was built under R version 4.5.1 
+5: package 'lubridate' was built under R version 4.5.1 
+Warning message:
+package 'fixest' was built under R version 4.5.2 
+Loading data from: C:\Users\Keitaro Ninomiya/Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data/Tokyo_Personnel_Master_All_Years.csv 
+Data loaded. df: 469735 rows. df_all: 723493 rows.
+
+Warning message:
+In left_join(., staff_lag, by = c("staff_id", "year_num")) :
+  Detected an unexpected many-to-many relationship between `x` and `y`.
+Γä╣ Row 12 of `x` matches multiple rows in `y`.
+Γä╣ Row 212633 of `y` matches multiple rows in `x`.
+Γä╣ If a many-to-many relationship is expected, set `relationship =
+  "many-to-many"` to silence this warning.
+Panel constructed: 12502 obs
+  ka panel: 7972 
+  kyoku panel: 7972 
+
+================================================================
+RESULT SECTION 1: INTERNAL TRANSFERS AND HIRING
+================================================================
+
+--- LINE 22: Transfers In ~ Own Drafts (Poisson, Ka FE) ---
+NOTE: 0/299/3 fixed-effects (347 observations) removed because of only 0 outcomes or singletons.
+Coef (n_drafted_male): 0.0478   SE: 0.0171   pval: 0.0052 
+Interpretation: A one-unit increase in own drafts increases transfers in by 4.9 %
+N: 7625 
+
+  Descriptive: mean n_transfers_in = 155.436 
+  Descriptive: mean n_transfers_in (drafted positions) = 228.765 
+  Descriptive: mean n_transfers_in (non-drafted positions) = 150.108 
+
+NOTE: 0/299/3 fixed-effects (347 observations) removed because of only 0 outcomes or singletons.
+With adjacent drafts controlled:
+  Coef (n_drafted_male): 0.0542   SE: 0.0193 
+  Coef (adjacent_drafts): 0.0136   SE: 0.0162 
+
+--- LINE 23: Decomposition by rank ---
+NOTE: 0/305/3 fixed-effects (352 observations) removed because of only 0 outcomes or singletons.
+NOTE: 0/264/0 fixed-effects (276 observations) removed because of only 0 outcomes or singletons.
+Transfers in at LOW-rank positions (rank 1-2):
+  Coef: 0.0483   SE: 0.0173   N: 6905 
+Transfers in at HIGH-rank positions (rank 3):
+  Coef: -0.9572   SE: 0.0706   N: 439 
+
+--- LINE 24: Transfers by network distance ---
+Distance definition: 1=same ka, 2=same kyoku diff ka, 3=diff kyoku
+
+  Distance 1 (DV: n_transfers_dist1 ):
+NOTE: 0/1,223/40 fixed-effects (6,519 observations) removed because of only 0 outcomes or singletons.
+    Coef: 0.4124   SE: 0.2345   pval: 0.0787   N: 1453 
+  Distance 2 (DV: n_transfers_dist2 ):
+NOTE: 0/931/31 fixed-effects (4,103 observations) removed because of only 0 outcomes or singletons.
+    Coef: 0.0696   SE: 0.0337   pval: 0.039   N: 3869 
+  Distance 3 (DV: n_transfers_dist3 ):
+NOTE: 0/303/3 fixed-effects (357 observations) removed because of only 0 outcomes or singletons.
+    Coef: 0.0474   SE: 0.0172   pval: 0.0059   N: 7615 
+
+  Descriptive: transfer distance distribution
+    Total transfers: 1624637 
+    Distance 1 : 4775 ( 0.3 %)
+    Distance 2 : 144899 ( 8.9 %)
+    Distance 3 : 1474963 ( 90.8 %)
+
+--- LINE 25: Donor offices ΓÇö new hires ~ workers poached away ---
+NOTE: 0/768/11 fixed-effects (2,443 observations) removed because of only 0 outcomes or singletons.
+Coef (n_transfers_out): 1e-04   SE: 0   pval: 0.0017 
+N: 4989 (positions with 0 own drafts)
+  Obs with transfers out: 1780 
+
+--- LINE 27: Replacement via transfer ΓåÆ fewer new hires ---
+NOTE: 0/201/17 fixed-effects (328 observations) removed because of only 0 outcomes or singletons.
+Among positions with own drafts:
+  Coef (n_transfers_in): 0   SE: 1e-04   pval: 0.7808 
+  Coef (n_drafted_male): 0.0288   SE: 0.011 
+  N: 212 
+  Descriptive: Drafted positions WITH transfer: mean new hires = 5.368 (N= 506 )
+  Descriptive: Drafted positions WITHOUT transfer: mean new hires = 0.971 (N= 34 )
+  Difference: 4.397 
+
+================================================================
+RESULT SECTION 2: GENDER COMPOSITION
+================================================================
+
+--- LINE 30: New hires ~ own drafts (Poisson, Ka FE) ---
+NOTE: 0/768/10 fixed-effects (2,598 observations) removed because of only 0 outcomes or singletons.
+Coef: 0.0492   SE: 0.0174   pval: 0.0046 
+Percent change per draft: 5 %
+Baseline mean new hires: 2.41 
+Headcount change per draft: 0.122 
+N: 5374 
+
+--- LINES 29 & 31: Female vs Male new hires ~ drafts ---
+NOTE: 0/1,096/29 fixed-effects (4,927 observations) removed because of only 0 outcomes or singletons.
+NOTE: 0/769/10 fixed-effects (2,600 observations) removed because of only 0 outcomes or singletons.
+Female new hires:
+  Coef: 0.0487   SE: 0.0171   pval: 0.0044   N: 3045 
+Male new hires:
+  Coef: 0.0493   SE: 0.0181   pval: 0.0064   N: 5372 
+
+  Descriptive: Total new hires across all position-years:
+    Female: 1296 
+    Male: 17918 
+    Female share: 0.067 
+
+--- LINE 32: Female new hires by rank ---
+NOTE: 0/1,090/29 fixed-effects (4,563 observations) removed because of only 0 outcomes or singletons.
+NOTE: 6/405/1 fixed-effects (713 observations) removed because of only 0 outcomes or singletons.
+  High-rank Poisson failed, trying OLS
+NOTE: 0/253/0 fixed-effect singletons were removed (253 observations).
+Low-rank (rank 1-2): female new hires
+  Coef: 0.0487   SE: 0.0172   pval: 0.0048 
+  Percent change: 5 %
+  N: 2694 
+High-rank (rank 3): female new hires
+  Coef: -4e-04   SE: 0.0022   pval: 0.8591 
+  Percent change: 0 %
+  N: 462 
+
+  Descriptive: female new hires by rank
+# A tibble: 2 ├ù 5
+  rank_group total_female_hires total_male_hires mean_female_hires n_obs
+  <chr>                   <int>            <int>             <dbl> <int>
+1 High (3)                    3               94             0.004   715
+2 Low (1-2)                1293            17824             0.178  7257
+
+--- LINE 33: Female share among all workers ~ drafting ---
+NOTE: 0/278/3 fixed-effect singletons were removed (281 observations).
+Coef (any_drafted): -0.0075   SE: 0.0059   pval: 0.2071 
+NOTE: 0/278/3 fixed-effect singletons were removed (281 observations).
+Coef (draft_share): 0.0083   SE: 0.0164   pval: 0.6135 
+N: 6976 
+
+  Descriptive: mean female_share_all = 0.0323 
+  Mean female_share_all (drafted): 0.0279 
+  Mean female_share_all (non-drafted): 0.0327 
+
+================================================================
+RESULT SECTION 3: PROMOTION AND RETENTION
+================================================================
+
+--- LINES 35-36: Promotion / Rank outcome ---
+Sample: non-drafted 1944 workers appearing postwar: 2821 
+Mean rank_1944: 1.965 
+Mean avg_rank_postwar: 2.154 
+Mean rank_change: 0.189 
+
+NOTE: 11/2 fixed-effect singletons were removed (13 observations).
+NOTE: 11/2 fixed-effect singletons were removed (13 observations).
+NOTE: 11/2 fixed-effect singletons were removed (13 observations).
+Ka FE: rank_change ~ any_drafted
+  Coef: -0.039   SE: 0.028   pval: 0.1657   N: 1254 
+Ka FE: rank_change ~ draft_share
+  Coef: -0.061   SE: 0.0714   pval: 0.3948   N: 1254 
+Ka FE: avg_rank_postwar ~ draft_share (controlling for 1944 rank via pos FE)
+  Coef: -0.061   SE: 0.0714   pval: 0.3948   N: 1254 
+NOTE: 0/3 fixed-effect singletons were removed (3 observations).
+
+Kyoku FE: rank_change ~ draft_share
+  Coef: -0.0337   SE: 0.0463   pval: 0.4677   N: 1508 
+
+  Descriptive: rank change by draft exposure
+# A tibble: 2 ├ù 5
+  group                    n mean_rank_1944 mean_rank_postwar mean_rank_change
+  <chr>                <int>          <dbl>             <dbl>            <dbl>
+1 Drafted position      1843           1.95              2.16            0.206
+2 Non-drafted position   978           1.99              2.14            0.156
+
+  Descriptive: rank change by gender
+# A tibble: 2 ├ù 5
+  is_female     n mean_rank_1944 mean_rank_postwar mean_rank_change
+  <lgl>     <int>          <dbl>             <dbl>            <dbl>
+1 FALSE      2744           1.97              2.15            0.186
+2 TRUE         77           1.90              2.19            0.294
+
+NOTE: 11/2 fixed-effect singletons were removed (13 observations).
+Ka FE: rank_change ~ draft_share * is_female
+                                   L35e
+Dependent Var.:             rank_change
+                                       
+draft_share                    -0.0617 
+                               (0.0716)
+is_femaleTRUE                  -0.0447 
+                               (0.0718)
+draft_share x is_femaleTRUE     0.0449 
+                               (0.2452)
+Fixed-Effects:              -----------
+ka_id_1944                          Yes
+pos_norm_1944                       Yes
+___________________________ ___________
+S.E.: Clustered             by: offic..
+Observations                      1,254
+R2                              0.48297
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+--- LINE 37: Retention (postwar tenure) ---
+NOTE: 3/4 fixed-effect singletons were removed (7 observations).
+NOTE: 3/4 fixed-effect singletons were removed (7 observations).
+Ka FE: tenure_postwar ~ any_drafted
+  Coef: -0.0908   SE: 0.0996   pval: 0.3633   N: 3411 
+Ka FE: tenure_postwar ~ draft_share
+  Coef: -0.2264   SE: 0.2305   pval: 0.3274   N: 3411 
+
+  Descriptive: mean postwar tenure = 0.975 
+  Mean tenure (drafted pos): 0.932 
+  Mean tenure (non-drafted pos): 1.059 
+  Pct appearing postwar: 38 %
+
+--- LINE 38: Destination office gender composition ---
+NOTE: 11/2 fixed-effect singletons were removed (13 observations).
+NOTE: 11/2 fixed-effect singletons were removed (13 observations).
+Ka FE: avg_female_share_dest ~ any_drafted
+  Coef: 0.0034   SE: 0.0032   pval: 0.2958   N: 1254 
+Ka FE: avg_female_share_dest ~ draft_share
+  Coef: 0.0028   SE: 0.0076   pval: 0.7164   N: 1254 
+
+  Descriptive: mean avg_female_share_dest = 0.0298 
+
+================================================================
+DESCRIPTIVE STATISTICS
+================================================================
+
+--- Worker counts by year (wartime) ---
+# A tibble: 8 ├ù 5
+  year_num n_workers n_female n_male pct_female
+     <dbl>     <int>    <int>  <int>      <dbl>
+1     1937     17619      912  16707        5.2
+2     1938     25385     1478  23907        5.8
+3     1939     23674     1233  22441        5.2
+4     1940     24673     1281  23392        5.2
+5     1941     26944     1707  25237        6.3
+6     1942     18461     1248  17213        6.8
+7     1943     19339     1230  18109        6.4
+8     1944      9323      702   8621        7.5
+
+--- Draft counts by year ---
+# A tibble: 6 ├ù 2
+  year_num n_drafted
+     <dbl>     <int>
+1     1938       210
+2     1940       270
+3     1941       419
+4     1942         1
+5     1943         2
+6     1944      1970
+
+--- Position rank distribution (wartime, 1938-1945) ---
+# A tibble: 3 ├ù 3
+   rank n_person_years   pct
+  <int>          <int> <dbl>
+1     1          42952  17.4
+2     2         201840  81.7
+3     3           2308   0.9
+
+--- Position rank distribution by gender (wartime) ---
+# A tibble: 3 ├ù 3
+   rank female_FALSE female_TRUE
+  <int>        <int>       <int>
+1     1        38744        4208
+2     2       194006        7834
+3     3         2285          23
+
+--- New hires per position-year (wartime panel) ---
+Mean: 2.42 
+Median: 0 
+SD: 9.147 
+Mean (drafted positions): 5.212 
+Mean (non-drafted): 2.168 
+
+--- Transfers in per position-year ---
+Mean: 129.95 
+Pct with any transfer: 79.6 %
+
+--- Office structure ---
+Unique offices (office_id): 2070 
+Unique kyoku: 59 
+Unique ka: 1702 
+Unique positions: 73 
+
+
+===== SCRIPT COMPLETE =====
+
+
+########## NewTable1_Reallocation.R ##########
+
+ΓöÇΓöÇ Attaching core tidyverse packages ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse 2.0.0 ΓöÇΓöÇ
+Γ£ö dplyr     1.1.4     Γ£ö readr     2.1.5
+Γ£ö forcats   1.0.0     Γ£ö stringr   1.5.1
+Γ£ö ggplot2   3.5.2     Γ£ö tibble    3.2.1
+Γ£ö lubridate 1.9.4     Γ£ö tidyr     1.3.1
+Γ£ö purrr     1.1.0     
+ΓöÇΓöÇ Conflicts ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse_conflicts() ΓöÇΓöÇ
+Γ£û dplyr::filter() masks stats::filter()
+Γ£û dplyr::lag()    masks stats::lag()
+Γä╣ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package 'tidyverse' was built under R version 4.5.1 
+2: package 'tidyr' was built under R version 4.5.1 
+3: package 'purrr' was built under R version 4.5.1 
+4: package 'forcats' was built under R version 4.5.1 
+5: package 'lubridate' was built under R version 4.5.1 
+Warning message:
+package 'fixest' was built under R version 4.5.2 
+here() starts at C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures
+Warning message:
+package 'here' was built under R version 4.5.2 
+Panel: 11932 obs. With ka_id: 7661 
+
+Transfer rate by year (position-level mean):
+# A tibble: 7 ├ù 2
+  year_num mean_transfers
+     <dbl>          <dbl>
+1     1938          0.259
+2     1939          1.71 
+3     1940          4.07 
+4     1941          2.12 
+5     1942          4.22 
+6     1943          0.373
+7     1944          0.798
+NOTE: 0/249/3 fixed-effect singletons were removed (252 observations).
+NOTE: 0/249/3 fixed-effect singletons were removed (252 observations).
+NOTE: 0/249/3 fixed-effect singletons were removed (252 observations).
+NOTE: 0/249/3 fixed-effect singletons were removed (252 observations).
+
+===== TABLE 1: TRANSFERS IN =====
+
+                                          c1             c2             c3
+Dependent Var.:               n_transfers_in n_transfers_in n_transfers_in
+                                                                          
+n_drafted_male                     0.1438*        0.1333***      0.1991   
+                                  (0.0600)       (0.0364)       (0.1461)  
+log(cumul_n_male+1)                0.4573***      0.4571***      0.4565***
+                                  (0.1074)       (0.1074)       (0.1075)  
+n_drafted_male x is_rank1                         0.1316                  
+                                                 (0.2609)                 
+n_drafted_male x is_rank3                         0.8801*                 
+                                                 (0.4214)                 
+n_drafted_male x is_engineer                                    -0.0778   
+                                                                (0.1378)  
+female_share                                                              
+                                                                          
+n_drafted_male x female_share                                             
+                                                                          
+Fixed-Effects:                -------------- -------------- --------------
+year_num                                 Yes            Yes            Yes
+ka_id                                    Yes            Yes            Yes
+pos_norm                                 Yes            Yes            Yes
+_____________________________ ______________ ______________ ______________
+S.E.: Clustered                by: office_id  by: office_id  by: office_id
+Observations                           7,409          7,409          7,409
+
+                                          c4
+Dependent Var.:               n_transfers_in
+                                            
+n_drafted_male                     0.1716** 
+                                  (0.0617)  
+log(cumul_n_male+1)                0.4588***
+                                  (0.1080)  
+n_drafted_male x is_rank1                   
+                                            
+n_drafted_male x is_rank3                   
+                                            
+n_drafted_male x is_engineer                
+                                            
+female_share                       0.7203   
+                                  (0.7740)  
+n_drafted_male x female_share     -0.6720   
+                                  (0.3731)  
+Fixed-Effects:                --------------
+year_num                                 Yes
+ka_id                                    Yes
+pos_norm                                 Yes
+_____________________________ ______________
+S.E.: Clustered                by: office_id
+Observations                           7,409
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Table 1 exported to NewTable1_Reallocation.tex
+NOTE: 0/249/3 fixed-effect singletons were removed (252 observations).
+NOTE: 0/249/3 fixed-effect singletons were removed (252 observations).
+NOTE: 0/249/3 fixed-effect singletons were removed (252 observations).
+
+===== APPENDIX: ADJACENT HIRES =====
+
+                               a1          a2          a3
+Dependent Var.:       n_new_hires n_new_hires n_new_hires
+                                                         
+n_drafted_male          0.6200***                        
+                       (0.1153)                          
+log(cumul_n_male+1)     2.504***     2.507***    2.513***
+                       (0.5336)     (0.5360)    (0.5269) 
+adj_ka_within_occ                    0.0598              
+                                    (0.0851)             
+adj_kakari_across_occ                            0.0027  
+                                                (0.0934) 
+Fixed-Effects:        ----------- ----------- -----------
+year_num                      Yes         Yes         Yes
+ka_id                         Yes         Yes         Yes
+pos_norm                      Yes         Yes         Yes
+_____________________ ___________ ___________ ___________
+S.E.: Clustered       by: offic.. by: offic.. by: offic..
+Observations                7,409       7,409       7,409
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Appendix table exported to AppendixTable_AdjacentHires.tex
+
+
+########## NewTable2_Gender.R ##########
+
+ΓöÇΓöÇ Attaching core tidyverse packages ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse 2.0.0 ΓöÇΓöÇ
+Γ£ö dplyr     1.1.4     Γ£ö readr     2.1.5
+Γ£ö forcats   1.0.0     Γ£ö stringr   1.5.1
+Γ£ö ggplot2   3.5.2     Γ£ö tibble    3.2.1
+Γ£ö lubridate 1.9.4     Γ£ö tidyr     1.3.1
+Γ£ö purrr     1.1.0     
+ΓöÇΓöÇ Conflicts ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse_conflicts() ΓöÇΓöÇ
+Γ£û dplyr::filter() masks stats::filter()
+Γ£û dplyr::lag()    masks stats::lag()
+Γä╣ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package 'tidyverse' was built under R version 4.5.1 
+2: package 'tidyr' was built under R version 4.5.1 
+3: package 'purrr' was built under R version 4.5.1 
+4: package 'forcats' was built under R version 4.5.1 
+5: package 'lubridate' was built under R version 4.5.1 
+Warning message:
+package 'fixest' was built under R version 4.5.2 
+here() starts at C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures
+Warning message:
+package 'here' was built under R version 4.5.2 
+Panel: 6865 obs
+NOTE: 0/269/3 fixed-effect singletons were removed (272 observations).
+NOTE: 0/269/3 fixed-effect singletons were removed (272 observations).
+NOTE: 0/269/3 fixed-effect singletons were removed (272 observations).
+NOTE: 0/269/3 fixed-effect singletons were removed (272 observations).
+NOTE: 0/269/3 fixed-effect singletons were removed (272 observations).
+NOTE: 0/269/3 fixed-effect singletons were removed (272 observations).
+
+===== TABLE 2: GENDER COMPOSITION AND TENURE =====
+
+--- C1: Female share (baseline) ---
+                                  c1
+                            Baseline
+Dependent Var.:     female_share_all
+                                    
+n_drafted_male               0.0006 
+                            (0.0009)
+log(cumul_n_male+1)         -0.0021 
+                            (0.0014)
+Fixed-Effects:      ----------------
+year_num                         Yes
+ka_id                            Yes
+pos_norm                         Yes
+___________________ ________________
+S.E.: Clustered        by: office_id
+Observations                   6,593
+R2                           0.42749
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+--- C2: Female share ├ù Rank ---
+                                        c2
+                                   ├ù Rank
+Dependent Var.:           female_share_all
+                                          
+n_drafted_male                     0.0005 
+                                  (0.0009)
+log(cumul_n_male+1)               -0.0021 
+                                  (0.0015)
+n_drafted_male x is_rank1          0.0016 
+                                  (0.0026)
+n_drafted_male x is_rank3         -0.0123 
+                                  (0.0132)
+Fixed-Effects:            ----------------
+year_num                               Yes
+ka_id                                  Yes
+pos_norm                               Yes
+_________________________ ________________
+S.E.: Clustered              by: office_id
+Observations                         6,593
+R2                                 0.42757
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+--- C3: Female share ├ù Engineer ---
+                                           c3
+                                      ├ù Eng.
+Dependent Var.:              female_share_all
+                                             
+n_drafted_male                        0.0026 
+                                     (0.0021)
+log(cumul_n_male+1)                  -0.0022 
+                                     (0.0014)
+n_drafted_male x is_engineer         -0.0029 
+                                     (0.0022)
+Fixed-Effects:               ----------------
+year_num                                  Yes
+ka_id                                     Yes
+pos_norm                                  Yes
+____________________________ ________________
+S.E.: Clustered                 by: office_id
+Observations                            6,593
+R2                                    0.42762
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+--- C4: Avg tenure (baseline) ---
+                            c4
+                      Baseline
+Dependent Var.:     avg_tenure
+                              
+n_drafted_male       -0.0677**
+                     (0.0210) 
+log(cumul_n_male+1)   0.0438  
+                     (0.0256) 
+Fixed-Effects:      ----------
+year_num                   Yes
+ka_id                      Yes
+pos_norm                   Yes
+___________________ __________
+S.E.: Clustered     by: offi..
+Observations             6,593
+R2                     0.56720
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+--- C5: Avg tenure ├ù Rank ---
+                                  c5
+                             ├ù Rank
+Dependent Var.:           avg_tenure
+                                    
+n_drafted_male             -0.0668**
+                           (0.0215) 
+log(cumul_n_male+1)         0.0450  
+                           (0.0256) 
+n_drafted_male x is_rank1   0.0106  
+                           (0.0464) 
+n_drafted_male x is_rank3  -0.5821  
+                           (0.3177) 
+Fixed-Effects:            ----------
+year_num                         Yes
+ka_id                            Yes
+pos_norm                         Yes
+_________________________ __________
+S.E.: Clustered           by: offi..
+Observations                   6,593
+R2                           0.56743
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+--- C6: Avg tenure ├ù Engineer ---
+                                     c6
+                                ├ù Eng.
+Dependent Var.:              avg_tenure
+                                       
+n_drafted_male                -0.1091**
+                              (0.0385) 
+log(cumul_n_male+1)            0.0447  
+                              (0.0256) 
+n_drafted_male x is_engineer   0.0605  
+                              (0.0392) 
+Fixed-Effects:               ----------
+year_num                            Yes
+ka_id                               Yes
+pos_norm                            Yes
+____________________________ __________
+S.E.: Clustered              by: offi..
+Observations                      6,593
+R2                              0.56730
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Table 2 exported to NewTable2_Gender.tex and Tokyo_Project
+
+
+########## NewTable3_Retention.R ##########
+
+ΓöÇΓöÇ Attaching core tidyverse packages ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse 2.0.0 ΓöÇΓöÇ
+Γ£ö dplyr     1.1.4     Γ£ö readr     2.1.5
+Γ£ö forcats   1.0.0     Γ£ö stringr   1.5.1
+Γ£ö ggplot2   3.5.2     Γ£ö tibble    3.2.1
+Γ£ö lubridate 1.9.4     Γ£ö tidyr     1.3.1
+Γ£ö purrr     1.1.0     
+ΓöÇΓöÇ Conflicts ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse_conflicts() ΓöÇΓöÇ
+Γ£û dplyr::filter() masks stats::filter()
+Γ£û dplyr::lag()    masks stats::lag()
+Γä╣ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package 'tidyverse' was built under R version 4.5.1 
+2: package 'tidyr' was built under R version 4.5.1 
+3: package 'purrr' was built under R version 4.5.1 
+4: package 'forcats' was built under R version 4.5.1 
+5: package 'lubridate' was built under R version 4.5.1 
+Warning message:
+package 'fixest' was built under R version 4.5.2 
+here() starts at C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures
+Warning message:
+package 'here' was built under R version 4.5.2 
+Years with draft info: 1938, 1940, 1941, 1943, 1944, 1948 
+Retention panel: 190248 obs
+N female: 10831  N male: 179417 
+Positions with drafts: 1717 
+NOTE: 0/60/1 fixed-effect singletons were removed (61 observations).
+NOTE: 0/60/1 fixed-effect singletons were removed (61 observations).
+NOTE: 0/60/1 fixed-effect singletons were removed (61 observations).
+NOTE: 0/60/1 fixed-effect singletons were removed (61 observations).
+
+===== TABLE 3: RETENTION =====
+
+                                     m1       m2       m3         m4
+                               Baseline x Gender   x Rank x Engineer
+Dependent Var.:                retained retained retained   retained
+                                                                    
+n_drafted_male                  0.0091   0.0091   0.0130     0.0130 
+                               (0.0062) (0.0058) (0.0098)   (0.0085)
+log(cumul_n_male+1)            -0.0064* -0.0065* -0.0064*   -0.0065*
+                               (0.0029) (0.0029) (0.0029)   (0.0029)
+is_femaleTRUE                           -0.0082                     
+                                        (0.0060)                    
+n_drafted_male x is_femaleTRUE           0.0022                     
+                                        (0.0138)                    
+n_drafted_male x is_rank1                        -0.0090            
+                                                 (0.0091)           
+n_drafted_male x is_engineer                                -0.0123 
+                                                            (0.0090)
+Fixed-Effects:                 -------- -------- --------   --------
+year_num                            Yes      Yes      Yes        Yes
+ka_id                               Yes      Yes      Yes        Yes
+pos_norm                            Yes      Yes      Yes        Yes
+______________________________ ________ ________ ________   ________
+S.E.: Clustered                by: of.. by: of.. by: of..   by: of..
+Observations                    190,187  190,187  190,187    190,187
+R2                              0.33710  0.33711  0.33711    0.33711
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Table 3 exported to NewTable3_Retention.tex and Tokyo_Project
+
+
+########## NewTable4_Rinji.R ##########
+
+ΓöÇΓöÇ Attaching core tidyverse packages ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse 2.0.0 ΓöÇΓöÇ
+Γ£ö dplyr     1.1.4     Γ£ö readr     2.1.5
+Γ£ö forcats   1.0.0     Γ£ö stringr   1.5.1
+Γ£ö ggplot2   3.5.2     Γ£ö tibble    3.2.1
+Γ£ö lubridate 1.9.4     Γ£ö tidyr     1.3.1
+Γ£ö purrr     1.1.0     
+ΓöÇΓöÇ Conflicts ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse_conflicts() ΓöÇΓöÇ
+Γ£û dplyr::filter() masks stats::filter()
+Γ£û dplyr::lag()    masks stats::lag()
+Γä╣ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package 'tidyverse' was built under R version 4.5.1 
+2: package 'tidyr' was built under R version 4.5.1 
+3: package 'purrr' was built under R version 4.5.1 
+4: package 'forcats' was built under R version 4.5.1 
+5: package 'lubridate' was built under R version 4.5.1 
+Warning message:
+package 'fixest' was built under R version 4.5.2 
+here() starts at C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures
+Warning message:
+package 'here' was built under R version 4.5.2 
+1944 office x position panel: 587 obs
+Total rinji recipients: 656 
+Positions with any rinji: 170 
+Positions with any drafted: 220 
+
+Rank distribution:
+
+  1   2   3 
+ 50 501  36 
+
+Engineer distribution:
+
+  0   1 
+318 269 
+
+Female share summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+0.00000 0.00000 0.00000 0.04045 0.00000 1.00000 
+NOTE: 7/4 fixed-effect singletons were removed (11 observations).
+NOTE: 7/4 fixed-effect singletons were removed (11 observations).
+NOTE: 7/4 fixed-effect singletons were removed (11 observations).
+NOTE: 7/4 fixed-effect singletons were removed (11 observations).
+
+===== C1: Baseline =====
+                          c1
+Dependent Var.:      n_rinji
+                            
+n_drafted_male       0.1367*
+                    (0.0529)
+log(cumul_n_male+1)  0.0323 
+                    (0.2085)
+Fixed-Effects:      --------
+ka_id                    Yes
+pos_norm                 Yes
+___________________ ________
+S.E.: Clustered     by: of..
+Observations             576
+R2                   0.45717
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+===== C2: ├ù Rank =====
+                                 c2
+Dependent Var.:             n_rinji
+                                   
+n_drafted_male             0.1548**
+                          (0.0587) 
+log(cumul_n_male+1)        0.0225  
+                          (0.2127) 
+n_drafted_male x is_rank1 -0.1852**
+                          (0.0610) 
+n_drafted_male x is_rank3  0.3099  
+                          (0.1828) 
+Fixed-Effects:            ---------
+ka_id                           Yes
+pos_norm                        Yes
+_________________________ _________
+S.E.: Clustered           by: off..
+Observations                    576
+R2                          0.46270
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+===== C3: ├ù Engineer =====
+                                   c3
+Dependent Var.:               n_rinji
+                                     
+n_drafted_male                0.0224 
+                             (0.0424)
+log(cumul_n_male+1)           0.0428 
+                             (0.2062)
+n_drafted_male x is_engineer  0.1494 
+                             (0.0758)
+Fixed-Effects:               --------
+ka_id                             Yes
+pos_norm                          Yes
+____________________________ ________
+S.E.: Clustered              by: of..
+Observations                      576
+R2                            0.46430
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+===== C4: ├ù Gender =====
+                                    c4
+Dependent Var.:                n_rinji
+                                      
+n_drafted_male                 0.1564*
+                              (0.0697)
+female_share                   1.787  
+                              (0.9378)
+log(cumul_n_male+1)            0.0636 
+                              (0.2064)
+n_drafted_male x female_share -0.4321 
+                              (0.3896)
+Fixed-Effects:                --------
+ka_id                              Yes
+pos_norm                           Yes
+_____________________________ ________
+S.E.: Clustered               by: of..
+Observations                       576
+R2                             0.46223
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Table 4 exported to NewTable4_Rinji.tex and Tokyo_Project
+
+
+########## NewTable5_Promotion.R ##########
+
+ΓöÇΓöÇ Attaching core tidyverse packages ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse 2.0.0 ΓöÇΓöÇ
+Γ£ö dplyr     1.1.4     Γ£ö readr     2.1.5
+Γ£ö forcats   1.0.0     Γ£ö stringr   1.5.1
+Γ£ö ggplot2   3.5.2     Γ£ö tibble    3.2.1
+Γ£ö lubridate 1.9.4     Γ£ö tidyr     1.3.1
+Γ£ö purrr     1.1.0     
+ΓöÇΓöÇ Conflicts ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ tidyverse_conflicts() ΓöÇΓöÇ
+Γ£û dplyr::filter() masks stats::filter()
+Γ£û dplyr::lag()    masks stats::lag()
+Γä╣ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package 'tidyverse' was built under R version 4.5.1 
+2: package 'tidyr' was built under R version 4.5.1 
+3: package 'purrr' was built under R version 4.5.1 
+4: package 'forcats' was built under R version 4.5.1 
+5: package 'lubridate' was built under R version 4.5.1 
+Warning message:
+package 'fixest' was built under R version 4.5.2 
+here() starts at C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures
+Warning message:
+package 'here' was built under R version 4.5.2 
+Years with draft info: 1938, 1940, 1941, 1943, 1944, 1948 
+
+Consecutive year overlaps at same office:
+  1937->1938: 1962 workers
+  1939->1940: 1007 workers
+  1940->1941: 7734 workers
+  1942->1943: 6694 workers
+  1943->1944: 4 workers
+  1947->1948: 0 workers
+
+Full panel: 17401 obs
+With any drafts at office: 3023 
+With ka_id: 8782 obs
+N female: 446  N male: 8336 
+With drafts: 379 
+Mean promoted: 0.083 
+Rank distribution: rank1 = 2195  rank2 = 6518  rank3 = 69 
+N engineer: 1203 
+
+===== TABLE 5: PROMOTION (INTERACTION DESIGN) =====
+
+NOTE: 0/25/4 fixed-effect singletons were removed (28 observations).
+NOTE: 0/25/4 fixed-effect singletons were removed (28 observations).
+NOTE: 0/25/4 fixed-effect singletons were removed (28 observations).
+NOTE: 0/25/4 fixed-effect singletons were removed (28 observations).
+                                     m1         m2       m3         m4
+                               Baseline   x Gender   x Rank x Engineer
+Dependent Var.:                promoted   promoted promoted   promoted
+                                                                      
+n_drafted_male                  0.0868*  0.0880*    0.0808*  0.0907*  
+                               (0.0404) (0.0403)   (0.0360) (0.0386)  
+log(cumul_n_male+1)            -0.0077  -0.0087    -0.0081  -0.0072   
+                               (0.0061) (0.0060)   (0.0062) (0.0060)  
+is_femaleTRUE                           -0.0216                       
+                                        (0.0183)                      
+n_drafted_male x is_femaleTRUE           0.0275***                    
+                                        (0.0079)                      
+n_drafted_male x is_rank1                           0.0352            
+                                                   (0.0516)           
+n_drafted_male x is_rank3                          -0.0243            
+                                                   (0.0269)           
+n_drafted_male x is_engineer                                -0.0422***
+                                                            (0.0111)  
+Fixed-Effects:                 -------- ---------- -------- ----------
+year_num                            Yes        Yes      Yes        Yes
+ka_id                               Yes        Yes      Yes        Yes
+pos_norm                            Yes        Yes      Yes        Yes
+______________________________ ________ __________ ________ __________
+S.E.: Clustered                by: of.. by: offi.. by: of.. by: offi..
+Observations                      8,754      8,754    8,754      8,754
+R2                              0.37121    0.37159  0.37166    0.37172
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Table 5 exported to NewTable5_Promotion.tex and Tokyo_Project

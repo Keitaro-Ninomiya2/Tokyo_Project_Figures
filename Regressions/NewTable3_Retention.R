@@ -200,7 +200,7 @@ tex <- etable(m1, m2, m3, m4,
               drop = "log",
               headers = c("Baseline", "$\\times$ Gender",
                           "$\\times$ Rank", "$\\times$ Engineer"),
-              se.below = TRUE, fitstat = ~n,
+              se.below = TRUE, fitstat = ~n + r2 + G,
               tex = TRUE)
 
 tc <- clean_depvar(extract_tabular(tex))

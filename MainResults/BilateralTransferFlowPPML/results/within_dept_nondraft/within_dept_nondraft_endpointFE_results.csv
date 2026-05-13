@@ -1,0 +1,2 @@
+model,nobs,pseudo_r2,dispersion,status,term,estimate,std.error,statistic,p.value,conf.low,conf.high
+within_dept_nondraft_endpointFE,2306,0.802385296601704,19.694960747731187,estimated,occ_similarity,2.4263331283730074,1.0924278899744682,2.2210464879560288,0.026347812880741218,0.28521380831596543,4.56745244843005

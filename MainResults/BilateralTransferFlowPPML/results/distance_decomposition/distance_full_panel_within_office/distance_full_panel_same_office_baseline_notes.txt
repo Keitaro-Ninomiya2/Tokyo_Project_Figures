@@ -1,0 +1,9 @@
+Same-office baseline re-estimation
+
+Omitted distance category: same office (cleaned kyoku x ka), different occupation.
+This is the supported ka-level analogue to a same-kakari/different-occupation baseline.
+A literal same-kakari baseline was attempted separately but has no positive flow cells in the kakari-covered sample.
+Distance coefficients therefore show log flow intensity relative to within-office occupation changes.
+
+No model warnings captured.
+No model errors captured.

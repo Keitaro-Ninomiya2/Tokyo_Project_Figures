@@ -1,0 +1,18 @@
+Within-department bilateral PPML diagnostic outcome
+
+Pair panel source: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/BilateralTransferFlowPPML/results/bilateral_flow_pair_panel_full.rds
+Restriction: same_department == 1, i.e. same cleaned kyoku and different ka.
+Office identifier: cleaned kyoku x ka from the earlier bilateral workflow.
+
+Within-department pairs: 59962
+Within-department pair-years: 64724
+Share origin draft varies: 0.00050032
+Share destination draft varies: 0.00050032
+Share any positive flow: 0.0079217
+Share multiple active years: 0.00018345
+
+Decision rule: proceed if origin or destination draft variation share is at least 0.03.
+Review flag: not borderline under the 0.02-0.03 definition.
+Merger/identifier note: the sample uses the existing cleaned kyoku x ka office identifiers from the prior bilateral workflow; it does not create an additional pre/post-merger ka linkage.
+
+Outcome: threshold failed; even within-department pairs do not have sufficient within-pair draft variation for pair-FE identification. PPML estimation was skipped.

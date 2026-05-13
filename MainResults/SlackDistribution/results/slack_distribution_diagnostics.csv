@@ -1,0 +1,8 @@
+diagnostic,value
+pool_ratio_sameDept_to_sameSection_mean,2.592465753424658
+pool_ratio_diffDept_to_sameSection_mean,96.82648401826485
+median_same_section_slack,0
+share_any_same_section_slack,0.18992248062015504
+corr_draft_log_same_section,0.06319386241849617
+corr_draft_log_same_department,0.2973078928314887
+corr_draft_log_different_department,0.10668332766065555

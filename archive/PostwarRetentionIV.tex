@@ -1,0 +1,94 @@
+\begin{table}[htbp]
+\centering
+\caption{Post-War Retention of Wartime Hires: IV Estimates}
+\label{tab:postwar-iv}
+\small
+\begin{threeparttable}
+
+Panel A: First Stage (Dep.\ var: No.\ new hires)
+\medskip
+
+\begin{tabular}{lccc}
+   \tabularnewline \midrule \midrule
+                        & All Hires     & Male Hires         & Female (Low-Rank) \\   
+   Model:               & (1)           & (2)                & (3)\\  
+   \midrule
+   \emph{Variables}\\
+   No. males drafted    & 0.1065        & 0.0820             & 0.0244\\   
+                        & (0.2094)      & (0.1952)           & (0.0340)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num            & Yes           & Yes                & Yes\\  
+   norm\_kyoku          & Yes           & Yes                & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations         & 1,318         & 1,318              & 1,318\\  
+   Wald (joint nullity) & 53.330        & 48.303             & 20.023\\  
+   \midrule \midrule
+   \multicolumn{4}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+
+\bigskip
+
+Panel B: Reduced Form (Dep.\ var: Share retained/promoted post-war)
+\medskip
+
+\begin{tabular}{lcccccc}
+   \tabularnewline \midrule \midrule
+                        & \makecell{Ret.\\All}    & \makecell{Prom.\\All}    & \makecell{Ret.\\Male}    & \makecell{Prom.\\Male}    & \makecell{Ret.\\Female}    & \makecell{Prom.\\Female} \\      
+   Model:               & (1)                     & (2)                      & (3)                      & (4)                       & (5)                        & (6)\\  
+   \midrule
+   \emph{Variables}\\
+   No. males drafted    & -0.0003                 & -0.0009                  & -0.0005                  & -0.0010                   & 0.0067                     & 0.0014\\   
+                        & (0.0012)                & (0.0006)                 & (0.0013)                 & (0.0007)                  & (0.0042)                   & (0.0011)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num            & Yes                     & Yes                      & Yes                      & Yes                       & Yes                        & Yes\\  
+   norm\_kyoku          & Yes                     & Yes                      & Yes                      & Yes                       & Yes                        & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations         & 1,318                   & 1,318                    & 1,308                    & 1,308                     & 453                        & 453\\  
+   \midrule \midrule
+   \multicolumn{7}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+
+\bigskip
+
+Panel C: IV (Dep.\ var: No.\ retained/promoted post-war)
+\medskip
+
+\begin{tabular}{lcccccc}
+   \tabularnewline \midrule \midrule
+                                                       & \makecell{Ret.\\All}    & \makecell{Prom.\\All}    & \makecell{Ret.\\Male}    & \makecell{Prom.\\Male}    & \makecell{Ret.\\Female}    & \makecell{Prom.\\Female} \\      
+   Model:                                              & (1)                     & (2)                      & (3)                      & (4)                       & (5)                        & (6)\\  
+   \midrule
+   \emph{Variables}\\
+   No. new hires                                       & 0.4404                  & -0.6033                  &                          &                           &                            &   \\   
+                                                       & (0.5216)                & (1.368)                  &                          &                           &                            &   \\   
+   No. male new hires                                  &                         &                          & 0.5412                   & -0.7856                   &                            &   \\   
+                                                       &                         &                          & (0.7809)                 & (2.100)                   &                            &   \\   
+   No. female new hires (low-rank)                     &                         &                          &                          &                           & 0.1032                     & 0.0067\\   
+                                                       &                         &                          &                          &                           & (0.1846)                   & (0.1051)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   year\_num                                           & Yes                     & Yes                      & Yes                      & Yes                       & Yes                        & Yes\\  
+   norm\_kyoku                                         & Yes                     & Yes                      & Yes                      & Yes                       & Yes                        & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                                        & 1,318                   & 1,318                    & 1,318                    & 1,318                     & 1,318                      & 1,318\\  
+   F-test (1st stage), No. new hires                   & 0.39681                 & 0.39681                  &                          &                           &                            & \\  
+   F-test (1st stage), No. male new hires              &                         &                          & 0.29485                  & 0.29485                   &                            & \\  
+   F-test (1st stage), No. female new hires (low-rank) &                         &                          &                          &                           & 0.68812                    & 0.68812\\  
+   \midrule \midrule
+   \multicolumn{7}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Panel~A reports the first-stage relationship between office-level military draft intensity and new hiring (1940--1945). Panel~B reports reduced-form estimates of draft intensity on the share of wartime hires who are retained or promoted in the post-war period (1947--1955). Panel~C reports IV estimates instrumenting new hiring with draft intensity. ``All'' pools both genders; ``Male'' restricts to male hires; ``Female'' restricts to female hires in low-rank administrative positions (rank~1--2). All specifications include entry-year and kyoku fixed effects and control for log male baseline (not shown). Standard errors clustered at the office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

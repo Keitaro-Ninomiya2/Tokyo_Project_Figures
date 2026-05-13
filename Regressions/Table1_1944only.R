@@ -10,7 +10,7 @@ DATA_PATH <- file.path(
   Sys.getenv("USERPROFILE"),
   "Box", "Research Notes (keitaro2@illinois.edu)",
   "Tokyo_Gender", "Processed_Data",
-  "Tokyo_Personnel_Master_All_Years_v2.csv"
+  "Tokyo_Personnel_Master_All_Years.csv"
 )
 
 df <- read_csv(DATA_PATH, locale = locale(encoding = "UTF-8"), show_col_types = FALSE) %>%
@@ -299,7 +299,7 @@ tex1 <- etable(c1, c2a, c2b, c3a, c3b, c4, c5, c6,
                             "New\nHires",
                             "New Hires\n(adj kakari)",
                             "New Hires\n(adj occ)"),
-               se.below = TRUE, fitstat = ~n,
+               se.below = TRUE, fitstat = ~n + r2 + G,
                tex = TRUE)
 
 tex1_out <- c(
@@ -339,7 +339,7 @@ g_export <- g_models[g_valid]
 
 tex2 <- etable(g_export,
                dict = dict2,
-               se.below = TRUE, fitstat = ~n,
+               se.below = TRUE, fitstat = ~n + r2 + G,
                tex = TRUE)
 
 # Determine header based on which models survived
@@ -352,7 +352,7 @@ headers_used <- header_full[g_valid]
 tex2 <- etable(g_export,
                dict = dict2,
                headers = headers_used,
-               se.below = TRUE, fitstat = ~n,
+               se.below = TRUE, fitstat = ~n + r2 + G,
                tex = TRUE)
 
 tex2_out <- c(

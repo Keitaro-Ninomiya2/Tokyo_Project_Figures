@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Transfer-Out Offices: Selection into Draft-Induced Vacancies}
+\label{tab:selection-transferout-restricted}
+\scriptsize
+\begin{threeparttable}
+\resizebox{0.92\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{All transfers} & \multicolumn{2}{c}{Different ka, same kyoku} & \multicolumn{2}{c}{Different kyoku} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+ & Any: Draft Vac. & Any: Non-Draft & Diff Ka: Draft & Diff Ka: Non-Draft & Diff Kyoku: Draft & Diff Kyoku: Non-Draft \\
+\midrule
+Decoration rank (0--8; high=better) & 0.5177$^{*}$ & 0.2717$$ & -12.6437$^{***}$ & 0.2250$$ & 0.7847$^{**}$ & 0.3688$$ \\
+                                    & (0.3129) & (0.1992) & (0.0000) & (0.2096) & (0.3308) & (0.2339) \\[3pt]
+Court rank (0--8; high=better) & 0.0394$$ & -0.0653$$ & -0.1200$$ & -0.0199$$ & 0.0372$$ & -0.1115$^{*}$ \\
+                               & (0.1049) & (0.0581) & (0.2334) & (0.0627) & (0.1070) & (0.0674) \\[3pt]
+Female & 0.4337$$ & 0.5985$^{**}$ & 0.2220$$ & 0.7970$^{***}$ & 0.1861$$ & 0.1060$$ \\
+       & (0.4927) & (0.2472) & (0.6567) & (0.2493) & (0.5295) & (0.2980) \\[3pt]
+Tenure (yrs) & -0.0071$$ & 0.0422$^{***}$ & -0.0249$$ & 0.0247$^{*}$ & 0.0150$$ & 0.0657$^{***}$ \\
+             & (0.0254) & (0.0123) & (0.0350) & (0.0135) & (0.0269) & (0.0143) \\[3pt]
+Log salary (current year) & -0.2971$^{**}$ & -0.2550$^{***}$ & 0.0509$$ & -0.2041$^{**}$ & -0.4618$^{***}$ & -0.3413$^{***}$ \\
+                          & (0.1485) & (0.0911) & (0.2079) & (0.0969) & (0.1598) & (0.1115) \\[3pt]
+\midrule
+Year FE & \multicolumn{6}{c}{Yes} \\
+Observations & \multicolumn{6}{c}{5,989} \\
+Log-likelihood & \multicolumn{2}{c}{-3195.7} & \multicolumn{4}{c}{-5546.4} \\
+AIC & \multicolumn{2}{c}{6439.4} & \multicolumn{4}{c}{11188.7} \\
+\bottomrule
+\end{tabular}}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Multinomial logit. Sample restricted to origin office-unit $\times$ year cells that transferred at least one worker either to a different ka within the same kyoku or to a different kyoku, further restricted to workers with observed current-year salary. Columns 1--2 estimate aggregate transfer outcomes; columns 3--6 estimate the decomposition into within-kyoku and cross-kyoku transfers. Base category: stayed in the same ka and kyoku. Decoration and court rank are coded 0--8, where 0 is unobserved/no rank and higher values indicate higher status. All specifications include year FE, tenure, and log current-year salary. Standard errors in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

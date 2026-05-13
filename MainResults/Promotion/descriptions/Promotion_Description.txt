@@ -1,0 +1,47 @@
+Transfer outcomes with productivity-controlled draft-vacancy comparison
+
+Data:
+C:\Users\Keitaro Ninomiya\Box\Research Notes (keitaro2@illinois.edu)\Tokyo_Gender\Processed_Data\Tokyo_Personnel_Master_All_Years.csv
+
+Table:
+This folder now mirrors the updated specification from Regressions/TransferOutcomes_Combined.R.
+
+Panel A:
+Transferred workers compared to destination-office peers already at the destination in the transfer year.
+Treatment is Transferred (=1).
+Controls include peer average rank, peer average tenure, peer female share, and log peer headcount.
+Fixed effects are destination section, transfer year, and position.
+Standard errors are clustered by destination section.
+
+Panel B:
+Transferred workers compared to donor-office peers who remained behind.
+Treatment is Transferred (=1).
+Controls include peer average rank, peer average tenure, peer female share, and log peer headcount.
+Fixed effects are donor section, transfer year, and position.
+Standard errors are clustered by donor section.
+
+Panel C:
+Transferees are compared within the same donor office x section x prior-position x year cell by whether the destination had a draft-induced vacancy.
+Treatment is Draft-Induced Vacancy (=1).
+Controls include worker productivity, tenure at transfer, and gender.
+Productivity is a prior-year indicator built from court rank, decoration class, and standardized salary.
+Fixed effects are donor cell x year and donor position.
+Standard errors are clustered by donor cell.
+Within each panel, all four outcomes are estimated on the same sample.
+
+Updated Panel C estimates:
+Tenure after = 1.5556 (0.2348)
+Postwar survival = 0.0804 (0.0153)
+Postwar years = 0.4705 (0.0649)
+Rank gain = 0.0305 (0.0137)
+
+Observations:
+Panel B = 91,586
+Panel C = 40,060
+Panel A = 97,145
+
+Files:
+Code: MainResults/Promotion/code/Promotion_Regressions.R
+Table TeX: MainResults/Promotion/results/Promotion_Table.tex
+Standalone PDF wrapper: MainResults/Promotion/results/Promotion_Results.tex
+PDF: MainResults/Promotion/results/Promotion_Results.pdf

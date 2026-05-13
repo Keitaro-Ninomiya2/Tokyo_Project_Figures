@@ -1,0 +1,4 @@
+term,estimate,std.error,statistic,p.value,specification,sample,n_event_origins,n_rows
+NA,NA,NA,NA,NA,full,occ_rank_worker_pool_salary,0,0
+NA,NA,NA,NA,NA,same_section_origin,occ_rank_worker_pool_salary,0,0
+NA,NA,NA,NA,NA,cross_section_origin,occ_rank_worker_pool_salary,0,0

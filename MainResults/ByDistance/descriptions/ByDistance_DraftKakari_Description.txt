@@ -1,0 +1,31 @@
+Drafted Workers and Replacement Margins
+
+Code: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/ByDistance/code/ByDistance_DraftKakari_Regressions.R
+Data: C:\Users\Keitaro Ninomiya/Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data/Tokyo_Personnel_Master_All_Years.csv
+Table: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/ByDistance/results/ByDistance_DraftKakari_Results.tex
+PDF: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/ByDistance/results/ByDistance_DraftKakari_Results.pdf
+Coefficient CSV: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/ByDistance/results/bydistance_draftkakari_coefficients.csv
+
+Purpose:
+This table distinguishes internal replacement margins from external new hiring after drafting at the destination office x kakari x occupation x year level.
+
+Definitions:
+Same section: worker remains in the same ka group as the prior year.
+Same department: worker moves from a different ka group within the same normalized kyoku group.
+Different department: worker moves from a different normalized kyoku group.
+Total internal: same section + same department + different department.
+Geographic benchmark: internal replacements are split by prior-office distance to the destination office: <=2 km, >2 km, or unknown distance.
+New hires: worker's first observed year, excluding first observed office-years following Table7_NewHires.R.
+
+Regression specification:
+Outcome = number of workers in the replacement margin. Treatment = number of drafted male workers in the same destination kakari-occupation-year. All regressions include year, section, and position fixed effects and control for log cumulative male baseline employment. Standard errors are clustered by office.
+
+Regression observations after singleton removal: 7,409
+Total internal workers: 42,876
+Same-section workers: 21,753
+Same-department transfers: 13,310
+Different-department transfers: 7,813
+Internal replacements from <=2 km: 10,898
+Internal replacements from >2 km: 2,063
+Internal replacements with unknown distance: 29,915
+New hires: 14,910

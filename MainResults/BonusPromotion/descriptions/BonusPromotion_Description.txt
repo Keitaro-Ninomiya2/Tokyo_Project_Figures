@@ -1,0 +1,17 @@
+Bonus/Promotion Regressions
+
+Data: C:\Users\Keitaro Ninomiya/Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data/Tokyo_Personnel_Master_All_Years.csv
+
+Outcome definitions:
+Promotion equals one when the worker's rank in year t is higher than their rank in t-1. Salary raise is the bonus-salary proxy and equals one when parsed monthly-equivalent salary in year t exceeds parsed salary in t-1. Annual salary entries are divided by 12 before comparison.
+
+Productivity definition:
+High productivity is a prior-year indicator based on an observable productivity score: prior decoration class, prior court-rank class, and standardized prior salary. Japanese court and decoration classes are parsed as actual class numbers where lower numbers are higher status (for example, class 1 is better than class 8). The productivity score converts those classes to prestige points using max(0, 9 - class), so class 1 contributes more than class 8. Missing decoration/court ranks contribute zero, and workers at or above the sample median score are coded as high productivity.
+
+Regression 1: retention/peer draft exposure:
+The worker-year panel begins with non-drafted workers observed in the prior year. Promotion and salary-raise outcomes are regressed on retained status, a dummy for male drafted peers in the worker's prior office-year, high productivity, and the interaction of draft exposure with productivity. Fixed effects are year, prior office-section assignment, prior position, and prior rank; standard errors are clustered by prior office.
+
+Regression 2: internal transfers:
+The transfer panel includes non-drafted workers who moved to a different office from t-1 to t. Promotion and salary-raise outcomes are regressed on whether the destination office-year had a male draft vacancy, high productivity, and their interaction. Fixed effects are year, donor office-section assignment, prior position, and prior rank; standard errors are clustered by donor office.
+
+Results TeX/PDF base: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/BonusPromotion/results/BonusPromotion_Results.tex

@@ -1,0 +1,25 @@
+Full occupation-level bilateral PPML including within-office occupation changes
+
+Unit: origin office x origin pos_norm x destination office x destination pos_norm x year.
+Retention is same office and same pos_norm, and is excluded.
+same_office is same cleaned kyoku x ka but different occupation.
+same_kyoku_diff_ka is different office within the same cleaned kyoku.
+diff_kyoku is omitted distance category.
+Sample is restricted to non-draft origin and destination offices in year t using office-year draft counts from the prior bilateral pair panel.
+
+Specification columns:
+- Column 1: year FE.
+- Column 2: year + origin occupation x destination occupation FE.
+- Column 3: year + origin kyoku FE.
+- Column 4: year + destination kyoku FE.
+- Column 5: year + origin ka FE.
+- Column 6: year + destination ka FE.
+Both endpoint occupation-size terms and their interaction are retained in every column because they vary at office x occupation level.
+occ_similarity is office-level cosine; same-office rows set occ_similarity = 1.
+
+Cells: 5208970
+Transfers: 4125
+Positive cells: 1466
+
+No model warnings captured.
+No model errors captured.

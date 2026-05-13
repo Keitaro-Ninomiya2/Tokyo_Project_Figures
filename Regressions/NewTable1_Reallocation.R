@@ -280,7 +280,7 @@ tex <- etable(c1, c2, c3, c4,
               drop = "log|Female share$",
               headers = c("Baseline", "$\\times$ Rank", "$\\times$ Eng.",
                           "$\\times$ Gender"),
-              se.below = TRUE, fitstat = ~n, tex = TRUE)
+              se.below = TRUE, fitstat = ~n + r2 + G, tex = TRUE)
 
 tc <- clean_depvar(extract_tabular(tex))
 
@@ -387,7 +387,7 @@ tex_b <- etable(a1, a2, a3,
                 order = c("No. drafted", "Adj\\."),
                 drop = "log",
                 headers = c("Own Drafts", "Adj: Diff Kakari", "Adj: Diff Occ"),
-                se.below = TRUE, fitstat = ~n, tex = TRUE)
+                se.below = TRUE, fitstat = ~n + r2 + G, tex = TRUE)
 
 tc_b <- clean_depvar(extract_tabular(tex_b))
 

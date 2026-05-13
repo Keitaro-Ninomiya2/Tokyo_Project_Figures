@@ -1,0 +1,52 @@
+Bilateral Transfer Flow PPML: construction notes
+
+Run date: 2026-05-13 07:38:23.329326
+Master personnel panel: C:\Users\Keitaro Ninomiya/Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data/Tokyo_Personnel_Master_All_Years.csv
+
+Office definition:
+- The operational office is kyoku x ka after kyoku normalization and the 1944 TokyoTo ka/facility/kakari backfill used in the SlackDistribution cleanup scripts.
+- Kakari was not used in the office identifier because of the known coverage gaps; this remains flagged for substantive review.
+
+Pair-year construction:
+- Years are 1938-1945. A transfer is a staff_id observed at a different kyoku x ka office in year t than in t-1.
+- Within-office moves are excluded. The estimation panel includes zero-flow origin-destination pairs.
+- Pairs with missing origin or destination kyoku classification after cleanup are dropped.
+
+Feasibility and size:
+- The primary feasibility filter keeps origin-destination pairs whose offices share at least one non-drafted occupation x rank cell in t-1.
+- log_N_o and log_N_d are log counts of non-drafted workers in the shared occupation x rank cells at the origin and destination in t-1.
+- The exact-position feasibility variant is not substituted automatically; it is flagged for review as requested.
+
+Occupational similarity:
+- Continuous similarity is cosine similarity of non-drafted position-composition vectors in t-1.
+- The robustness specification uses an indicator for cosine similarity greater than 0.5.
+
+Distance:
+- same_section is kyoku x ka equality and is excluded as within-office.
+- same_department is same cleaned kyoku but different ka.
+- different_department is different cleaned kyoku.
+- Because same_section pairs are excluded, the same_department and different_department dummies have no observed same_section baseline in the final flow panel. With pair fixed effects, distance main effects are identified only where classifications change over time.
+
+Draft shocks:
+- D_origin and D_destination are male draftee counts at the origin/destination kyoku x ka office in year t.
+- The main draft model includes origin and destination draft variables jointly. The indicator robustness replaces counts with any-draft indicators.
+
+Fixed effects and clustering:
+- Main models use pair_id and year fixed effects.
+- Robustness includes origin_office x year and destination_office x year fixed effects.
+- Standard errors are clustered two-way by origin and destination offices throughout.
+
+Review flags from prompt:
+1. Confirm kyoku x ka as the operational office level.
+2. Confirm occupation x rank feasibility as primary versus exact-position feasibility.
+3. Confirm use of year fixed effects in pair-FE specifications.
+4. Confirm treatment of office identifier changes across the 1943 merger via cleaned reference table mappings.
+
+Diagnostics:
+- Flow distribution diagnostic file: bilateral_flow_distribution_diagnostics.csv
+- Distance positive-flow diagnostic file: bilateral_flow_distance_diagnostics.csv
+- Draft share diagnostic file: bilateral_flow_draft_share_diagnostics.csv
+- Model convergence/warning diagnostic file: bilateral_flow_model_diagnostics.csv
+- Captured fepois warnings: draft_pair_year: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | origin_destination_year_fe: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | binary_occupational_similarity: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | draft_indicator: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov).
+- Captured fepois errors: post_merger_1944_1945: All observations are either fixed-effects singletons or are perfectly
+explained by the fixed-effects. The estimation cannot be done.

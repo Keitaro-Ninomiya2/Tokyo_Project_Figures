@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\caption{Reduced Form: Wartime Draft Shock and Postwar Female Integration}
+\label{tab:reduced-form-female}
+\small
+\begin{threeparttable}
+\begin{tabular}{lcccccc}
+   \tabularnewline \midrule \midrule
+ & \multicolumn{2}{c}{Any female (=1)} & \multicolumn{2}{c}{N females} & \multicolumn{2}{c}{Female share} \\
+\midrule
+                                   & (1)            & (2)            & (3)            & (4)            & (5)                    & (6) \\   
+   Model:                          & (1)            & (2)            & (3)            & (4)            & (5)                    & (6)\\  
+   \midrule
+   \emph{Variables}\\
+   Draft shock (kakaricho wartime) & -0.0536        & -0.0564        & -0.4470        & -0.3880        & 0.0202                 & 0.0183\\   
+                                   & (0.1492)       & (0.1490)       & (0.3951)       & (0.3702)       & (0.0499)               & (0.0503)\\   
+   Kakari size                     & 0.0081$^{***}$ & 0.0081$^{***}$ & 0.0537$^{***}$ & 0.0541$^{***}$ & 0.0001$^{*}$           & 0.0001\\   
+                                   & (0.0010)       & (0.0009)       & (0.0095)       & (0.0092)       & ($6.3\times 10^{-5}$)  & ($6.69\times 10^{-5}$)\\    
+   \midrule
+   \emph{Fixed-effects}\\
+   wt\_ka                          & Yes            & Yes            & Yes            & Yes            & Yes                    & Yes\\  
+   wt\_pos                         & Yes            & Yes            & Yes            & Yes            & Yes                    & Yes\\  
+   year\_num                       &                & Yes            &                & Yes            &                        & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                    & 2,686          & 2,685          & 2,686          & 2,685          & 2,686                  & 2,685\\  
+   R$^2$                           & 0.25972        & 0.26101        & 0.57891        & 0.58173        & 0.15465                & 0.15632\\  
+   Size of the 'effective' sample  & 1,322          & 1,322          & 1,322          & 1,322          & 1,322                  & 1,322\\  
+   \midrule \midrule
+   \multicolumn{7}{l}{\emph{Clustered (office\_id) standard-errors in parentheses}}\\
+   \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions. Unit of observation: kakari $\times$ year (1947 onward). The sample includes postwar kakari-years whose \emph{kakaricho} (subsection chief) can be linked to a wartime office. The treatment variable is the mean share of males drafted from the kakaricho's wartime position $\times$ kakari $\times$ year cells. Fixed effects condition on the kakaricho's wartime \emph{ka} (section) and wartime position; even-numbered columns add postwar year fixed effects. Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,7 +1,7 @@
 # 1948 Kyoku Assignment Validation Report
 
 **Ground truth:** 昭和23年8月1日現在 (Aug 1, 1948)  
-**Data:** Tokyo_Personnel_Master_All_Years_v2.csv, year 1948
+**Data:** Tokyo_Personnel_Master_All_Years.csv, year 1948
 
 ---
 

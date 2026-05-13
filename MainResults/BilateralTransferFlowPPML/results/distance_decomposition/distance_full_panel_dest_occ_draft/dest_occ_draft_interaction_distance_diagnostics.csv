@@ -1,0 +1,7 @@
+distance_category,D_dest_occ_any,n_cells,n_positive_cells,total_transfers
+diff_kyoku,0,4383591,569,731
+diff_kyoku,1,2621,11,14
+same_kyoku_diff_ka,0,871540,555,1739
+same_kyoku_diff_ka,1,250,6,25
+same_office,0,28325,344,1658
+same_office,1,19,0,0

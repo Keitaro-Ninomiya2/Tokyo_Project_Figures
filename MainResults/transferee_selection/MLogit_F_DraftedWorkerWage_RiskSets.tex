@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Selection into Draft-Induced Vacancies by Drafted-Worker Salary: Expanded Risk Sets}
+\label{tab:selection-drafted-worker-wage-risksets}
+\scriptsize
+\begin{threeparttable}
+\resizebox{0.96\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{Origin ka $\times$ year risk set} & \multicolumn{3}{c}{Origin kyoku $\times$ year risk set} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & High Draft & Low Draft & Non-Draft & High Draft & Low Draft & Non-Draft \\
+\midrule
+Decoration rank (0--8; high=better) & 20.8031$^{***}$ & -12.8863$^{***}$ & -6.1309$^{***}$ & 23.6450$^{***}$ & -14.0499$^{***}$ & -7.6652$^{***}$ \\
+                                    & (0.0000) & (0.0000) & (0.0000) & (0.0000) & (0.0000) & (0.0000) \\[3pt]
+Court rank (0--8; high=better) & 11.5398$^{***}$ & 11.5610$^{***}$ & 11.2116$^{***}$ & 11.0691$^{***}$ & 11.0903$^{***}$ & 10.7242$^{***}$ \\
+                               & (0.1653) & (0.1745) & (0.3100) & (0.1685) & (0.1774) & (0.3168) \\[3pt]
+Female & 21.9272$^{***}$ & 23.0102$^{***}$ & 23.2265$^{***}$ & 19.7688$^{***}$ & 20.8586$^{***}$ & 20.9121$^{***}$ \\
+       & (0.4013) & (0.4122) & (0.5598) & (0.3993) & (0.4086) & (0.5517) \\[3pt]
+Tenure (yrs) & -0.0586$$ & -0.1382$$ & 0.0881$$ & -0.0589$$ & -0.1378$$ & 0.0751$$ \\
+             & (0.0799) & (0.0853) & (0.0867) & (0.0800) & (0.0854) & (0.0860) \\[3pt]
+Log salary (current year) & 0.0276$$ & -0.4468$$ & 0.2240$$ & 0.0295$$ & -0.4422$$ & 0.1276$$ \\
+                          & (0.3642) & (0.3685) & (0.4170) & (0.3637) & (0.3680) & (0.4010) \\[3pt]
+\midrule
+Year FE & \multicolumn{6}{c}{Yes} \\
+Observations & \multicolumn{3}{c}{332} & \multicolumn{3}{c}{335} \\
+Log-likelihood & \multicolumn{3}{c}{-291.8} & \multicolumn{3}{c}{-299.8} \\
+AIC & \multicolumn{3}{c}{619.6} & \multicolumn{3}{c}{635.7} \\
+\bottomrule
+\end{tabular}}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Multinomial logit. Columns 1--3 define candidate workers within origin ka-within-kyoku $\times$ year cells; columns 4--6 define candidate workers within origin kyoku $\times$ year cells. Risk-set cells are included if at least one worker transferred to a draft-vacancy office-year with observed drafted-worker salary. High and low draft vacancies split destination office-years by whether the mean monthly salary of drafted workers is at or above the median among draft-vacancy office-years with observed drafted-worker salary. Base category: not selected/stayed in the origin unit. Transfers to draft-vacancy office-years with missing drafted-worker salary are excluded. Decoration and court rank are coded 0--8, where 0 is unobserved/no rank and higher values indicate higher status. All specifications include year FE, tenure, and log current-year salary. Standard errors in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

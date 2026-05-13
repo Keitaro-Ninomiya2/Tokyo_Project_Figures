@@ -1,0 +1,6 @@
+metric,value
+na_transfer_obs,2664
+dest_norm_missing_with_raw,372
+origin_norm_missing_with_raw,114
+dest_norm_missing_no_raw,1315
+origin_norm_missing_no_raw,1063

@@ -300,7 +300,7 @@ dict_a <- c(
 tex_a <- etable(a1, a2, a3, a4,
                 dict = dict_a,
                 headers = c("Female", "Tenure", "Rank", "All"),
-                se.below = TRUE, fitstat = ~n, tex = TRUE)
+                se.below = TRUE, fitstat = ~n + G, tex = TRUE)
 
 tc_a <- clean_depvar(extract_tabular(tex_a))
 
@@ -343,7 +343,7 @@ tex_b <- etable(b1, b2, b3, b4,
                 dict = dict_b,
                 drop = "log|n_kakari",
                 headers = c("Tenure", "Tenure", "Promotion", "Promotion"),
-                se.below = TRUE, fitstat = ~n + r2, tex = TRUE)
+                se.below = TRUE, fitstat = ~n + r2 + G, tex = TRUE)
 
 tc_b <- clean_depvar(extract_tabular(tex_b))
 

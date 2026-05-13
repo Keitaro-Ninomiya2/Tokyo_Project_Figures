@@ -1,0 +1,4 @@
+model,status,nobs,pseudo_r2,dispersion,pair_fe_absorbed,warnings,errors
+within_dept_nondraft_pairFE,estimated,487,0.6224810930875073,3.20236822750945,196,,
+within_dept_nondraft_endpointFE,estimated,2306,0.802385296601704,19.694960747731187,NA,,
+within_dept_nondraft_yearFE,estimated,58702,0.35149788279604643,20.46197688538391,NA,,

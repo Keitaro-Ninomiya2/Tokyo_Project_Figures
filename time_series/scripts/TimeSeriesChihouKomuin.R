@@ -14,7 +14,7 @@ user_path <- Sys.getenv("USERPROFILE") # Gets "C:/Users/Keitaro Ninomiya"
 
 # 2. Build the path to the Box data
 DATA_ROOT <- file.path(user_path, "Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data")
-FILE_PATH <- file.path(DATA_ROOT, "Tokyo_Personnel_Master_All_Years_v2.csv")
+FILE_PATH <- file.path(DATA_ROOT, "Tokyo_Personnel_Master_All_Years.csv")
 
 # 3. Load the data
 df <- read_csv(FILE_PATH, locale = locale(encoding = "UTF-8"), show_col_types = FALSE) %>%

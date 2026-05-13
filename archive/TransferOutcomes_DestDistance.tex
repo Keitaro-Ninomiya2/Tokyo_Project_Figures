@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+\centering
+\caption{Career Outcomes of Transferees by Destination Type (Donor-Office Comparison)}
+\label{tab:transfer-dest-type}
+\footnotesize
+\begin{threeparttable}
+\begin{tabular}{lcccccccc}
+   \tabularnewline \midrule \midrule
+    & \multicolumn{2}{c}{Tenure After} & \multicolumn{2}{c}{PW Surv.} & \multicolumn{2}{c}{PW Years} & \multicolumn{2}{c}{Rank Gain} \\ 
+   Model:                              & (1)            & (2)            & (3)             & (4)             & (5)            & (6)                  & (7)           & (8)\\  
+   \midrule
+   \emph{Variables}\\
+   Dest. drafted (=1)                  & 0.0349         & 0.2258         & -0.0017         & 0.0239          & -0.0283        & 0.0449               & 0.0028        & 0.0411\\   
+                                       & (0.2164)       & (0.3786)       & (0.0150)        & (0.0292)        & (0.0489)       & (0.0827)             & (0.0188)      & (0.0421)\\   
+   Donor peer avg rank                 & -1.218$^{**}$  & -1.201$^{**}$  & -0.0262         & -0.0240         & -0.1470        & -0.1407              & -0.0298       & -0.0265\\   
+                                       & (0.4951)       & (0.5029)       & (0.0348)        & (0.0353)        & (0.1207)       & (0.1213)             & (0.0800)      & (0.0788)\\   
+   Donor peer avg tenure               & -0.1377$^{**}$ & -0.1373$^{**}$ & -0.0150$^{***}$ & -0.0150$^{***}$ & -0.0320$^{**}$ & -0.0318$^{**}$       & -0.0153$^{*}$ & -0.0152$^{*}$\\   
+                                       & (0.0659)       & (0.0657)       & (0.0049)        & (0.0049)        & (0.0161)       & (0.0160)             & (0.0081)      & (0.0082)\\   
+   Donor peer female share             & -0.9419        & -0.9350        & -0.1059         & -0.1050         & -0.0026        & $2.8\times 10^{-5}$  & -0.0121       & -0.0107\\   
+                                       & (1.764)        & (1.756)        & (0.1363)        & (0.1356)        & (0.4044)       & (0.4040)             & (0.2299)      & (0.2295)\\   
+   Dest. drafted $\times$ Diff. Dept.  &                & -0.2581        &                 & -0.0347         &                & -0.0989              &               & -0.0519\\   
+                                       &                & (0.3838)       &                 & (0.0301)        &                & (0.0901)             &               & (0.0475)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   donor\_occ\_id                      & Yes            & Yes            & Yes             & Yes             & Yes            & Yes                  & Yes           & Yes\\  
+   transfer\_year                      & Yes            & Yes            & Yes             & Yes             & Yes            & Yes                  & Yes           & Yes\\  
+   first\_yr                           & Yes            & Yes            & Yes             & Yes             & Yes            & Yes                  & Yes           & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                        & 27,018         & 27,018         & 27,018          & 27,018          & 27,018         & 27,018               & 27,018        & 27,018\\  
+   R$^2$                               & 0.10166        & 0.10168        & 0.10224         & 0.10228         & 0.12945        & 0.12949              & 0.18694       & 0.18700\\  
+   Size of the 'effective' sample      & 695            & 695            & 695             & 695             & 695            & 695                  & 695           & 695\\  
+   \midrule \midrule
+   \multicolumn{9}{l}{\emph{Clustered (lag\_office\_id) standard-errors in parentheses}}\\
+   \multicolumn{9}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} OLS. Sample: transferred workers (changed ka or kyoku across years, 1938--1945). Unit of observation: individual transferee. ``Dest.\ drafted'' = 1 if the destination office had $\geq$1 drafted worker that year. Odd columns: baseline effect of being sent to a drafted vacancy. Even columns: interaction with whether the destination was in a different department (kyoku). Comparison: workers who left the \emph{same donor office $\times$ occupation} but went to different destinations. All specifications control for donor-office peer composition (avg rank, avg tenure, female share, log headcount). Fixed effects: donor-office $\times$ occupation + transfer year + entry year. Standard errors clustered at the donor-office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

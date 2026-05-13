@@ -1,0 +1,25 @@
+Distance-decomposition flow concentration notes
+
+Master panel: C:\Users\Keitaro Ninomiya/Box/Research Notes (keitaro2@illinois.edu)/Tokyo_Gender/Processed_Data/Tokyo_Personnel_Master_All_Years.csv
+Cross-ka pair panel: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/BilateralTransferFlowPPML/results/bilateral_flow_pair_panel_full.rds
+
+Distance definitions:
+- same_ka: same cleaned kyoku x ka in t and t-1 but changed nonmissing kakari. Because the analysis is ka-level and kakari coverage is incomplete, this is a lower-confidence within-ka movement measure and is aggregated at ka-year rather than sub-ka pair level.
+- same_kyoku_diff_ka: existing bilateral pair panel, same cleaned kyoku and different ka.
+- diff_kyoku: existing bilateral pair panel, different cleaned kyoku.
+
+Office/unit definition:
+- origin_unit and destination_unit are cleaned kyoku x ka labels.
+- Existing 1944 TokyoTo cleanup/backfill logic is reused for same_ka construction.
+- No additional pre/post-1943 merger linkage is imposed for kyoku_pair_id stability.
+
+Draft restriction:
+- The main decomposition includes all pair-years in the existing panel and same_ka universe; it is not restricted to non-draft years.
+
+Regression notes:
+- same_ka has no true bilateral sub-ka pair structure, so it enters only the pooled distance-gradient PPML.
+- same_ka rows set log_N_o = log_N_d and occ_similarity = 1 by construction.
+- Standard errors are clustered two-way by origin_unit and destination_unit.
+
+No model warnings captured.
+No model errors captured.

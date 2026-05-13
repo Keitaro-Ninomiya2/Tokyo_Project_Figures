@@ -1,0 +1,5 @@
+outcome,specification,term,estimate,std_error,p_value,n
+tenure,tenure,low_wage_draftee,-0.5858433082136769,1.2086921587351391,0.6337405715955942,174
+baseline_court_rank,court_rank,low_wage_draftee,0.375594687814022,0.3461490489101924,0.29221165787383263,174
+baseline_decoration_rank,decoration_rank,low_wage_draftee,-0.01354911706055478,0.013872927913725713,0.3416824258544594,174
+position_rank_change,position_rank_change,low_wage_draftee,0.1755632127342728,0.11327258458803427,0.13856464686164224,174

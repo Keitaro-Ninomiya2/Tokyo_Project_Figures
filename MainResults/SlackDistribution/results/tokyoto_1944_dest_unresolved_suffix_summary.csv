@@ -1,0 +1,13 @@
+suffix_group,n_rows,n_unique_labels
+composite_or_ka_like,46,6
+training_center,34,1
+workshop_office,32,1
+clinic,26,6
+health_guidance_center,23,6
+health_center,16,2
+branch_office,14,1
+other,14,6
+workshop_site,13,1
+quarantine_office,12,2
+factory,8,1
+housing_unit,1,1

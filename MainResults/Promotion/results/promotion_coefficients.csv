@@ -1,0 +1,13 @@
+panel,outcome,estimate,std_error
+Panel B: Donor peers,Tenure after,3.7525,0.0911
+Panel B: Donor peers,Postwar survival,0.1953,0.0052
+Panel B: Donor peers,Postwar years,0.6345,0.0206
+Panel B: Donor peers,Rank gain,0.1813,0.0071
+Panel C: Draft vacancy,Tenure after,1.5556,0.2348
+Panel C: Draft vacancy,Postwar survival,0.0804,0.0153
+Panel C: Draft vacancy,Postwar years,0.4705,0.0649
+Panel C: Draft vacancy,Rank gain,0.0305,0.0137
+Panel A: Dest. peers,Tenure after,2.2992,0.0868
+Panel A: Dest. peers,Postwar survival,0.1426,0.0059
+Panel A: Dest. peers,Postwar years,0.4895,0.0208
+Panel A: Dest. peers,Rank gain,0.1348,0.0060

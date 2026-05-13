@@ -1,0 +1,4 @@
+model,status,nobs,pseudo_r2,dispersion,warnings,errors
+distance_ppml,estimated,307652,0.3579130123776735,9.801291788640238,,
+distance_ppml_kyokuFE,estimated,223378,0.38464154320025745,7.809211967615201,,
+within_dept_features,estimated,27756,0.3350407758954669,47.60349365783977,,

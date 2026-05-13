@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{Within-Kyoku Transfers: Selection into Draft-Induced Vacancies}
+\label{tab:selection-within-kyoku}
+\footnotesize
+\begin{threeparttable}
+\begin{tabular}{lcc}
+\toprule
+ & Diff Ka: Draft Vac. & Diff Ka: Non-Draft \\
+\midrule
+Decoration rank (0--8; high=better) & -11.7626$^{***}$ & 0.1753$$ \\
+                                    & (0.0000) & (0.1926) \\[3pt]
+Court rank (0--8; high=better) & -0.1754$$ & -0.0225$$ \\
+                               & (0.3155) & (0.0607) \\[3pt]
+Female & 0.0765$$ & 0.9102$^{***}$ \\
+       & (0.9183) & (0.2458) \\[3pt]
+Tenure (yrs) & -0.0923$^{*}$ & 0.0178$$ \\
+             & (0.0505) & (0.0134) \\[3pt]
+Log salary (current year) & 0.1264$$ & -0.1669$^{*}$ \\
+                          & (0.2295) & (0.0941) \\[3pt]
+\midrule
+Year FE & \multicolumn{2}{c}{Yes} \\
+Observations & \multicolumn{2}{c}{3,275} \\
+Log-likelihood & \multicolumn{2}{c}{-2137.8} \\
+AIC & \multicolumn{2}{c}{4323.7} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Multinomial logit. Base category: stayed (same ka and kyoku). Sample: workers who either stayed or transferred within the same kyoku (different ka). ``Draft Vac.'' = destination office had $\geq$1 drafted worker that year. All specifications use the salary subsample and include year FE, tenure, and current-year log salary. Standard errors in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

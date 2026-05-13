@@ -1,0 +1,12 @@
+Slack Distribution Framework
+
+Draft-impacted sections choose between internal sourcing and external hiring.
+Internal sourcing is cheaper when there are non-drafted, non-scarce workers in nearby sections that are plausible rank-adjacent substitutes and come from sections with prior hiring activity.
+The relevant constraint is not whether transfers are possible in the abstract, but how the available slack pool is distributed across organizational distance.
+Same-section slack should be the cheapest margin, same-department slack the next cheapest, and different-department slack the most costly internal margin; external hiring fills the residual when internal slack is thin.
+The empirical 2:1 transfer-to-hire ratio is therefore an aggregate outcome of section-level optimization against this distance-specific slack distribution.
+In the regressions, the key prediction is a declining coefficient profile for transfers as slack moves from same-section to same-department to different-department sources, with hiring absorbing vacancies when nearby slack is unavailable.
+
+The estimated coefficient pattern only partially matches a simple monotone-distance mechanism.
+The emerging evidence instead points to a threshold role for same-section slack and a distinction between same-department slack, which appears to be absorbed through non-transfer adjustments, and different-department slack, which appears more closely tied to formal transfer reliance.
+The framework should therefore emphasize that the form of adjustment depends on where slack is located, rather than presuming a single declining distance gradient.

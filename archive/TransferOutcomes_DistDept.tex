@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\caption{Career Dynamics of Transferees: Same- vs.\ Different-Department Origin}
+\label{tab:transfer-distdept}
+\footnotesize
+\begin{threeparttable}
+\begin{tabular}{lcccccccc}
+   \tabularnewline \midrule \midrule
+    & \multicolumn{2}{c}{Tenure After} & \multicolumn{2}{c}{PW Surv.} & \multicolumn{2}{c}{PW Years} & \multicolumn{2}{c}{Rank Gain} \\ 
+   Model:                            & (1)             & (2)             & (3)             & (4)             & (5)             & (6)             & (7)             & (8)\\  
+   \midrule
+   \emph{Variables}\\
+   Transferred                       & 1.100$^{***}$   & 1.482$^{***}$   & 0.0879$^{***}$  & 0.1201$^{***}$  & 0.2358$^{***}$  & 0.3135$^{***}$  & 0.0631$^{***}$  & 0.0753$^{***}$\\   
+                                     & (0.1920)        & (0.3419)        & (0.0185)        & (0.0233)        & (0.0869)        & (0.0980)        & (0.0116)        & (0.0164)\\   
+   Own tenure (yrs since entry)      & 0.2871$^{***}$  & 0.2905$^{***}$  & 0.0219$^{***}$  & 0.0222$^{***}$  & 0.0820$^{***}$  & 0.0827$^{***}$  & 0.0132$^{***}$  & 0.0133$^{***}$\\   
+                                     & (0.0659)        & (0.0631)        & (0.0049)        & (0.0047)        & (0.0138)        & (0.0128)        & (0.0015)        & (0.0015)\\   
+   Peer avg rank                     & -0.2402         & -0.0553         & 0.0035          & 0.0192          & 0.5528$^{***}$  & 0.5905$^{**}$   & -0.1687$^{***}$ & -0.1628$^{***}$\\   
+                                     & (0.6772)        & (0.6180)        & (0.0479)        & (0.0397)        & (0.2087)        & (0.2286)        & (0.0322)        & (0.0333)\\   
+   Peer avg tenure                   & -0.4904$^{***}$ & -0.4759$^{***}$ & -0.0398$^{***}$ & -0.0386$^{***}$ & -0.1427$^{***}$ & -0.1397$^{***}$ & -0.0237$^{***}$ & -0.0232$^{***}$\\   
+                                     & (0.1330)        & (0.1354)        & (0.0090)        & (0.0093)        & (0.0252)        & (0.0271)        & (0.0073)        & (0.0070)\\   
+   Peer female share                 & -1.069          & 0.3340          & -0.1442         & -0.0259         & -0.1281         & 0.1577          & -0.7407$^{***}$ & -0.6959$^{***}$\\   
+                                     & (3.472)         & (4.176)         & (0.1014)        & (0.1653)        & (2.368)         & (2.649)         & (0.1837)        & (0.1839)\\   
+   Transferred $\times$ Diff. Dept.  &                 & -0.5757         &                 & -0.0486         &                 & -0.1173         &                 & -0.0184\\   
+                                     &                 & (0.3821)        &                 & (0.0369)        &                 & (0.1591)        &                 & (0.0177)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   dest\_occ\_id                     & Yes             & Yes             & Yes             & Yes             & Yes             & Yes             & Yes             & Yes\\  
+   transfer\_year                    & Yes             & Yes             & Yes             & Yes             & Yes             & Yes             & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                      & 6,384           & 6,384           & 6,384           & 6,384           & 6,384           & 6,384           & 6,384           & 6,384\\  
+   R$^2$                             & 0.12678         & 0.12715         & 0.11851         & 0.11899         & 0.13541         & 0.13570         & 0.34665         & 0.34672\\  
+   Size of the 'effective' sample    & 100             & 100             & 100             & 100             & 100             & 100             & 100             & 100\\  
+   \midrule \midrule
+   \multicolumn{9}{l}{\emph{Clustered (dest\_office) standard-errors in parentheses}}\\
+   \multicolumn{9}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} OLS. Sample: workers at destination offices that received a transferee in 1938--1945 (transferees plus incumbent peers). Odd columns show the baseline effect of being a transferee; even columns add an interaction with an indicator for whether the transferee arrived from a \emph{different department (kyoku)}. A transfer is defined as a change of ka or kyoku across years. ``Diff.\ Dept.'' is coded 0 for incumbent peers and for same-kyoku transferees. All specifications control for peer average rank, peer average tenure, peer female share, and log peer headcount, and include destination-kakari, year, and position fixed effects. Standard errors clustered at the destination-kakari level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

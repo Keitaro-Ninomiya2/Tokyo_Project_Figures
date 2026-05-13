@@ -1,7 +1,8 @@
 ################################################################################
 # Table: Transfer Decomposition by Organizational Distance
-# Three dep vars: same ka & kyoku, same kyoku diff ka, different kyoku
-# Each decomposed by: Baseline, × Rank, × Engineer (9 columns)
+# Three dep vars: same kyoku & same ka, same kyoku diff ka, different kyoku
+# ka_group from worker flows (build_ka_groups.py, 40% threshold)
+# kyoku_group from historical crosswalk
 ################################################################################
 
 library(tidyverse)
@@ -14,6 +15,8 @@ DATA_PATH <- file.path(
   "Tokyo_Gender", "Processed_Data",
   "Tokyo_Personnel_Master_All_Years.csv"
 )
+
+KA_GROUP_PATH <- here("Regressions", "ka_group_map.csv")
 
 df <- read_csv(DATA_PATH, locale = locale(encoding = "UTF-8"), show_col_types = FALSE) %>%
   filter(is_name == TRUE) %>%
@@ -29,8 +32,24 @@ df_all <- read_csv(DATA_PATH, locale = locale(encoding = "UTF-8"), show_col_type
 years_of_interest <- 1938:1945
 
 # ============================================================
+# LOAD KA_GROUP MAP (from worker flows)
+# ============================================================
+
+ka_group_raw <- read_csv(KA_GROUP_PATH, show_col_types = FALSE) %>%
+  mutate(kyoku = replace_na(kyoku, ""))
+
+cat("ka_group_map:", nrow(ka_group_raw), "rows\n")
+
+# Join ka_group to df
+df <- df %>%
+  mutate(kyoku_clean = replace_na(kyoku, ""),
+         ka_clean = replace_na(ka, "")) %>%
+  left_join(ka_group_raw, by = c("year_num" = "year", "kyoku_clean" = "kyoku", "ka_clean" = "ka"))
+
+cat("Workers with ka_group:", sum(!is.na(df$ka_group)), "/", nrow(df), "\n")
+
+# ============================================================
 # KYOKU NORMALIZATION + MERGER CROSSWALK
-# (identical to NewTable1_Reallocation.R)
 # ============================================================
 
 normalize_kyoku <- function(k) {
@@ -75,7 +94,7 @@ normalize_kyoku <- function(k) {
     str_detect(k, "計[晝画]")   ~ "計画局",
     str_detect(k, "民局")       ~ "健民局",
     str_detect(k, "後醍院")     ~ "電気局",
-    str_detect(k, "築地産院|荒産院") ~ "健民局",
+    str_detect(k, "築地産院|荒産院") ~ "厚生局",
     str_detect(k, "防衛")       ~ "防衛局",
     str_detect(k, "民生")       ~ "民生局",
     str_detect(k, "長官官房")   ~ "長官官房",
@@ -127,7 +146,7 @@ cumul_male_stock <- map_dfr(years_of_interest, function(yr) {
     mutate(year_num = yr)
 })
 
-# --- Lag records ---
+# --- Lag records (include ka_group and kyoku_group) ---
 staff_first_year <- df %>% group_by(staff_id) %>%
   summarise(first_year = min(year_num), .groups = "drop")
 
@@ -135,7 +154,8 @@ staff_lag <- df %>%
   distinct(staff_id, year_num, .keep_all = TRUE) %>%
   select(staff_id, year_num,
          lag_kyoku_group = kyoku_group, lag_norm_kyoku = norm_kyoku,
-         lag_ka = ka, lag_kakari = kakari, lag_pos = pos_norm) %>%
+         lag_ka = ka, lag_kakari = kakari, lag_pos = pos_norm,
+         lag_ka_group = ka_group) %>%
   mutate(year_num = year_num + 1)
 
 # --- Classify arrivals by distance ---
@@ -144,20 +164,20 @@ staff_transitions <- df %>%
   left_join(staff_first_year, by = "staff_id") %>%
   left_join(staff_lag, by = c("staff_id", "year_num")) %>%
   mutate(
-    # Transfer distance classification (cross-kakari moves only)
     arrival_type = case_when(
-      # No lag record (new hire or first year in data)
+      # No lag record
       is.na(lag_kyoku_group) | is.na(kyoku_group) ~ NA_character_,
-      # Same kakari = stayer, not a transfer
-      lag_kakari == kakari & lag_ka == ka &
-        lag_kyoku_group == kyoku_group              ~ "stayer",
-      # Same ka & kyoku group: within-section transfer
-      lag_kyoku_group == kyoku_group &
-        !is.na(lag_ka) & !is.na(ka) & lag_ka == ka  ~ "same_ka",
-      # Same kyoku group, different ka: within-bureau transfer
-      lag_kyoku_group == kyoku_group                 ~ "same_kyoku_diff_ka",
-      # Different kyoku group: cross-bureau transfer
-      lag_kyoku_group != kyoku_group                 ~ "diff_kyoku",
+      # Same ka_group = stayer (same functional unit across years)
+      !is.na(ka_group) & !is.na(lag_ka_group) &
+        ka_group == lag_ka_group                    ~ "stayer",
+      # Same kyoku group, same raw ka (fallback when ka_group missing)
+      (is.na(ka_group) | is.na(lag_ka_group)) &
+        lag_kyoku_group == kyoku_group &
+        !is.na(lag_ka) & !is.na(ka) & lag_ka == ka ~ "stayer",
+      # Same kyoku group, different ka = within-bureau transfer
+      lag_kyoku_group == kyoku_group                ~ "same_kyoku_diff_ka",
+      # Different kyoku group = cross-bureau transfer
+      lag_kyoku_group != kyoku_group                ~ "diff_kyoku",
       TRUE ~ NA_character_
     ),
     pos_rank    = assign_rank(pos_norm),
@@ -167,17 +187,24 @@ staff_transitions <- df %>%
   )
 
 # Diagnostics
-cat("Arrival type distribution:\n")
+cat("\nArrival type distribution:\n")
 staff_transitions %>% filter(!is.na(arrival_type)) %>%
   count(arrival_type, sort = TRUE) %>% print()
+
+cat("\nArrival type by year:\n")
+staff_transitions %>% filter(!is.na(arrival_type)) %>%
+  count(year_num, arrival_type) %>%
+  pivot_wider(names_from = arrival_type, values_from = n, values_fill = 0) %>%
+  print()
 
 # --- Aggregate to position × kakari level ---
 position_outcomes <- staff_transitions %>%
   group_by(kyoku, ka, office_id, kakari, pos_norm, year_num) %>%
   summarise(
-    n_same_ka          = sum(arrival_type == "same_ka", na.rm = TRUE),
+    n_same_ka            = sum(arrival_type == "stayer", na.rm = TRUE),
     n_same_kyoku_diff_ka = sum(arrival_type == "same_kyoku_diff_ka", na.rm = TRUE),
-    n_diff_kyoku       = sum(arrival_type == "diff_kyoku", na.rm = TRUE),
+    n_diff_kyoku         = sum(arrival_type == "diff_kyoku", na.rm = TRUE),
+    n_workers            = n(),
     .groups = "drop"
   )
 
@@ -202,53 +229,60 @@ position_panel <- position_outcomes %>%
   )
 
 panel_ka <- position_panel %>% filter(!is.na(ka_id))
-cat("Panel:", nrow(position_panel), "obs. With ka_id:", nrow(panel_ka), "\n")
+cat("\nPanel:", nrow(position_panel), "obs. With ka_id:", nrow(panel_ka), "\n")
+
+# --- Totals ---
+panel_ka <- panel_ka %>%
+  mutate(
+    n_transfers_in = n_same_kyoku_diff_ka + n_diff_kyoku
+  )
+
+# Diagnostics
+cat("\nMean outcomes per position-year:\n")
+panel_ka %>%
+  summarise(across(c(n_same_ka, n_same_kyoku_diff_ka, n_diff_kyoku, n_transfers_in,
+                     n_drafted_male), mean)) %>%
+  print()
+
+cat("\nBy year:\n")
+panel_ka %>% group_by(year_num) %>%
+  summarise(across(c(n_same_kyoku_diff_ka, n_diff_kyoku, n_transfers_in), mean),
+            .groups = "drop") %>%
+  print()
 
 # ============================================================
-# REGRESSIONS: 9 columns (3 dep vars × {baseline, ×rank, ×eng})
+# REGRESSIONS: 3 panels × 2 specs (baseline, engineer)
+# Panel A: Same kyoku, same ka (retention)
+# Panel B: Same kyoku, different ka (close transfer)
+# Panel C: Different kyoku (distant transfer)
 # ============================================================
 
-# --- Same ka & kyoku ---
-s1 <- feols(n_same_ka ~ n_drafted_male + log(cumul_n_male + 1) |
+# --- Panel A: Same kyoku, same ka (retention) ---
+a1 <- feols(n_same_ka ~ n_drafted_male + log(cumul_n_male + 1) |
               year_num + ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
 
-s2 <- feols(n_same_ka ~ n_drafted_male + n_drafted_male:is_rank1 +
-              n_drafted_male:is_rank3 + log(cumul_n_male + 1) |
-              year_num + ka_id + pos_norm,
-            data = panel_ka, cluster = ~office_id)
-
-s3 <- feols(n_same_ka ~ n_drafted_male + n_drafted_male:is_engineer +
+a2 <- feols(n_same_ka ~ n_drafted_male + n_drafted_male:is_engineer +
               log(cumul_n_male + 1) |
               year_num + ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
 
-# --- Same kyoku, different ka ---
-k1 <- feols(n_same_kyoku_diff_ka ~ n_drafted_male + log(cumul_n_male + 1) |
+# --- Panel B: Same kyoku, different ka (close transfer) ---
+b1 <- feols(n_same_kyoku_diff_ka ~ n_drafted_male + log(cumul_n_male + 1) |
               year_num + ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
 
-k2 <- feols(n_same_kyoku_diff_ka ~ n_drafted_male + n_drafted_male:is_rank1 +
-              n_drafted_male:is_rank3 + log(cumul_n_male + 1) |
-              year_num + ka_id + pos_norm,
-            data = panel_ka, cluster = ~office_id)
-
-k3 <- feols(n_same_kyoku_diff_ka ~ n_drafted_male + n_drafted_male:is_engineer +
+b2 <- feols(n_same_kyoku_diff_ka ~ n_drafted_male + n_drafted_male:is_engineer +
               log(cumul_n_male + 1) |
               year_num + ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
 
-# --- Different kyoku ---
-d1 <- feols(n_diff_kyoku ~ n_drafted_male + log(cumul_n_male + 1) |
+# --- Panel C: Different kyoku (distant transfer) ---
+c1 <- feols(n_diff_kyoku ~ n_drafted_male + log(cumul_n_male + 1) |
               year_num + ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
 
-d2 <- feols(n_diff_kyoku ~ n_drafted_male + n_drafted_male:is_rank1 +
-              n_drafted_male:is_rank3 + log(cumul_n_male + 1) |
-              year_num + ka_id + pos_norm,
-            data = panel_ka, cluster = ~office_id)
-
-d3 <- feols(n_diff_kyoku ~ n_drafted_male + n_drafted_male:is_engineer +
+c2 <- feols(n_diff_kyoku ~ n_drafted_male + n_drafted_male:is_engineer +
               log(cumul_n_male + 1) |
               year_num + ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
@@ -257,11 +291,22 @@ d3 <- feols(n_diff_kyoku ~ n_drafted_male + n_drafted_male:is_engineer +
 # PRINT
 # ============================================================
 
-cat("\n===== TRANSFER DECOMPOSITION =====\n\n")
-etable(s1, s2, s3, k1, k2, k3, d1, d2, d3, se.below = TRUE, fitstat = ~n,
-       headers = c("Base", "Rank", "Eng",
-                   "Base", "Rank", "Eng",
-                   "Base", "Rank", "Eng"))
+cat("\n===== TRANSFER DECOMPOSITION (ka_group from worker flows) =====\n\n")
+cat("Panel A: Same kyoku, same ka (retention)\n")
+etable(a1, a2, se.below = TRUE, fitstat = ~n)
+
+cat("\nPanel B: Same kyoku, different ka (close transfer)\n")
+etable(b1, b2, se.below = TRUE, fitstat = ~n)
+
+cat("\nPanel C: Different kyoku (distant transfer)\n")
+etable(c1, c2, se.below = TRUE, fitstat = ~n)
+
+# Full 6-column table
+cat("\n===== FULL TABLE =====\n\n")
+etable(a1, a2, b1, b2, c1, c2, se.below = TRUE, fitstat = ~n + r2,
+       headers = c("Base", "Eng",
+                   "Base", "Eng",
+                   "Base", "Eng"))
 
 # ============================================================
 # EXPORT LaTeX
@@ -280,7 +325,7 @@ extract_tabular <- function(tex_raw) {
 }
 
 clean_depvar <- function(tex_content) {
-  drop_idx <- grep("n\\_same|n\\_diff", tex_content)
+  drop_idx <- grep("n\\_same|n\\_diff|n\\_transfer", tex_content)
   if (length(drop_idx) > 0) tex_content <- tex_content[-drop_idx]
   drop_idx2 <- grep("Dependent Var", tex_content)
   if (length(drop_idx2) > 0) tex_content <- tex_content[-drop_idx2]
@@ -291,25 +336,23 @@ clean_depvar <- function(tex_content) {
 
 dict <- c(
   n_drafted_male                = "No. drafted workers",
-  "n_drafted_male:is_rank1"     = "No. drafted $\\times$ Rank 1",
-  "n_drafted_male:is_rank3"     = "No. drafted $\\times$ Rank 3",
   "n_drafted_male:is_engineer"  = "No. drafted $\\times$ Engineer"
 )
 
-tex <- etable(s1, s2, s3, k1, k2, k3, d1, d2, d3,
+tex <- etable(a1, a2, b1, b2, c1, c2,
               dict = dict,
               order = c("No. drafted"),
               drop = "log",
-              headers = c("Base", "$\\times$ Rank", "$\\times$ Eng.",
-                          "Base", "$\\times$ Rank", "$\\times$ Eng.",
-                          "Base", "$\\times$ Rank", "$\\times$ Eng."),
-              se.below = TRUE, fitstat = ~n, tex = TRUE)
+              headers = c("Base", "$\\times$ Eng.",
+                          "Base", "$\\times$ Eng.",
+                          "Base", "$\\times$ Eng."),
+              se.below = TRUE, fitstat = ~n + r2 + G, tex = TRUE)
 
 tc <- clean_depvar(extract_tabular(tex))
 
 # Insert dep-var header rows after the first \midrule
 midrule_idx <- grep("\\\\midrule", tc)[1]
-depvar_row <- " & \\multicolumn{3}{c}{Same ka \\& kyoku} & \\multicolumn{3}{c}{Same kyoku, diff.\\ ka} & \\multicolumn{3}{c}{Different kyoku} \\\\"
+depvar_row <- " & \\multicolumn{2}{c}{Retention (same section)} & \\multicolumn{2}{c}{Close transfer (same bureau)} & \\multicolumn{2}{c}{Distant transfer (diff.\\ bureau)} \\\\"
 tc <- append(tc, c(depvar_row, "\\midrule"), after = midrule_idx)
 
 tex_out <- c(
@@ -323,12 +366,13 @@ tex_out <- c(
   "\\begin{tablenotes}[flushleft]",
   "\\footnotesize",
   paste0("\\item \\textit{Notes:} OLS regressions. Unit of observation: position $\\times$ kakari $\\times$ year (1938--1945). ",
-         "Dependent variable: number of workers arriving from each organizational distance. ",
-         "Columns~(1)--(3): workers who transferred from a different kakari within the same ka and kyoku (bureau) group. ",
-         "Columns~(4)--(6): workers from the same kyoku group but a different ka (section). ",
-         "Columns~(7)--(9): workers from a different kyoku group entirely. ",
+         "``Retention'' (columns~1--2): workers remaining in the same ka group (same bureau and section). ",
+         "``Close transfer'' (columns~3--4): workers from the same kyoku group but a different ka group. ",
+         "``Distant transfer'' (columns~5--6): workers from a different kyoku group. ",
+         "Ka groups are constructed from worker flows across consecutive years: ",
+         "two (kyoku, ka) cells in adjacent years are linked if $\\geq$40\\% of workers in the source cell appear in the destination cell. ",
          "Kyoku groups use a crosswalk that accounts for the 1943 Tokyo-Fu/Shi to Tokyo-To merger. ",
-         "Rank and engineer main effects are absorbed by position fixed effects. ",
+         "Engineer main effects are absorbed by position fixed effects. ",
          "All specifications include year, ka, and position fixed effects, and control for log cumulative male baseline (not shown). ",
          "Standard errors clustered at the office level in parentheses. ",
          "$^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$."),

@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{Selection into 1944 Destinations by Destination Draftee Salary}
+\label{tab:selection-1944-ka-occ-destination-wage}
+\scriptsize
+\begin{threeparttable}
+\resizebox{0.96\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{All destinations} & \multicolumn{2}{c}{High-wage draftee destination} & \multicolumn{2}{c}{Low-wage draftee destination} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+ & Draft & Non-Draft & Draft & Non-Draft & Draft & Non-Draft \\
+\midrule
+Decoration rank (0--8; high=better) & -0.1441$$ & -0.2383$$ & 0.0389$$ & -0.2268$$ & -1.1910$$ & -0.6273$$ \\
+                                    & (0.5346) & (0.6675) & (0.5392) & (0.6663) & (0.8865) & (0.6018) \\[3pt]
+Court rank (0--8; high=better) & 0.2071$$ & 0.1904$$ & 0.2276$$ & 0.1935$$ & 0.1766$$ & 0.1923$$ \\
+                               & (0.2195) & (0.2289) & (0.2222) & (0.2301) & (0.2303) & (0.2348) \\[3pt]
+Female & 0.0481$$ & 0.6143$$ & -0.6959$$ & 0.5942$$ & 0.4434$$ & 0.6160$$ \\
+       & (0.5334) & (0.5590) & (0.5768) & (0.5585) & (0.5423) & (0.5588) \\[3pt]
+Tenure (yrs) & -0.0435$^{*}$ & -0.0307$$ & -0.0361$$ & -0.0266$$ & -0.0500$^{**}$ & -0.0325$$ \\
+             & (0.0225) & (0.0254) & (0.0234) & (0.0255) & (0.0236) & (0.0254) \\[3pt]
+Log salary (current year) & 0.2466$^{***}$ & 0.6037$^{***}$ & 0.2995$^{***}$ & 0.5630$^{***}$ & 0.2490$^{***}$ & 0.6749$^{***}$ \\
+                          & (0.0702) & (0.0931) & (0.0737) & (0.0907) & (0.0770) & (0.0996) \\[3pt]
+\midrule
+Observations & \multicolumn{2}{c}{1,741} & \multicolumn{2}{c}{1,068} & \multicolumn{2}{c}{988} \\
+Log-likelihood & \multicolumn{2}{c}{-1156.1} & \multicolumn{2}{c}{-917.7} & \multicolumn{2}{c}{-875.5} \\
+AIC & \multicolumn{2}{c}{2336.2} & \multicolumn{2}{c}{1859.4} & \multicolumn{2}{c}{1775.0} \\
+\bottomrule
+\end{tabular}}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Multinomial logit. Choice sets are defined by all workers' baseline ka $\times$ occupation cells from 1943 Tokyo Shi and 1941 Tokyo Fu rosters. Outcomes and salaries are measured from the worker's 1944 assignment; Tokyo Fu baseline workers therefore use their 1944 salary. A worker is selected if assigned to a different 1944 ka; when 1944 ka is missing, office assignment is used instead. Columns 1--2 split 1944 transfers into drafted and non-drafted destination office-years. Columns 3--4 keep drafted destinations whose drafted workers have at-or-above-median mean salary, plus non-drafted destinations. Columns 5--6 analogously use below-median drafted-worker salary destinations plus non-drafted destinations. Base category: not selected from the baseline ka-occupation choice set. Decoration and court rank are baseline values coded 0--8, where 0 is unobserved/no rank and higher values indicate higher status. All specifications include tenure and log 1944 salary. Standard errors in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Does Productivity Predict Transfer Destination?}
+\label{tab:selection-productivity}
+\footnotesize
+\begin{threeparttable}
+\begin{tabular}{lcccccc}
+   \tabularnewline \midrule \midrule
+                                  & Any Transfer  & Same Dept     & Diff Dept       & Any Transfer & Same Dept   & Diff Dept \\   
+   Model:                         & (1)           & (2)           & (3)             & (4)          & (5)         & (6)\\  
+   \midrule
+   \emph{Variables}\\
+   Court rank (1--8)              & -0.0076$^{*}$ & -0.0091$^{*}$ & 0.0028          &              &             &   \\   
+                                  & (0.0045)      & (0.0053)      & (0.0039)        &              &             &   \\   
+   Decoration (1--8)              &               &               &                 & -0.0119      & -0.0221     & 0.0080\\   
+                                  &               &               &                 & (0.0226)     & (0.0259)    & (0.0137)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   origin\_ka\_occ                & Yes           & Yes           & Yes             & Yes          & Yes         & Yes\\  
+   year\_num                      & Yes           & Yes           & Yes             & Yes          & Yes         & Yes\\  
+   first\_yr                      & Yes           & Yes           & Yes             & Yes          & Yes         & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 1,036         & 1,036         & 1,202           & 389          & 389         & 440\\  
+   R$^2$                          & 0.77819       & 0.76184       & 0.78300         & 0.91916      & 0.86197     & 0.91620\\  
+   Size of the 'effective' sample & 205           & 205           & 221             & 98           & 98          & 109\\  
+   \midrule \midrule
+   \multicolumn{7}{l}{\emph{Clustered (lag\_office\_id) standard-errors in parentheses}}\\
+   \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Linear probability models. Sample: all worker $\times$ year observations with prior-year records, 1938--1945. Dependent variable in Columns (1) and (4): transferred to any office (=1). Columns (2) and (5): transferred within same department/kyoku (=1). Columns (3) and (6): transferred to a different department/kyoku (=1). ``Rank'' is the prior-year position rank (1--3 scale; higher = more senior). Columns (4)--(6) add own tenure (years since first observed). Fixed effects: origin-office $\times$ occupation + year + entry year. Standard errors clustered at the origin-office level. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}\end{threeparttable}\end{table}

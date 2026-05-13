@@ -1,0 +1,13 @@
+Destination office x occupation draft interaction PPML
+
+D_dest_occ_any equals 1 if at least one male worker in the destination office x occupation cell is drafted in year t.
+All reported regressors are interacted with D_dest_occ_any.
+Omitted distance category is same office, different occupation.
+This model does not impose the previous non-draft office-year restriction because that would make D_dest_occ_any identically zero.
+
+Cells: 5286346
+Destination occupation drafted cells: 2890
+Transfers to drafted destination occupation cells: 39
+
+Warnings: col1_year_fe: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | col2_year_occ_pair_fe: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | col3_year_origin_kyoku_fe: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | col4_year_destination_kyoku_fe: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | col5_year_origin_ka_fe: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). | col6_year_destination_ka_fe: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov).
+No model errors captured.

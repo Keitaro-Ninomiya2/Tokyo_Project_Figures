@@ -124,8 +124,8 @@ print(summary(panel_ka$female_share))
 c1 <- feols(n_rinji ~ n_drafted_male + log(cumul_n_male + 1) | ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
 
-# C2: × Rank (rank2 = base; rank main effects absorbed by pos_norm FE)
-c2 <- feols(n_rinji ~ n_drafted_male + n_drafted_male:is_rank1 + n_drafted_male:is_rank3
+# C2: × Rank 1 only (rank 2+ = base; part-time vs above)
+c2 <- feols(n_rinji ~ n_drafted_male + n_drafted_male:is_rank1
             + log(cumul_n_male + 1) | ka_id + pos_norm,
             data = panel_ka, cluster = ~office_id)
 
@@ -179,7 +179,7 @@ tex <- etable(c1, c2, c3, c4,
                           "$\\times$ Engineer", "$\\times$ Gender"),
               order = c("No. drafted", "Female share"),
               drop = "log",
-              se.below = TRUE, fitstat = ~n,
+              se.below = TRUE, fitstat = ~n + r2 + G,
               tex = TRUE)
 
 tc <- extract_tabular(tex)

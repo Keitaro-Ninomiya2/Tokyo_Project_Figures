@@ -1,0 +1,3 @@
+side,n_missing_kyoku,n_ka_present,n_recovered,recovery_rate,n_recovered_office_tiebreak,n_recovered_unique_reference,n_ambiguous_reference_ka,n_no_reference_match
+destination,616,616,377,0.612012987012987,0,377,26,213
+origin,117,117,40,0.3418803418803419,0,40,0,77

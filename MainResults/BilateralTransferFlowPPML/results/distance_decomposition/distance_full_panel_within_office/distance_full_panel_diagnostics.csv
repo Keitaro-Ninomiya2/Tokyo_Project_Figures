@@ -1,0 +1,4 @@
+distance_category,n_cells,n_office_pairs,n_origin_destination_occ_cells,n_positive_cells,total_transfers,transfer_share,mean_flow_if_positive,median_flow_if_positive,max_flow
+diff_kyoku,4322640,246766,4155162,569,731,0.1772121212121212,1.2847100175746924,1,36
+same_kyoku_diff_ka,858412,59910,805136,553,1736,0.42084848484848486,3.1392405063291138,1,72
+same_office,27918,893,23760,344,1658,0.40193939393939393,4.819767441860465,1.5,77

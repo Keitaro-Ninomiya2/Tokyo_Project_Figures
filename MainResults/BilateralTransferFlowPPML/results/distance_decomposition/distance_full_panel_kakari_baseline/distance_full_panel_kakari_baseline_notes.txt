@@ -1,0 +1,16 @@
+Kakari-baseline occupation-level PPML
+
+Unit: origin kakari x origin occupation x destination kakari x destination occupation x year.
+Retention is same kakari and same occupation; excluded.
+Omitted baseline category is same kakari, different occupation.
+Distance coefficients compare farther moves to this within-kakari occupation-change baseline.
+Only rows with nonmissing kakari can enter; this is a smaller kakari-covered diagnostic panel.
+Size variables are log(1 + non-drafted lagged kakari x occupation counts).
+The +1 is required because the omitted same-kakari/different-occupation baseline includes destination occupations with zero lagged employment.
+
+Cells: 44065
+Transfers: 619
+Positive cells: 104
+
+No model warnings captured.
+No model errors captured.

@@ -1,0 +1,35 @@
+ka,suffix_group,n_kyoku,kyoku_values,years,n_rows_observed
+会計課,composite_or_ka_like,34,一府会事務局 | 上木局 | 中央卸売市場 | 九財務局 | 事務局 | 五(社会局 | 伊興事業局 | 保健局 | 告補助局 | 土木局 | 城東病院院 | 市会事務局 | 御築局 | 復与事業局 | 復興事業局 | 日大参保療院 | 東京市主事(厚生局 | 歩補助局 | 水道局 | 清掃監督(厚生局 | 港湾局 | 港準局 | 監査局 | 社会局 | 経理局 | 繰済局 | 荒産院 | 薬局 | 衆議院 | 記(社会局 | 財務局 | 電気局 | 養育院 | 齒薬外耳産事副院,"1928,1929,1930,1931,1932,1933,1934,1935,1936,1937,1938,1939,1940,1941,1942,1943,1951,1954,1958",9885
+コンクリート工場,factory,2,水道局 | 財務局,"1938,1939",252
+荒川区出張所,branch_office,4,保健局 | 台東産院 | 土木局 | 監察医務院,"1933,1935,1937,1938,1950,1951",194
+荏原診療所,clinic,2,一府会事務局 | 衆議院,"1938,1941",134
+三河島診療所,clinic,2,一府会事務局 | 衆議院,"1938,1941",40
+白山診療所,clinic,1,厚生局,1939,35
+下谷児童健康指導所,health_guidance_center,NA,NA,NA,NA
+中央裁斷場,other,NA,NA,NA,NA
+五反田診療所,clinic,NA,NA,NA,NA
+五技所,other,NA,NA,NA,NA
+共同住宅管理事務所,housing_unit,NA,NA,NA,NA
+厚生課健民課,composite_or_ka_like,NA,NA,NA,NA
+小石川児童健康指導所,health_guidance_center,NA,NA,NA,NA
+振興課厚生課,composite_or_ka_like,NA,NA,NA,NA
+日暮里健康相談所,other,NA,NA,NA,NA
+日本橋小児保健所,health_center,NA,NA,NA,NA
+月月月雇主所,other,NA,NA,NA,NA
+本郷健康相談所,other,NA,NA,NA,NA
+東京都本所防疫所,quarantine_office,NA,NA,NA,NA
+東京都荏原防疫所,quarantine_office,NA,NA,NA,NA
+深川作業場,workshop_site,NA,NA,NA,NA
+深川児童健康指導所,health_guidance_center,NA,NA,NA,NA
+清日課,composite_or_ka_like,NA,NA,NA,NA
+熱海第二健民修錬所,training_center,NA,NA,NA,NA
+王子小児保健所,health_center,NA,NA,NA,NA
+用度課考査課,composite_or_ka_like,NA,NA,NA,NA
+神田児童健康指導所,health_guidance_center,NA,NA,NA,NA
+立川健康相談所,other,NA,NA,NA,NA
+翳生課,composite_or_ka_like,NA,NA,NA,NA
+船舶作業所,workshop_office,NA,NA,NA,NA
+葛飾児童健康指導所,health_guidance_center,NA,NA,NA,NA
+銀座診療所,clinic,NA,NA,NA,NA
+隅田診療所,clinic,NA,NA,NA,NA
+麻布児童健康指導所,health_guidance_center,NA,NA,NA,NA

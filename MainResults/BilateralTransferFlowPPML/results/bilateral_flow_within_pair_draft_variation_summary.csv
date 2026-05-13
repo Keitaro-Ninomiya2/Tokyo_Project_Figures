@@ -1,0 +1,13 @@
+metric,value,n_pairs,share_pairs
+years_origin_draft,0,306455,0.9983158073049008
+years_origin_draft,1,517,0.0016841926950992272
+years_destination_draft,0,306455,0.9983158073049008
+years_destination_draft,1,517,0.0016841926950992272
+origin_draft_status_varies,0,306600,0.9987881630897932
+origin_draft_status_varies,1,372,0.001211836910206794
+destination_draft_status_varies,0,306600,0.9987881630897932
+destination_draft_status_varies,1,372,0.001211836910206794
+origin_draft_count_values,1,306600,0.9987881630897932
+origin_draft_count_values,2,372,0.001211836910206794
+destination_draft_count_values,1,306600,0.9987881630897932
+destination_draft_count_values,2,372,0.001211836910206794

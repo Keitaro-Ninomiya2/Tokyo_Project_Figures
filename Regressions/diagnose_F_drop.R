@@ -5,7 +5,7 @@ library(fixest)
 
 # Minimal reproduction: load data and build est, then compare by year
 DATA_PATH <- file.path(Sys.getenv("USERPROFILE"), "Box", "Research Notes (keitaro2@illinois.edu)",
-  "Tokyo_Gender", "Processed_Data", "Tokyo_Personnel_Master_All_Years_v2.csv")
+  "Tokyo_Gender", "Processed_Data", "Tokyo_Personnel_Master_All_Years.csv")
 
 # We need the full pipeline - source FirstStage but stop before regressions, extract est
 # Simpler: re-run key steps and build est_1950, est_1951, est_pooled

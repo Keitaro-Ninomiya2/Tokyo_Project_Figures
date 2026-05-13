@@ -1,0 +1,82 @@
+\begin{table}[htbp]
+\centering
+\caption{Long-Run Outcomes of Transferred Workers}
+\label{tab:transfer-outcomes}
+\begin{threeparttable}
+
+\textbf{Panel A: Transferred vs.\ Destination Office Peers}
+\medskip
+
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+                                  & Tenure After    & Postwar Surv.      & Postwar Yrs     & Rank Gain \\   
+   Model:                         & (1)             & (2)                & (3)             & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Transferred (=1)               & 1.686$^{***}$   & 0.1054$^{***}$     & 0.3158$^{***}$  & 0.1214$^{***}$\\   
+                                  & (0.0791)        & (0.0057)           & (0.0182)        & (0.0070)\\   
+   peer\_avg\_rank                & -0.3034         & -0.0196            & -0.0947         & -0.0902$^{**}$\\   
+                                  & (0.3673)        & (0.0238)           & (0.0699)        & (0.0378)\\   
+   peer\_avg\_tenure              & -0.1895$^{***}$ & -0.0064$^{*}$      & 0.0008          & 0.0039\\   
+                                  & (0.0521)        & (0.0035)           & (0.0101)        & (0.0053)\\   
+   peer\_female\_share            & -2.252          & -0.2035            & -0.2974         & -0.0574\\   
+                                  & (2.128)         & (0.1531)           & (0.4545)        & (0.1672)\\   
+   log(peer\_headcount+1)         & -0.0840         & 0.0066             & 0.0082          & -0.0125\\   
+                                  & (0.0991)        & (0.0073)           & (0.0230)        & (0.0088)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   Dest. Kakari                   & Yes             & Yes                & Yes             & Yes\\  
+   Year                           & Yes             & Yes                & Yes             & Yes\\  
+   Position                       & Yes             & Yes                & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 75,165          & 75,165             & 75,165          & 75,165\\  
+   R$^2$                          & 0.07759         & 0.06469            & 0.06891         & 0.31177\\  
+   Size of the 'effective' sample & 860             & 860                & 860             & 860\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (Dest. Kakari) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+
+\bigskip
+
+\textbf{Panel B: Transferred vs.\ Donor Office Peers}
+\medskip
+
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+                                  & Tenure After   & Postwar Surv.      & Postwar Yrs     & Rank Gain \\   
+   Model:                         & (1)            & (2)                & (3)             & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Transferred (=1)               & 3.361$^{***}$  & 0.1634$^{***}$     & 0.4800$^{***}$  & 0.1798$^{***}$\\   
+                                  & (0.0944)       & (0.0051)           & (0.0172)        & (0.0081)\\   
+   peer\_avg\_rank                & -0.4870        & -0.0311            & -0.1597$^{**}$  & -0.1020$^{***}$\\   
+                                  & (0.4083)       & (0.0244)           & (0.0778)        & (0.0341)\\   
+   peer\_avg\_tenure              & -0.1685$^{**}$ & -0.0064            & 0.0003          & 0.0038\\   
+                                  & (0.0669)       & (0.0042)           & (0.0137)        & (0.0050)\\   
+   peer\_female\_share            & -2.715         & -0.2503            & -0.6472         & -0.0573\\   
+                                  & (2.403)        & (0.1824)           & (0.6162)        & (0.1809)\\   
+   log(peer\_headcount+1)         & -0.1151        & -0.0028            & -0.0269         & -0.0139\\   
+                                  & (0.1227)       & (0.0076)           & (0.0265)        & (0.0089)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   Donor Kakari                   & Yes            & Yes                & Yes             & Yes\\  
+   Year                           & Yes            & Yes                & Yes             & Yes\\  
+   Position                       & Yes            & Yes                & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 76,723         & 76,723             & 76,723          & 76,723\\  
+   R$^2$                          & 0.10984        & 0.07574            & 0.07826         & 0.33013\\  
+   Size of the 'effective' sample & 944            & 944                & 944             & 944\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (Donor Kakari) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS regressions comparing transferred workers to peers. Unit of observation: individual worker. Panel~A compares transferred workers to non-transferred workers already at the destination office in the transfer year; Panel~B compares to workers who remained at the donor office in the year before transfer. ``Tenure After'' = years observed after the transfer year. ``Postwar Surv.'' = 1 if worker appears in any year 1947--1955. ``Postwar Yrs'' = number of years observed 1947--1955. ``Rank Gain'' = maximum rank achieved minus rank at time of transfer. All specifications control for peer composition at the relevant office (average rank, average tenure, female share, log headcount). Panel~A includes destination kakari, year, and position FE; Panel~B includes donor kakari, year, and position FE. Standard errors clustered at the kakari level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

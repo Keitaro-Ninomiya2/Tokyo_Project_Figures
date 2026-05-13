@@ -1,0 +1,8 @@
+outcome,specification,term,estimate,std_error,p_value,n
+promoted_table8,baseline,low_wage_draftee,0.21496845670864867,0.09579808805016947,0.03764789263090413,174
+promoted_table8,baseline_controls,low_wage_draftee,0.18971544327853673,0.08225071064157434,0.033185029626000166,174
+promoted_table8,destination_position_fe,low_wage_draftee,0.09910967049042789,0.05126618093350264,0.06909361979662627,174
+promoted_table8,donor_ka_year_fe,low_wage_draftee,0.18629756098343178,0.08065210724439759,0.03296119312858652,173
+promoted_table8,continuous_dest_position_wage_rank,dest_pos_year_draftee_wage_rank,-0.4755940425377947,0.24975060284018946,0.07501537544487807,139
+rank_change_table8,rank_change_baseline,low_wage_draftee,0.1755632127342728,0.11327258458803427,0.13856464686164224,174
+rank_change_table8,rank_change_controls,low_wage_draftee,0.14969361615077548,0.09973846188721586,0.1507291695111329,174

@@ -1,0 +1,34 @@
+\begin{table}[htbp]
+\centering
+\caption{Network Proximity and Transfer Probability}
+\label{tab:network}
+\begin{threeparttable}
+
+\begin{tabular}{lccccc}
+\toprule
+ & Office & Self & Both & Intensive & $\times$ Gender \\
+\midrule
+\multicolumn{6}{l}{\textit{Dep.\ var: Transferred (=1 if worker moved to different ka/kyoku in year $t$)}} \\
+Office has connection to drafted dest. & & & & & \\
+ & & & & & \\
+Self connected to dest.\ office & & & & & \\
+ & & & & & \\
+No.\ connected colleagues & & & & & \\
+ & & & & & \\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A: Informativeness of Network Measure}} \\
+\midrule
+Share with any connection & \multicolumn{5}{c}{[Computation in progress]} \\
+Share self-connected & \multicolumn{5}{c}{[Computation in progress]} \\
+Mean connections & \multicolumn{5}{c}{[Computation in progress]} \\
+\midrule
+Year + Ka + Position FE & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} OLS linear probability model. Dependent variable: transferred (=1 if worker moved to a different ka or kyoku in year $t$). Sample: all workers observed in year $t{-}1$ (1938--1945). ``Office has connection'' = 1 if any colleague in the worker's office at $t{-}1$ previously shared a workplace (office $\times$ ka) with anyone currently at an office that experienced military drafts in year $t$. ``Self connected'' = 1 if the worker themselves had such a past workplace link. Panel~A reports the share of workers for whom each measure is non-zero. All specifications include year, ka, and position fixed effects. Standard errors clustered at the office level in parentheses. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.1$. Results pending completion of network computation.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,2 @@
+n_pair_years,n_pairs,n_origin_offices,n_destination_offices,zero_flow_share,positive_flow_share,total_flows,mean_flow,max_flow,min_flow,p50_flow,p90_flow,p99_flow,n_pairs_with_positive_flow,share_pairs_with_positive_flow,draft_origin_pair_years,draft_destination_pair_years,same_department_verification,nondraft_verification
+64614,59910,1076,1076,0.9926022224285759,0.00739777757142415,4156,0.06432042591388863,1007,0,0,0,0,467,0.007795025872141545,0,0,TRUE,TRUE

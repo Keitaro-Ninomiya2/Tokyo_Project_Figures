@@ -1,0 +1,18 @@
+Within-department non-draft baseline PPML notes
+
+Pair panel source: C:/Users/Keitaro Ninomiya/Documents/GitHub/Tokyo_Project_Figures/MainResults/BilateralTransferFlowPPML/results/bilateral_flow_pair_panel_full.rds
+Sample: same_department == 1 and D_origin == 0 and D_destination == 0.
+Same-department means same cleaned kyoku and different ka, inherited from the earlier bilateral workflow.
+Office identifier remains cleaned kyoku x ka; no additional pre/post-merger ka linkage was imposed.
+
+Pair-years: 64614
+Pairs: 59910
+Zero-flow share: 0.9926
+Pairs with positive flows: 467
+
+Within-pair covariate variation is saved in:
+- within_dept_nondraft_within_pair_covariate_variation_summary.csv
+- within_dept_nondraft_within_pair_covariate_variation_detail.csv
+
+No model warnings captured.
+No model errors captured.

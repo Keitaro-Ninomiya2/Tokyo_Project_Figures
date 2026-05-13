@@ -253,7 +253,7 @@ tex <- etable(c1, c2, c3, c4,
               drop = "log|Female share$",
               headers = c("Baseline", "$\\times$ Rank", "$\\times$ Eng.",
                           "$\\times$ Gender"),
-              se.below = TRUE, fitstat = ~n, tex = TRUE)
+              se.below = TRUE, fitstat = ~n + r2 + G, tex = TRUE)
 
 tc <- clean_depvar(extract_tabular(tex))
 

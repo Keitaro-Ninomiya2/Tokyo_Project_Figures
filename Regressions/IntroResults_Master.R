@@ -15,7 +15,7 @@ DATA_PATH <- file.path(
   Sys.getenv("USERPROFILE"),
   "Box", "Research Notes (keitaro2@illinois.edu)",
   "Tokyo_Gender", "Processed_Data",
-  "Tokyo_Personnel_Master_All_Years_v2.csv"
+  "Tokyo_Personnel_Master_All_Years.csv"
 )
 
 cat("Loading data from:", DATA_PATH, "\n")

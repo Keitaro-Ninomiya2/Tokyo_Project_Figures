@@ -1,0 +1,9 @@
+variant,drop_reason,n_events,share
+exact_pos,no_candidate_rows,534,0.7946428571428571
+occ_rank,usable,290,0.43154761904761907
+occ_rank,no_candidate_rows,278,0.41369047619047616
+occ_rank,chosen_origin_not_in_candidates,89,0.1324404761904762
+exact_pos,usable,72,0.10714285714285714
+exact_pos,chosen_origin_not_in_candidates,58,0.08630952380952381
+occ_rank,degenerate_choice_set,15,0.022321428571428572
+exact_pos,degenerate_choice_set,8,0.011904761904761904

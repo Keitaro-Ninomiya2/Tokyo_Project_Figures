@@ -1,0 +1,1396 @@
+year_num,gov_level,office_id,office,office_norm,ward_current,historical_ward_guess,ward_assignment_method,ward_jp,historical_wards,slug,distance_to_yurakucho_km,central_hq,ward_guess_jp,ward_centroid_lat,ward_centroid_lon
+1941,TokyoFu,10,)並農産工藝學校,)並農産工藝学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,65,Unknown Office,Unknown Office,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1093,○三ツ木診療所,三ツ木診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1095,○三宅島出張所,三宅島出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1096,○三河島共同住宅管理事務所,三河島共同住宅管理事務所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1941,TokyoFu,1098,○三河島診療所,三河島診療所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1941,TokyoFu,1099,○上野出張所,上野出張所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1941,TokyoFu,1109,○世田谷出張所,世田谷出張所,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1941,TokyoFu,1162,○五反田出張所,五反田出張所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,1179,○代用品相談所,代用品相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1214,○六郷出張所,六郷出張所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1941,TokyoFu,1242,○北多摩方面事務所,北多摩方面事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1267,○千住出張所,千住出張所,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1941,TokyoFu,1273,○南多摩方面事務所,南多摩方面事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1295,○向島診療所,向島診療所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,1313,○品川診療所,品川診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,1323,○國民精神文化講習所,国民精神文化講習所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1334,○地方課,地方課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1355,○多摩川沿岸水利改良係,多摩川沿岸水利改良係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1357,○多磨砂利採取工場,多磨砂利採取工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1360,○大井診療所,大井診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,1365,○大島分場,大島分場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1366,○大島診療所,大島診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1368,○大崎診療所,大崎診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,1387,○契約係,契約係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1388,○奥多摩支場,奥多摩支場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1390,○女子商業講習所係,女子商業講習所係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1421,○小笠原試育所,小笠原試育所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1428,○島嶼物産販賣斡旋所,島嶼物産販売斡旋所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1432,○工事係,工事係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1434,○工務課,工務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1436,○工業組合監査指導係,工業組合監査指導係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1445,○府立協同組合講習所,府立協同組合講習所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1446,○府立農會技術員養成所,府立農会技術員養成所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1447,○府費係,府費係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1448,○庶務係,庶務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,1449,○庶務課,庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,1476,○技術係,技術係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1518,○新宿出張所,新宿出張所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,1555,○會計課,会計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,1570,○本田出張所,本田出張所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1941,TokyoFu,1584,○杉並診療所,杉並診療所,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,1603,○東駒形出張所,東駒形出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1634,○橋梁課,橋梁課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1636,○檢定係,検定係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1667,○江東橋出張所,江東橋出張所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,1670,○池袋出張所,池袋出張所,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1941,TokyoFu,1684,○淀橋出張所,淀橋出張所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,1688,○淀橋診療所,淀橋診療所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,1692,○深川出張所,深川出張所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,1737,○瀝青乳劑製造工場,瀝青乳劑製造工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1746,○熊川砂利採取工場,熊川砂利採取工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1752,○營繕課,営繕課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1760,○物價統制係,物價統制係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1767,○玉川診療所,玉川診療所,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1941,TokyoFu,1771,○王子出張所,王子出張所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,1776,○王子診療所,王子診療所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,1784,○産業組合係,産業組合係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1788,○用地係,用地係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1824,○目黒臨時診療所,目黒臨時診療所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1941,TokyoFu,1830,○砂町診療所,砂町診療所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,1836,○社會教育課,社会教育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1839,○神津島診療所,神津島診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1918,○經理係,経理係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1919,○經理課,経理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1948,○職業補導所,職業補導所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,1949,○職業課,職業課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,1973,○芝浦出張所,芝浦出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,1985,○荏原診療所,荏原診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,2013,○蒲田出張所,蒲田出張所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1941,TokyoFu,2041,○西多摩方面事務所,西多摩方面事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2044,○西巣鴨出張所,西巣鴨出張所,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1941,TokyoFu,2045,○西巣鴨診療所,西巣鴨診療所,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1941,TokyoFu,2050,○視學課,視学課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,2071,○調査課,調査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,2096,○負擔金係,負擔金係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,2125,○軍事援護課,軍事援護課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,2131,○農林産業檢査所大島出張所,農林産業検査所大島出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2132,○農林産物檢査所,農林産物検査所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2133,○農林産物檢査所府中出張所,農林産物検査所府中出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2134,○農林産物檢査所板橋出張所,農林産物検査所板橋出張所,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,2135,○農林産物檢査所深川出張所,農林産物検査所深川出張所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,2136,○農林産物檢査所青梅出張所,農林産物検査所青梅出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2147,○道路課,道路課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,2165,○醫療救護班,医療救護班,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2234,○龜戸出張所,龜戸出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2240,。市町村・小學校,。市町村・小学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2276,〇八王子支所,八王子支所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,2493,〓上野税務出張所,上野税務出張所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1941,TokyoFu,2724,〓傷痍軍人職業補導所,傷痍軍人職業補導所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2754,〓八王子土木出張所,八王子土木出張所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,2755,〓八王子市役所,八王子市役所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,1,北区,35.7528,139.7336
+1941,TokyoFu,2757,〓八王子職業紹介所,八王子職業紹介所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,2773,〓公立青年學校,公立青年学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2871,〓北多摩税務出張所,北多摩税務出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2958,〓南多摩税務出張所,南多摩税務出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,2959,〓南葛飾税務出張所,南葛飾税務出張所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1941,TokyoFu,2960,〓南足立税務出張所,南足立税務出張所,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1941,TokyoFu,3134,〓坂商業學校,坂商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3218,〓大泉師範學校,大泉師範学校,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,3228,〓大緑地建設事務所,大緑地建設事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3252,〓女子師範學校,女子師範学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3308,〓家具王養成所,家具王養成所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3408,〓幹部機械工養成所,幹部機械工養成所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3420,〓府中土木出張所,府中土木出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3424,〓府立久留米青年學校,府立久留米青年学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3426,〓府立五高女夜學校,府立五高女夜学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3428,〓府立八王子性病豫防所,府立八王子性病豫防所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,3430,〓府立六高女夜學校,府立六高女夜学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3431,〓府立化學工業學校,府立化学工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3432,〓府立北多摩保健所,府立北多摩保健所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3433,〓府立商工學校,府立商工学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3434,〓府立園藝學校,府立園藝学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3435,〓府立女子青年學校,府立女子青年学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3438,〓府立工業奬勵館,府立工業奬勵館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3439,〓府立工藝學校,府立工藝学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3440,〓府立府中性病豫防所,府立府中性病豫防所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3441,〓府立恩方診療所,府立恩方診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3442,〓府立東京商工奬勵館,府立東京商工奬勵館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3444,〓府立板橋健康相談所,府立板橋健康相談所,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,3445,〓府立板橋性病豫防所,府立板橋性病豫防所,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,3446,〓府立染織試驗場,府立染織試験場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3447,〓府立機械工業學校,府立機械工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3448,〓府立機械工養成所,府立機械工養成所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3449,〓府立淀橋健康相談所,府立淀橋健康相談所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,3450,〓府立淀橋性病豫防所,府立淀橋性病豫防所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,3451,〓府立清瀬病院,府立清瀬病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3452,〓府立立川健康相談所,府立立川健康相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3453,〓府立立川性病豫防所,府立立川性病豫防所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3454,〓府立第一中學校,府立第一中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3455,〓府立第一商業學校,府立第一商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3456,〓府立第一高女夜學校,府立第一高女夜学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3457,〓府立第一高等女學校,府立第一高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3458,〓府立第七中學校,府立第七中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3459,〓府立第七高等女學校,府立第七高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3460,〓府立第三中學校,府立第三中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3461,〓府立第三商業學校,府立第三商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3462,〓府立第三高等女學校,府立第三高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3463,〓府立第九中學校,府立第九中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3464,〓府立第九高等女學校,府立第九高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3465,〓府立第二中學校,府立第二中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3466,〓府立第二商業學校,府立第二商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3467,〓府立第二高等女學校,府立第二高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3468,〓府立第五中學校,府立第五中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3469,〓府立第五高等女學校,府立第五高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3470,〓府立第八中學校,府立第八中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3471,〓府立第八高女夜學校,府立第八高女夜学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3472,〓府立第八高等女學校,府立第八高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3473,〓府立第六中學校,府立第六中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3474,〓府立第六高等女學校,府立第六高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3475,〓府立第十一中學校,府立第十一中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3476,〓府立第十一高等女學校,府立第十一高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3477,〓府立第十七中學校,府立第十七中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3478,〓府立第十七高等女學校,府立第十七高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3479,〓府立第十三中學校,府立第十三中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3480,〓府立第十三高等女學校,府立第十三高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3481,〓府立第十中學校,府立第十中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3482,〓府立第十九中學校,府立第十九中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3483,〓府立第十二中學校,府立第十二中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3484,〓府立第十二高等女學校,府立第十二高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3485,〓府立第十五中學校,府立第十五中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3487,〓府立第十八中學校,府立第十八中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3488,〓府立第十六中學校,府立第十六中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3489,〓府立第十六高等女學校,府立第十六高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3490,〓府立第十四中學校,府立第十四中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3491,〓府立第十四高等女學校,府立第十四高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3492,〓府立第十高等女學校,府立第十高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3493,〓府立第四中學校,府立第四中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3494,〓府立第四商業學校,府立第四商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3495,〓府立第四高等女學校,府立第四高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3496,〓府立織染學校,府立織染学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3497,〓府立聾〓學校,府立聾〓学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3498,〓府立航空工業學校,府立航空工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3499,〓府立西多摩保健所,府立西多摩保健所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3500,〓府立農事試驗場,府立農事試験場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3501,〓府立農林學校,府立農林学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3502,〓府立農藝學校,府立農藝学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3503,〓府立農蠶學校,府立農蠶学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3504,〓府立重機工業學校,府立重機工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3505,〓府立電機工業學校,府立電機工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3506,〓府立青山青年學校,府立青山青年学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,3507,〓府立青年學校教員養成所,府立青年学校教員養成所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3508,〓府立青梅性病豫防所,府立青梅性病豫防所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3509,〓府立高等學校,府立高等学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3510,〓府立高等家政女學校,府立高等家政女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3511,〓府立高等工業學校,府立高等工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3517,〓庶務係,庶務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,3608,〓所,所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3624,〓拓務訓練所,拓務訓練所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3693,〓教員養成所,教員養成所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3862,〓東京勞働紹介所,東京労働紹介所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3863,〓東京市下谷商業學校,東京市下谷商業学校,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1941,TokyoFu,3864,〓東京市京橋高等家政女學校,東京市京橋高等家政女学校,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1941,TokyoFu,3867,〓東京市向島女子商業學校,東京市向島女子商業学校,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,3868,〓東京市四谷高等家政女學校,東京市四谷高等家政女学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,3870,〓東京市城東高等家政女學校,東京市城東高等家政女学校,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,3873,〓東京市役所,東京市役所,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,3874,〓東京市日本橋商業學校,東京市日本橋商業学校,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1941,TokyoFu,3875,〓東京市日本橋高等家政女學校,東京市日本橋高等家政女学校,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1941,TokyoFu,3876,〓東京市本所區本所商業學校,東京市本所区本所商業学校,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,3878,〓東京市本郷區高等家政女學校,東京市本郷区高等家政女学校,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1941,TokyoFu,3879,〓東京市本郷商業學校,東京市本郷商業学校,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1941,TokyoFu,3880,〓東京市杉並商業學校,東京市杉並商業学校,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,3881,〓東京市杉並農産工藝學校,東京市杉並農産工藝学校,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,3882,〓東京市杉並高等家政女學校,東京市杉並高等家政女学校,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,3883,〓東京市東調布高等家政女學校,東京市東調布高等家政女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3886,〓東京市牛込第一商業學校,東京市牛込第一商業学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,3887,〓東京市牛込第一女子商業學校,東京市牛込第一女子商業学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,3888,〓東京市神田區今川家政女學校,東京市神田区今川家政女学校,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,3891,〓東京市立向島商業學校,東京市立向島商業学校,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,3892,〓東京市立向島工業學校,東京市立向島工業学校,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,3893,〓東京市立商業學校,東京市立商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3894,〓東京市立四谷商業學校,東京市立四谷商業学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,3895,〓東京市立小石川工業學校,東京市立小石川工業学校,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1941,TokyoFu,3896,〓東京市立忍岡女子商業學校,東京市立忍岡女子商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3897,〓東京市立忍岡高等女學校,東京市立忍岡高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3898,〓東京市立本所工業學校,東京市立本所工業学校,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,3899,〓東京市立杉並工業學校,東京市立杉並工業学校,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,3900,〓東京市立板橋高等家政女學校,東京市立板橋高等家政女学校,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,3901,〓東京市立深川商業學校,東京市立深川商業学校,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,3902,〓東京市立深川工業學校,東京市立深川工業学校,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,3903,〓東京市立牛込商業學校,東京市立牛込商業学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,3904,〓東京市立目黒高等女學校,東京市立目黒高等女学校,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1941,TokyoFu,3905,〓東京市立神田高等家政女學校,東京市立神田高等家政女学校,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,3906,〓東京市立第一女子商業學校,東京市立第一女子商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3907,〓東京市立聾學校,東京市立聾学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,3908,〓東京市立芝商業學校,東京市立芝商業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,3909,〓東京市立荒川商業學校,東京市立荒川商業学校,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1941,TokyoFu,3910,〓東京市立蒲田工業學校,東京市立蒲田工業学校,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1941,TokyoFu,3912,〓東京市立高輪工業學校,東京市立高輪工業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,3913,〓東京市立麻布商業學校,東京市立麻布商業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,3914,〓東京市立麻布工業學校,東京市立麻布工業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,3915,〓東京市芝高等家政女學校,東京市芝高等家政女学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,3917,〓東京市赤坂商業學校,東京市赤坂商業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,3919,〓東京市麹町商業學校,東京市麹町商業学校,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,3922,〓東京職業紹介所,東京職業紹介所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4028,〓業試驗場,業試験場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4273,〓濟部産業組合課,済部産業組合課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,4274,〓濟部資材統制課,済部資材統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,4578,〓種畜場,種畜場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4597,〓立川職業紹介所,立川職業紹介所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4621,〓第一區府縣立全生病院,第一区府縣立全生病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4632,〓第一東京市立中學校,第一東京市立中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4633,〓第一東京市立高等女學校,第一東京市立高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4634,〓第一河川出張所,第一河川出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4641,〓第一道路出張所,第一道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4660,〓第三東京市立中學校,第三東京市立中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4661,〓第三河川出張所,第三河川出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4664,〓第三道路出張所,第三道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4683,〓第二東京市立中學校,第二東京市立中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4684,〓第二河川出張所,第二河川出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4689,〓第二道路出張所,第二道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4726,〓第四東京市立高等女學校,第四東京市立高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4730,〓第四道路出張所,第四道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4888,〓繭檢定所,繭検定所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4894,〓美術館,美術館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,4936,〓臨時生活必需品配給部,臨時生活必需品配給部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,4990,〓荏原税務出張所,荏原税務出張所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,5049,〓虎ノ門税務出張所,虎ノ門税務出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,5063,〓蠶業取締所,蠶業取締所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5064,〓蠶業取締所福生支所,蠶業取締所福生支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5065,〓蠶業取締所立川支所,蠶業取締所立川支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5066,〓蠶業試驗場,蠶業試験場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5108,〓西多摩税務出張所,西多摩税務出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5192,〓調布飛行場建設事務所,調布飛行場建設事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5287,〓資材統制課,資材統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,5396,〓還事講習所,還事講習所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5542,〓青山師範學校,青山師範学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,5551,〓青梅土木出張所,青梅土木出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5552,〓青梅職業紹介所,青梅職業紹介所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5578,〓飯田橋税務出張所,飯田橋税務出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5583,〓養正館,養正館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5665,の部資材統制課,の部資材統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,5674,アパート一號館,アパート一號館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5677,カーカム,カーカム,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5680,ス・カーカム,ス・カーカム,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5700,ラバヤ出張所,ラバヤ出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5711,一分室,一分室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,5724,三三一美土代館,三三一美土代館,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,5737,上.藤合,上.藤合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5751,上野税務出張所,上野税務出張所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1941,TokyoFu,5762,下落合,下落合,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,5764,下谷區,下谷区,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1941,TokyoFu,5770,世田谷區,世田谷区,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1941,TokyoFu,5791,中學校府立第十九中學校,中学校府立第十九中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5801,中野分所,中野分所,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1941,TokyoFu,5804,中野區,中野区,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1941,TokyoFu,5852,事務所,事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5853,事務所荒木田出張所,事務所荒木田出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5861,二九宮城館,二九宮城館,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,5865,二西巣鴨診療所,二西巣鴨診療所,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1941,TokyoFu,5908,京橋區,京橋区,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1941,TokyoFu,5911,京済運河建設事務所,京済運河建設事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,5914,人事課,人事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,6001,八女學寮,八女学寮,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6004,八王子土木出張所,八王子土木出張所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,6005,八王子家政女學校,八王子家政女学校,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,6037,円立商業學校,円立商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6039,出張所,出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6089,北多多摩下染屋,北多多摩下染屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6090,北多府中番場,北多府中番場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6093,北砂町分所,北砂町分所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,6098,北高輪工業學校,北高輪工業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,6106,十五高等女學校府立第女學校,十五高等女学校府立第女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6122,南多浅川上長房,南多浅川上長房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6125,南葛飾税務出張所,南葛飾税務出張所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1941,TokyoFu,6165,吉野養魚場,吉野養魚場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6184,向島區,向島区,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,6189,向島工業學校,向島工業学校,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,6192,吾婿分所,吾婿分所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6205,品川區,品川区,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,6211,員東京國民健康,員東京国民健康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6212,商務課,商務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6218,商江會議所,商江会議所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6233,四谷區,四谷区,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,6235,四谷商業學校,四谷商業学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,6243,回等女學校,回等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6265,地方課,地方課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6283,埼玉北足立土合,埼玉北足立土合,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1941,TokyoFu,6285,場,場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6299,大井分所,大井分所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,6301,大井診療所,大井診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,6311,大島分所,大島分所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6329,大泉師範學校,大泉師範学校,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,6336,大緑地建設事務所,大緑地建設事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6349,女子師範學校,女子師範学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6367,守屋,守屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6379,官幣大社明治神宮外苑管理署,官幣大社明治神宮外苑管理署,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6432,小松川方面雲務所,小松川方面雲務所,Edogawa,Edogawa,name_keyword,江戸川区,Edogawa,edogawa-ku,10.086549942004947,0,江戸川区,35.7067,139.8683
+1941,TokyoFu,6440,小石川區,小石川区,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1941,TokyoFu,6453,尚島商業學校,尚島商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6454,尽市神田區今川家政女學校,尽市神田区今川家政女学校,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6484,岡女子商業學校,岡女子商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6488,岡芳房,岡芳房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6509,工務課,工務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6528,市牛込第一女子商業學校,市牛込第一女子商業学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,6532,師範學校,師範学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6550,府立化學工業學校,府立化学工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6551,府立北多摩保健所,府立北多摩保健所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6552,府立商工學校,府立商工学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6554,府立工業〓勵館,府立工業〓勵館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6555,府立東京商工奬勵館,府立東京商工奬勵館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6559,府立東京商正奬勵館,府立東京商正奬勵館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6562,府立機械工養成所,府立機械工養成所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6563,府立清瀬病院,府立清瀬病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6564,府立第一中學校,府立第一中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6565,府立第一商業學校,府立第一商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6566,府立第一高等女學校,府立第一高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6568,府立第三中學校,府立第三中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6569,府立第三商業學校,府立第三商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6570,府立第九中學校,府立第九中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6571,府立第九高等女學校,府立第九高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6573,府立第二商業學校,府立第二商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6574,府立第二高等女學校,府立第二高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6575,府立第五中學校,府立第五中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6576,府立第五高等女學校,府立第五高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6577,府立第八中學校,府立第八中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6579,府立第六中學校,府立第六中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6580,府立第十一中學校,府立第十一中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6581,府立第十一高等女學校,府立第十一高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6582,府立第十中學校,府立第十中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6583,府立第十二中學校,府立第十二中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6584,府立第十高等女學校,府立第十高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6585,府立第四中學校,府立第四中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6586,府立第四高等女學校,府立第四高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6587,府立聾〓學校,府立聾〓学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6588,府立西多摩保健所,府立西多摩保健所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6589,府立農事試驗場,府立農事試験場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6590,府立農林學校,府立農林学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6591,府立農藝學校,府立農藝学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6592,府立電機工業學校,府立電機工業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6595,庶務係,庶務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,6597,庶務課,庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,6635,必需品配給部,必需品配給部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6650,所,所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6679,拓務訓練所大緑地建設事務所,拓務訓練所大緑地建設事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6707,整地課,整地課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6713,文窓館,文窓館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6742,日本橋區,日本橋区,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1941,TokyoFu,6765,會計課,会計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,6791,本所區,本所区,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,6796,本校,本校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6802,本郷區,本郷区,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1941,TokyoFu,6809,杉並分所,杉並分所,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,6811,杉並區,杉並区,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,6821,東京勞働紹介所,東京労働紹介所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6826,東京市市立高輪工業學校,東京市市立高輪工業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,6827,東京市役所,東京市役所,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,6829,東京市日本橋高等家政女學校,東京市日本橋高等家政女学校,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1941,TokyoFu,6832,東京市立小石川工業學校,東京市立小石川工業学校,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1941,TokyoFu,6833,東京市立本所工業學校,東京市立本所工業学校,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1941,TokyoFu,6835,東京市立杉並正業學校,東京市立杉並正業学校,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,6836,東京市立板橋高等家政女學校,東京市立板橋高等家政女学校,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,6837,東京市立目黒高等女學校,東京市立目黒高等女学校,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1941,TokyoFu,6838,東京市立神田高等家政女學校,東京市立神田高等家政女学校,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6839,東京市立聾學校,東京市立聾学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6840,東京市立芝商業學校,東京市立芝商業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,6841,東京市立荒川商業學校,東京市立荒川商業学校,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1941,TokyoFu,6842,東京市立麻布工業學校,東京市立麻布工業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,6850,東京職業紹介所,東京職業紹介所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6867,松本會館,松本会館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6873,板橋分所,板橋分所,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,6876,板橋區,板橋区,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1941,TokyoFu,6887,染學校,染学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6888,染織試驗場,染織試験場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6894,校,校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6909,業取締所繭檢定所,業取締所繭検定所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6910,業學校,業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6920,横濱神奈川鶴屋,横濱神奈川鶴屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6925,橋梁課,橋梁課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6927,檢定係,検定係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,6949,水産試驗場,水産試験場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,6983,江戸川區,江戸川区,Edogawa,Edogawa,name_keyword,江戸川区,Edogawa,edogawa-ku,10.086549942004947,0,江戸川区,35.7067,139.8683
+1941,TokyoFu,7001,河港課,河港課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7004,波戸部田山垣口田部,波戸部田山垣口田部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7012,淀橋區,淀橋区,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,7021,淀橋診療所,淀橋診療所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,7029,深川區,深川区,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,7039,淺草區,浅草区,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1941,TokyoFu,7093,濟生會三河島診療所,済生会三河島診療所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1941,TokyoFu,7095,濟部農林課,済部農林課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7110,營繕課,営繕課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7116,牛學校府立久留米青年學校,牛学校府立久留米青年学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7124,物價統制課,物價統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7134,王子區,王子区,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,7142,産業組合課,産業組合課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7162,甲學校,甲学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7188,目黒分所,目黒分所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1941,TokyoFu,7191,目黒區,目黒区,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1941,TokyoFu,7195,目黒診療所,目黒診療所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1941,TokyoFu,7228,社會教育課,社会教育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7230,社會課,社会課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7235,神田區,神田区,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7244,科校,科校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7280,第一東京市立中學校,第一東京市立中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7281,第一東京市立高等女學校,第一東京市立高等女学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7286,第一道路出張所,第一道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7298,第三東京市立中學校,第三東京市立中学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7299,第三河川出張所,第三河川出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7303,第三道路出張所,第三道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7323,第二荏原專修女學校,第二荏原専修女学校,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,7325,第二道路出張所,第二道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7349,第四道路出張所,第四道路出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7356,管理署,管理署,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7390,經済部産業組合課,経済部産業組合課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7391,經済部資材統制課,経済部資材統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7392,經濟〓物價統湖課,経済〓物價統湖課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7397,經濟部工務課,経済部工務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7398,經濟部物價統制課,経済部物價統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7399,經濟部産業組合課,経済部産業組合課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7400,經濟部資材統制課,経済部資材統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7401,經濟部農林課,経済部農林課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7405,經理課,経理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7422,繭檢定所,繭検定所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7428,美術館,美術館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7429,美衛館,美衛館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7450,職業課,職業課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7452,背山師範學校,背山師範学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7461,芝區,芝区,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,7477,若葉寮,若葉寮,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7484,荏原區,荏原区,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1941,TokyoFu,7492,荒川區,荒川区,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1941,TokyoFu,7506,落合,落合,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,7512,葛飾區,葛飾区,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1941,TokyoFu,7517,蒲田區,蒲田区,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1941,TokyoFu,7525,藤房,藤房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7535,虎ノ門税務出張所,虎ノ門税務出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,7570,視學課,視学課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7571,視廳警部,視庁警部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7580,診療所,診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7606,調布飛行場建設事務所,調布飛行場建設事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7608,調査課,調査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7612,警視廳屬兼警視廳警部,警視庁屬兼警視庁警部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7614,警視聽屬兼警視廳警部,警視聽屬兼警視庁警部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7643,資材統制課,資材統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7647,赤坂區,赤坂区,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,7657,足立區,足立区,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1941,TokyoFu,7673,軍事援護課,軍事援護課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7676,農事講習所,農事講習所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7680,農林課,農林課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7686,込王子職業紹介所,込王子職業紹介所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1941,TokyoFu,7697,道路課,道路課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7703,部,部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7708,部農林課,部農林課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7709,郵澤部産業組合課,郵澤部産業組合課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7732,配屬將校,配屬將校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7748,野納康,野納康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7754,金町分所,金町分所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1941,TokyoFu,7767,鎌經濟部工務課,鎌経済部工務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7845,青山師範學校,青山師範学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,7857,頒泣北多摩保健所,頒泣北多摩保健所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7858,願館出張所,願館出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7863,飯田橋税務出張所,飯田橋税務出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,7878,體育課,体育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7879,體育課社寺兵事課,体育課社寺兵事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7910,麹町區,麹町区,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7915,麻布區,麻布区,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,7918,麻布商業學校,麻布商業学校,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1941,TokyoFu,7967,○商務課,商務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7988,○河港課,河港課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7995,○社寺兵事課,社寺兵事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,7996,○社會課,社会課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8007,○資材統制課,資材統制課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8013,○農林課,農林課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8024,〇人事課,人事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,8084,〓業課,業課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8098,〓知事官房,知事官房,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,8126,〔敗療係,敗療係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8145,一一九失業對策係,一一九失業対策係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8148,一副業係,一副業係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8151,一學校幼稚園及青年學校,一学校幼稚園及青年学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8153,一府會事務局,一府会事務局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,8158,一電氣瓦斯水道煖房,一電気瓦斯水道煖房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8160,七六規畫係,七六規画係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8164,三宿,三宿,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1941,TokyoFu,8197,九一庶務係,九一庶務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,8198,九二庶務係,九二庶務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,8199,九四社寺係,九四社寺係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8210,二八檢税係,二八検税係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8212,二四三第二會議室,二四三第二会議室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,8213,二四二第一會議室,二四二第一会議室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1941,TokyoFu,8235,佐室,佐室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8243,保房,保房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8252,兒童係,児童係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8255,八八教化係,八八教化係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8307,北室,北室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8315,南多摩方面事務所,南多摩方面事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8325,口屋,口屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8332,吉野清房,吉野清房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8345,商工奬勵館事務室,商工奬勵館事務室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8353,國費係,国費係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8358,土屋,土屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8361,土木部,土木部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8364,地代家賃係,地代家賃係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8370,城所,城所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8372,堀内康,堀内康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8405,委員會室,委員会室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8429,小室,小室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8457,岡部,岡部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8462,崎部,崎部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8470,工務第一區係,工務第一区係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8514,康,康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8535,戸河里長康,戸河里長康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8539,戸部,戸部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8562,援護會支部,援護会支部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8565,政康,政康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8571,旅券係,旅券係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8578,星澤康,星澤康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8594,服部,服部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8595,木場,木場,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,8617,東京市四谷高等家政女學校,東京市四谷高等家政女学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,8618,東京市城東高等家政女學校,東京市城東高等家政女学校,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1941,TokyoFu,8619,東京市日本橋家政女學校,東京市日本橋家政女学校,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1941,TokyoFu,8623,東京市杉並高等家政女學校,東京市杉並高等家政女学校,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1941,TokyoFu,8624,東京市牛込第一商業學校,東京市牛込第一商業学校,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1941,TokyoFu,8631,東京市立第一女子商業學校,東京市立第一女子商業学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8678,水質檢査係,水質検査係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8690,河合,河合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8707,清房,清房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8710,清部,清部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8713,渡部,渡部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8743,生澤康,生澤康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8750,田場,田場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8756,田部,田部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8764,番社會教育課,番社会教育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8772,白木屋,白木屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8774,百合,百合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8782,矢田部,矢田部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8790,社寺兵事課,社寺兵事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8805,税務係,税務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8817,第一工務係,第一工務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8823,第三工務係,第三工務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8843,細合,細合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8854,經濟部,経済部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8857,經濟部部,経済部部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8885,茅場,茅場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8925,議員控室,議員控室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8930,負債整理係,負債整理係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8944,軍事扶助係,軍事扶助係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8945,軍人援護係,軍人援護係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8947,輸出工業係,輸出工業係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8965,郎康,郎康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8993,關谷源兵衛,関谷源兵衛,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,8994,阿部,阿部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,8996,隈部,隈部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1941,TokyoFu,9020,香坂昌康,香坂昌康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,9029,高等學校,高等学校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1941,TokyoFu,9031,高部,高部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,56,C番議室,C番議室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,65,Unknown Office,Unknown Office,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,66,Y事務局,Y事務局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,69,}各水シ合,}各水シ合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,1105,○下谷區役所,下谷区役所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1943,TokyoShi,1130,○中等教育課,中等教育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1135,○中野區役所,中野区役所,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1943,TokyoShi,1147,○主計課,主計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,1169,○京橋區役所,京橋区役所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1943,TokyoShi,1173,○人事課,人事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,1184,○企畫部,企画部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,1190,○作業課,作業課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1193,○保線課,保線課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1225,○動員課,動員課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1233,○勞務課,労務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1253,○區政課,区政課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1269,○千部出張所,千部出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,1278,○厚生課,厚生課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1292,○向島區役所,向島区役所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1943,TokyoShi,1303,○品川區役所,品川区役所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1943,TokyoShi,1317,○商工課,商工課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1335,○地理課,地理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1341,○城東病院院,城東病院院,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1943,TokyoShi,1344,○報道課,報道課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1359,○大久保病院,大久保病院,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1943,TokyoShi,1361,○大塚病院,大塚病院,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1943,TokyoShi,1374,○大森區役所,大森区役所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1943,TokyoShi,1395,○學校施設課,学校施設課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1400,○學校警繕課,学校警繕課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1402,○學校體育課,学校体育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1418,○小石川區役所,小石川区役所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1943,TokyoShi,1420,○小石川病院,小石川病院,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1943,TokyoShi,1449,○庶務課,庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,1459,○建築部,建築部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1478,○技術課,技術課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1486,○擴張課,擴張課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1488,○收納課,収納課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1490,○教化課,教化課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1501,○教育研究所,教育研究所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,1515,○文書課,文書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,1531,○施設課,施設課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1538,○日本橋區役所,日本橋区役所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1943,TokyoShi,1550,○書理課,書理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1551,○書計課,書計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1555,○會計課,会計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,1562,○本所區役所,本所区役所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1943,TokyoShi,1566,○本所病院,本所病院,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1943,TokyoShi,1576,○本郷區役所,本郷区役所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1943,TokyoShi,1581,○杉並區役所,杉並区役所,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1943,TokyoShi,1604,○松戸療養所,松戸療養所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,1637,○檢査課,検査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1642,○母子課,母子課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1650,○水源林事務所,水源林事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,1676,○治水課,治水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1686,○淀橋區役所,淀橋区役所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1943,TokyoShi,1695,○深川區役所,深川区役所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1943,TokyoShi,1697,○深川病院,深川病院,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1943,TokyoShi,1716,○港務所,港務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,1749,○營業課,営業課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1752,○營繕課,営繕課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1757,○牛込區役所,牛込区役所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1943,TokyoShi,1761,○物價課,物價課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1787,○用品課,用品課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1794,○町會課,町会課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1816,○監督課,監督課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1817,○監護課,監護課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1820,○目黒區役所,目黒区役所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1943,TokyoShi,1831,○研究課,研究課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1844,○神田區役所,神田区役所,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1853,○秘書課,秘書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,1896,○管理課,管理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1901,○築地病院,築地病院,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1943,TokyoShi,1902,○築港課,築港課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1906,○給水課,給水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1909,○統計課,統計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1919,○經理課,経理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1940,○考査課,考査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,1972,○芝區役所,芝区役所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1943,TokyoShi,1980,○荏原區役所,荏原区役所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1943,TokyoShi,1984,○荏原病院,荏原病院,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1943,TokyoShi,1989,○荒川區役所,荒川区役所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1943,TokyoShi,2003,○葛飾區役所,葛飾区役所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1943,TokyoShi,2006,○葛飾病院,葛飾病院,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1943,TokyoShi,2015,○蒲田區役所,蒲田区役所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1943,TokyoShi,2028,○衛生試驗所,衛生試験所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,2033,○補導課,補導課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2051,○親切課,親切課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2056,○計畫課,計画課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2061,○詞練課,詞練課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2062,○試驗課,試験課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2071,○調査課,調査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2072,○議事課,議事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2076,○議案課,議案課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2080,○豊多摩病院,豊多摩病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,2095,○豫算課,豫算課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2102,○貯薄奬勵課,貯薄奬勵課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2109,○購買課,購買課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2112,○赤坂區役所,赤坂区役所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1943,TokyoShi,2118,○足立區役所,足立区役所,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1943,TokyoShi,2123,○車輛課,車輛課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2125,○軍事援護課,軍事援護課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2138,○農漁課,農漁課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2143,○運轉課,運転課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2145,○道路建設課,道路建設課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2146,○道路管理課,道路管理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2150,○都市計晝課,都市計晝課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2158,○配給第一課,配給第一課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2159,○配給第二課,配給第二課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2164,○醫務課,医務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2174,○防疫課,防疫課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2183,○電力課,電力課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2213,○體力課,体力課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2221,○麹町區役所,麹町区役所,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2229,○麻布區役所,麻布区役所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1943,TokyoShi,2471,〓上中屋署,上中屋署,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,2500,〓下水課,下水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2572,〓主計課,主計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,2658,〓企畫課,企画課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,2699,〓保線課,保線課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2834,〓動員課,動員課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2853,〓勞務課,労務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,2916,〓區政課,区政課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,3119,〓地理課,地理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,3152,〓報道課,報道課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,3288,〓學校職員課,学校職員課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,3514,〓座松坂屋,座松坂屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,3518,〓庶務課,庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,3620,〓技術課,技術課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,3674,〓擴張課,擴張課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,3684,〓收納課,収納課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,3701,〓教育研究所,教育研究所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,3734,〓文書課,文書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,3809,〓會計課,会計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,3865,〓東京市健康保險組合明石病院,東京市健康保険組合明石病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,3873,〓東京市役所,東京市役所,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,4029,〓業部,業部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4069,〓母子課,母子課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4079,〓民局,民局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4080,〓民居區,民居区,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,4154,〓治水課,治水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4294,〓營業課,営業課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4303,〓營繕課,営繕課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4562,〓秘書課,秘書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,4640,〓第一課,第一課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4662,〓第三課,第三課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4751,〓管理課,管理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4857,〓総部,総部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,4900,〓考査課,考査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5092,〓補導課,補導課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5099,〓裝置課,裝置課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5133,〓計書課,計書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5137,〓計理課,計理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5223,〓議事課,議事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5265,〓豫算課,豫算課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5293,〓購買課,購買課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5377,〓運轉課,運転課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5384,〓道路管理課,道路管理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5484,〓防疫課,防疫課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5511,〓電力課,電力課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5604,〓體力課,体力課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5764,下谷區,下谷区,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1943,TokyoShi,5766,下谷區役所,下谷区役所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1943,TokyoShi,5770,世田谷區,世田谷区,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1943,TokyoShi,5787,中央卸賣市場,中央卸売市場,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1943,TokyoShi,5804,中野區,中野区,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1943,TokyoShi,5806,中野區役所,中野区役所,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1943,TokyoShi,5809,中野隊善松田提屋,中野隊善松田提屋,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1943,TokyoShi,5857,事業部分室,事業部分室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5869,五下守屋,五下守屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,5870,五下衛,五下衛,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,5878,井ノ部,井ノ部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5884,井野部,井野部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5908,京橋區,京橋区,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1943,TokyoShi,5921,代原形村部,代原形村部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5976,保守係員室,保守係員室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5986,健康保險組合,健康保険組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,5987,健民區,健民区,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,5988,健民局,健民局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,5990,健民局母子課,健民局母子課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6082,化學試驗部,化学試験部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6129,印刷所,印刷所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6143,古石場,古石場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6145,可籍兵事課・財務課,可籍兵事課・財務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6148,各區役所,各区役所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6184,向島區,向島区,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1943,TokyoShi,6205,品川區,品川区,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1943,TokyoShi,6233,四谷區,四谷区,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1943,TokyoShi,6255,土木局,土木局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6279,城東區,城東区,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1943,TokyoShi,6284,報道課,報道課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6302,大和三八〇富署,大和三八〇富署,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6318,大森南千〓一四四柴ワ館,大森南千〓一四四柴ワ館,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1943,TokyoShi,6328,大森織部,大森織部,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1943,TokyoShi,6330,大澤勝康,大澤勝康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6337,大谷部,大谷部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6350,女田百合,女田百合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6367,守屋,守屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6383,室室室,室室室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6384,室室室室,室室室室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6398,宿室,宿室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6407,審議室,審議室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6415,小宅康,小宅康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6427,小智海合宿所,小智海合宿所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6440,小石川區,小石川区,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1943,TokyoShi,6445,小石川病院,小石川病院,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1943,TokyoShi,6447,小習酒合病所,小習酒合病所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6449,小野藤兵衛,小野藤兵衛,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6487,岡田政康,岡田政康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6501,川奈部,川奈部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6509,工務課,工務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6520,市會事務局,市会事務局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6597,庶務課,庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6602,庶務部,庶務部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6603,庶務部長室,庶務部長室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6625,後醍院,後醍院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6633,復興記念館,復興記念館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6641,戰時生活局,戰時生活局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6650,所,所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6671,所長橋本房,所長橋本房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6701,教育局,教育局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6702,教育局・防〓局土木局,教育局・防〓局土木局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6703,教育局學校體育課,教育局学校体育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6721,新宿,新宿,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1943,TokyoShi,6729,新聞記者室,新聞記者室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6742,日本橋區,日本橋区,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1943,TokyoShi,6752,明隆衛,明隆衛,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6768,會議室,会議室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6776,有房,有房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6791,本所區,本所区,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1943,TokyoShi,6792,本所區役所,本所区役所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1943,TokyoShi,6802,本郷區,本郷区,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1943,TokyoShi,6811,杉並區,杉並区,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1943,TokyoShi,6818,村合,村合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6824,東京市健康保險組合,東京市健康保険組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6827,東京市役所,東京市役所,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6843,東京市職員共濟組合,東京市職員共済組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6844,東京市電氣局健康保險組合,東京市電気局健康保険組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6845,東京市電氣局共濟組合,東京市電気局共済組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6876,板橋區,板橋区,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1943,TokyoShi,6895,校校,校校,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6904,森藤博康,森藤博康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6913,業所長健民屋,業所長健民屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6915,業部,業部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6922,橋健康相談所長兼城東兒童健康,橋健康相談所長兼城東児童健康,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1943,TokyoShi,6926,機械工訓育所長兼機械工訓育所,機械工訓育所長兼機械工訓育所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,6946,水戸部,水戸部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6952,水質試驗部,水質試験部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6953,水道局,水道局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,6974,水違局,水違局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,6983,江戸川區,江戸川区,Edogawa,Edogawa,name_keyword,江戸川区,Edogawa,edogawa-ku,10.086549942004947,0,江戸川区,35.7067,139.8683
+1943,TokyoShi,6984,江戸川區出張所,江戸川区出張所,Edogawa,Edogawa,name_keyword,江戸川区,Edogawa,edogawa-ku,10.086549942004947,0,江戸川区,35.7067,139.8683
+1943,TokyoShi,7012,淀橋區,淀橋区,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1943,TokyoShi,7029,深川區,深川区,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1943,TokyoShi,7039,淺草區,浅草区,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1943,TokyoShi,7051,清掃部,清掃部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7067,港準局,港準局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7068,港灣局,港湾局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7130,玉川派出所,玉川派出所,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1943,TokyoShi,7134,王子區,王子区,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1943,TokyoShi,7136,王子區役所,王子区役所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1943,TokyoShi,7168,畠山邦康,畠山邦康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7176,發置場所,發置場所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7177,發育局,發育局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7191,目黒區,目黒区,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1943,TokyoShi,7204,矢部,矢部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7219,砧派出所,砧派出所,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1943,TokyoShi,7235,神田區,神田区,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7246,秘書課,秘書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1943,TokyoShi,7388,經〓局,経〓局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7404,經理局,経理局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7461,芝區,芝区,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1943,TokyoShi,7484,荏原區,荏原区,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1943,TokyoShi,7492,荒川區,荒川区,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1943,TokyoShi,7506,落合,落合,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1943,TokyoShi,7512,葛飾區,葛飾区,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1943,TokyoShi,7517,蒲田區,蒲田区,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1943,TokyoShi,7525,藤房,藤房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7548,衛生試驗所,衛生試験所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7580,診療所,診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7583,詰所,詰所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7603,調劑部,調劑部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7607,調査掛分室,調査掛分室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7638,財務課,財務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7647,赤坂區,赤坂区,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1943,TokyoShi,7657,足立區,足立区,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1943,TokyoShi,7659,足立區役所,足立区役所,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1943,TokyoShi,7673,軍事援護課,軍事援護課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7693,道末康,道末康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7700,那須信康,那須信康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7735,醫務部,医務部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7736,醫學試驗部,医学試験部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7748,野納康,野納康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7772,長室部掛掛室室室室室,長室部掛掛室室室室室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7776,長書仕役書役書室,長書仕役書役書室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7779,長町正康,長町正康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7782,長谷部,長谷部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7784,長長掛長掛長掛庫場,長長掛長掛長掛庫場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7789,門馬康,門馬康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7798,防衛課,防衛課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7819,隆房,隆房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7832,電氣局,電気局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7836,電氣研究所,電気研究所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7839,電話事務所,電話事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7840,電話交換室,電話交換室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7860,食養部,食養部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7866,飾區,飾区,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7867,養育院,養育院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7905,鴻田康,鴻田康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,7910,麹町區,麹町区,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,7915,麻布區,麻布区,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1943,TokyoShi,8037,〓初等教育課,初等教育課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8097,〓界〓會東京丈部,界〓会東京丈部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8164,三宿,三宿,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1943,TokyoShi,8187,中所,中所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8191,中館,中館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8321,原部,原部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8330,吉屋,吉屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8331,吉房,吉房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8355,園部,園部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8358,土屋,土屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8365,地部,地部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8367,坂賣所東京市職員共濟組合,坂売所東京市職員共済組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8376,堂所,堂所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8390,大場,大場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8407,安部,安部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8426,寺部,寺部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8427,小使室,小使室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8429,小室,小室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8457,岡部,岡部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8467,川部,川部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8490,幸場,幸場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8514,康,康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8520,建部,建部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8522,形部,形部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8539,戸部,戸部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8566,教育研究所,教育研究所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8594,服部,服部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8599,木衛,木衛,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8601,本室,本室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8664,橋場,橋場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8669,次部,次部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8690,河合,河合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8713,渡部,渡部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8751,田屋,田屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8757,田館,田館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8799,福室,福室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8836,築部,築部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8839,粟屋,粟屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8882,芳屋,芳屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8885,茅場,茅場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8899,藤部,藤部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8905,衛,衛,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8928,谷部,谷部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8946,輕部,輕部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8978,野房,野房,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1943,TokyoShi,8992,間部,間部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8994,阿部,阿部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,8996,隈部,隈部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1943,TokyoShi,9021,馬場,馬場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,65,Unknown Office,Unknown Office,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1087,○コンクリート工場,コンクリート工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1093,○三ツ木診療所,三ツ木診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1098,○三河島診療所,三河島診療所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1102,○下谷兒童健康指導所,下谷児童健康指導所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1944,TokyoTo,1104,○下谷區出張所,下谷区出張所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1944,TokyoTo,1106,○下谷診療所,下谷診療所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1944,TokyoTo,1110,○世田谷區出張所,世田谷区出張所,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1944,TokyoTo,1127,○中央裁斷場,中央裁斷場,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,1133,○中野兒童健康指導所,中野児童健康指導所,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1944,TokyoTo,1134,○中野區出張所,中野区出張所,Nakano,Nakano,name_keyword,中野区,Nakano,nakano-ku,9.718808442641786,0,中野区,35.7074,139.6638
+1944,TokyoTo,1140,○丸ノ内出張所,丸ノ内出張所,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1146,○主計係,主計係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1153,○事務係,事務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1168,○京橋區出張所,京橋区出張所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,1171,○人事第一係,人事第一係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1172,○人事第二係,人事第二係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1176,○什器工場,什器工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1178,○代々幡診療所,代々幡診療所,Shibuya,Shibuya,name_keyword,渋谷区,Shibuya,shibuya-ku,6.039756205738162,0,渋谷区,35.664,139.6982
+1944,TokyoTo,1180,○企業係,企業係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1182,○企畫係,企画係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1185,○住宅交換斡旋所,住宅交換斡旋所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1186,○住宅係,住宅係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1188,○作業第一係,作業第一係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1189,○作業第二係,作業第二係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1192,○保健相談所,保健相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1194,○保護係,保護係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1198,○修錬係,修錬係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1200,○元八王子診療所,元八王子診療所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,1201,○元町作業所,元町作業所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1205,○兩國出張所,兩国出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1215,○共同住宅管理事務所,共同住宅管理事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1220,○再生油工場,再生油工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1223,○加住村診療所,加住村診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1231,○勞務係,労務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1237,○化學工業指導所,化学工業指導所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1238,○化學燃料係,化学燃料係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1270,○南千住診療所,南千住診療所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1277,○厚生係,厚生係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1279,○參事官室,参事官室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1290,○向島兒童健康指導所,向島児童健康指導所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1291,○向島區出張所,向島区出張所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1295,○向島診療所,向島診療所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1299,○品川兒童健康指導所,品川児童健康指導所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1302,○品川區出張所,品川区出張所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1305,○品川小兒保健所,品川小児保健所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1306,○品川機械工業指導所,品川機械工業指導所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1313,○品川診療所,品川診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1315,○商工係,商工係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1319,○四谷區出張所,四谷区出張所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1321,○四谷小兒保健所,四谷小児保健所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1322,○四谷診療所,四谷診療所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1336,○城東兒童健康指導所,城東児童健康指導所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1337,○城東區出張所,城東区出張所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1342,○城東診療所,城東診療所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1343,○報道係,報道係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1356,○多磨墓地管理事務所,多磨墓地管理事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1360,○大井診療所,大井診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1363,○大島公園事務所,大島公園事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1368,○大崎診療所,大崎診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1373,○大森區出張所,大森区出張所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1944,TokyoTo,1382,○大門出張所,大門出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1393,○學事係,学事係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1401,○學校體育係,学校体育係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1405,○家畜市場,家畜市場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1406,○寄生蟲病診療所,寄生蟲病診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1409,○寺島優生相談所,寺島優生相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1415,○小石川兒童健康指導所,小石川児童健康指導所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,1417,○小石川區出張所,小石川区出張所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,1422,○少年厚生寮,少年厚生寮,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1423,○尾久派出所,尾久派出所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1424,○尾久診療所,尾久診療所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1425,○山林係,山林係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1429,○島嶼産業指導所,島嶼産業指導所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1432,○工事係,工事係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1448,○庶務係,庶務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1469,○恩方診療所,恩方診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1476,○技術係,技術係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1484,○採石工場,採石工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1489,○教化係,教化係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1492,○教習所,教習所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1506,○整地係,整地係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1514,○文書係,文書係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1526,○新富町診療所,新富町診療所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,1527,○新橋診療所,新橋診療所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,1529,○施設第一係,施設第一係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1530,○施設第二係,施設第二係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1532,○日暮里健康相談所,日暮里健康相談所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1533,○日暮里優生相談所,日暮里優生相談所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1536,○日本橋健康相談所,日本橋健康相談所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,1537,○日本橋區出張所,日本橋区出張所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,1539,○日本橋小兒保健所,日本橋小児保健所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,1548,○明石病院,明石病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1549,○春日町出張所,春日町出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1552,○會計係,会計係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1553,○會計第一係,会計第一係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1554,○會計第二係,会計第二係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1557,○木材係,木材係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1560,○本所兒童健康指導所,本所児童健康指導所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1564,○本所機械工業指導所,本所機械工業指導所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1567,○本所職業補導所,本所職業補導所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1568,○本所診療所,本所診療所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1569,○本田健康相談所,本田健康相談所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1944,TokyoTo,1572,○本郷健康相談所,本郷健康相談所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,1573,○本郷出張所,本郷出張所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,1575,○本郷區出張所,本郷区出張所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,1579,○杉並兒童健康指導所,杉並児童健康指導所,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1944,TokyoTo,1580,○杉並區出張所,杉並区出張所,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1944,TokyoTo,1584,○杉並診療所,杉並診療所,Suginami,Suginami,name_keyword,杉並区,Suginami,suginami-ku,11.817922816415564,0,杉並区,35.6995,139.6364
+1944,TokyoTo,1588,○東京都本所防疫所,東京都本所防疫所,Sumida,Honjo/Mukojima,name_keyword,墨田区,Honjo; Mukojima,sumida-ku,5.244001702733323,0,墨田区,35.7107,139.8015
+1944,TokyoTo,1589,○東京都消毒所,東京都消毒所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1590,○東京都消毒所本部,東京都消毒所本部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1595,○東京都荏原防疫所,東京都荏原防疫所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1598,○東京都駒込防疫所,東京都駒込防疫所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,1609,○板橋優生相談所,板橋優生相談所,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1944,TokyoTo,1610,○板橋區出張所,板橋区出張所,Itabashi,Itabashi,name_keyword,板橋区,Itabashi,itabashi-ku,9.81289847875712,0,板橋区,35.7513,139.7093
+1944,TokyoTo,1619,○林産物檢査所三宅支所,林産物検査所三宅支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1620,○林産物檢査所八丈支所,林産物検査所八丈支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1621,○林産物檢査所大島支所,林産物検査所大島支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1622,○林産物檢査所深川支所,林産物検査所深川支所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1629,○業務係,業務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1632,○横山村診療所,横山村診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1640,○母子係,母子係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1641,○母子寮,母子寮,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1656,○江戸川健康相談所,江戸川健康相談所,Edogawa,Edogawa,name_keyword,江戸川区,Edogawa,edogawa-ku,10.086549942004947,0,江戸川区,35.7067,139.8683
+1944,TokyoTo,1657,○江戸川區出張所,江戸川区出張所,Edogawa,Edogawa,name_keyword,江戸川区,Edogawa,edogawa-ku,10.086549942004947,0,江戸川区,35.7067,139.8683
+1944,TokyoTo,1682,○淀橋健康相談所,淀橋健康相談所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1683,○淀橋優生相談所,淀橋優生相談所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1684,○淀橋出張所,淀橋出張所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1685,○淀橋區出張所,淀橋区出張所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1688,○淀橋診療所,淀橋診療所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1689,○深川作業場,深川作業場,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1691,○深川兒童健康指導所,深川児童健康指導所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1692,○深川出張所,深川出張所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1694,○深川區出張所,深川区出張所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1698,○深川診療所,深川診療所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1700,○淺草健康相談所,浅草健康相談所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1944,TokyoTo,1701,○淺草出張所,浅草出張所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1944,TokyoTo,1703,○淺草區出張所,浅草区出張所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1944,TokyoTo,1706,○淺草診療所,浅草診療所,Taito,Shitaya/Asakusa,name_keyword,台東区,Shitaya; Asakusa,taito-ku,4.449000431186642,0,台東区,35.7126,139.7802
+1944,TokyoTo,1738,○瀝青混合所,瀝青混合所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1747,○熱海第一健民修錬所,熱海第一健民修錬所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1748,○熱海第二健民修錬所,熱海第二健民修錬所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1750,○營繕第一係,営繕第一係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1751,○營繕第二係,営繕第二係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1755,○牛込兒童健康指導所,牛込児童健康指導所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1756,○牛込區出張所,牛込区出張所,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,1759,○物價係,物價係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1767,○玉川診療所,玉川診療所,Setagaya,Setagaya,name_keyword,世田谷区,Setagaya,setagaya-ku,10.467247155679628,0,世田谷区,35.6466,139.6532
+1944,TokyoTo,1769,○王子健康相談所,王子健康相談所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,1770,○王子優生相談所,王子優生相談所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,1771,○王子出張所,王子出張所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,1772,○王子區出張所,王子区出張所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,1774,○王子小兒保健所,王子小児保健所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,1776,○王子診療所,王子診療所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,1780,○生産増強係,生産増強係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1781,○生鮮食品係,生鮮食品係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1786,○用品係,用品係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1789,○用度係,用度係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1790,○用材係,用材係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1793,○町會係,町会係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1797,○畜産係,畜産係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1800,○白山診療所,白山診療所,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,1801,○監察係,監察係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1804,○監査係,監査係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1813,○監理係,監理係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1815,○監督係,監督係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1818,○目黒兒童健康指導所,目黒児童健康指導所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1944,TokyoTo,1819,○目黒區出張所,目黒区出張所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1944,TokyoTo,1821,○目黒小兒保健所,目黒小児保健所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1944,TokyoTo,1825,○目黒診療所,目黒診療所,Meguro,Meguro,name_keyword,目黒区,Meguro,meguro-ku,6.986607322123391,0,目黒区,35.6415,139.6982
+1944,TokyoTo,1828,○砂町健康相談所,砂町健康相談所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1829,○砂町優生相談所,砂町優生相談所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1830,○砂町診療所,砂町診療所,Koto,Fukagawa/Joto,name_keyword,江東区,Fukagawa; Joto,koto-ku,4.856300520926465,0,江東区,35.6728,139.8174
+1944,TokyoTo,1834,○社寺兵事係,社寺兵事係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1839,○神津島診療所,神津島診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1841,○神田兒童健康指導所,神田児童健康指導所,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1843,○神田區出張所,神田区出張所,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1848,○福利係,福利係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1850,○私立學校係,私立学校係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1851,○秘書係,秘書係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,1859,○立川健康相談所,立川健康相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1860,○立川優生相談所,立川優生相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1865,○第一出張所,第一出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1873,○第七出張所,第七出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1874,○第三出張所,第三出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1877,○第二出張所,第二出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1885,○第五出張所,第五出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1888,○第八出張所,第八出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1889,○第八班トラホーム,第八班トラホーム,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1890,○第六出張所,第六出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1891,○第四出張所,第四出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1895,○管理係,管理係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1903,○米穀係,米穀係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1904,○結婚會館,結婚会館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1905,○給水工事係,給水工事係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1908,○統計係,統計係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1918,○經理係,経理係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1921,○綾瀬作業所,綾瀬作業所,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1944,TokyoTo,1935,○纎維係,纎維係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1938,○考査第一係,考査第一係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1939,○考査第二係,考査第二係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1944,○職員係,職員係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1959,○自動車工場,自動車工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1962,○自動車輛係,自動車輛係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1963,○自動車運轉係,自動車運転係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,1966,○船舶作業所,船舶作業所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1967,○船舶工場,船舶工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,1969,○芝健康相談所,芝健康相談所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,1971,○芝區出張所,芝区出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,1973,○芝浦出張所,芝浦出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,1975,○芝浦診療所,芝浦診療所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,1978,○荏原健康相談所,荏原健康相談所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1979,○荏原區出張所,荏原区出張所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1982,○荏原機械工補導所,荏原機械工補導所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1985,○荏原診療所,荏原診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,1987,○荒川兒童健康指導所,荒川児童健康指導所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1988,○荒川區出張所,荒川区出張所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1990,○荒川機械工業指導所,荒川機械工業指導所,Arakawa,Arakawa,name_keyword,荒川区,Arakawa,arakawa-ku,7.031496040938235,0,荒川区,35.7361,139.7833
+1944,TokyoTo,1995,○菊花寮櫻寮,菊花寮櫻寮,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2001,○葛飾兒童健康指導所,葛飾児童健康指導所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1944,TokyoTo,2002,○葛飾區出張所,葛飾区出張所,Katsushika,Katsushika,name_keyword,葛飾区,Katsushika,katsushika-ku,10.717065821617748,0,葛飾区,35.7434,139.8472
+1944,TokyoTo,2010,○葭町診療所,葭町診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2012,○蒲田兒童健康指導所,蒲田児童健康指導所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1944,TokyoTo,2014,○蒲田區出張所,蒲田区出張所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1944,TokyoTo,2018,○蒲田機械工業指導所,蒲田機械工業指導所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1944,TokyoTo,2020,○薪炭係,薪炭係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2024,○行政係,行政係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2035,○裝置係,裝置係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2037,○西品川健康相談所,西品川健康相談所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,2038,○西品川優生相談所,西品川優生相談所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,2042,○西巣鴨健康相談所,西巣鴨健康相談所,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1944,TokyoTo,2043,○西巣鴨優生相談所,西巣鴨優生相談所,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1944,TokyoTo,2045,○西巣鴨診療所,西巣鴨診療所,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1944,TokyoTo,2049,○視學係,視学係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2055,○計畫係,計画係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2060,○設計係,設計係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2068,○調度係,調度係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2069,○調査係,調査係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2070,○調査室,調査室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2075,○議案係,議案係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2094,○豫算第一係,豫算第一係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2100,○貯蓄係,貯蓄係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2104,○資材係,資材係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2108,○購買係,購買係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2111,○赤坂區出張所,赤坂区出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,2113,○赤坂診療所,赤坂診療所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,2116,○足立兒童健康指導所,足立児童健康指導所,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1944,TokyoTo,2117,○足立區出張所,足立区出張所,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1944,TokyoTo,2124,○軍事援護係,軍事援護係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2126,○農務係,農務係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2157,○配水係,配水係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2163,○配電係,配電係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2166,○醫藥係,医薬係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2167,○金屬係,金屬係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2170,○銀座出張所,銀座出張所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,2171,○銀座診療所,銀座診療所,Chuo,Nihonbashi/Kyobashi,name_keyword,中央区,Nihonbashi; Kyobashi,chuo-ku,0.8833015809656337,0,中央区,35.6707,139.772
+1944,TokyoTo,2173,○防疫係,防疫係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2177,○阿佐ケ谷健康相談所,阿佐ケ谷健康相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2180,○隅田診療所,隅田診療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2182,○雜品係,雑品係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2189,○電路係,電路係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2191,○電車輛係,電車輛係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2192,○電車運轉係,電車運転係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2193,○青寫眞工場,青寫眞工場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2194,○青山出張所,青山出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,2195,○青年學校係,青年学校係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2198,○青梅優生相談所,青梅優生相談所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2199,○食品係,食品係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2200,○食堂質屋,食堂質屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2202,○食糧檢査所,食糧検査所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2203,○食糧檢査所八王子支所,食糧検査所八王子支所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,2204,○食糧檢査所府中支所,食糧検査所府中支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2205,○食糧檢査所東京支所,食糧検査所東京支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2206,○食糧檢査所青梅支所,食糧検査所青梅支所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2212,○體力係,体力係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2220,○麹町區出張所,麹町区出張所,Chiyoda,Kojimachi/Kanda,name_keyword,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2227,○麻布兒童健康指導所,麻布児童健康指導所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,2228,○麻布區出張所,麻布区出張所,Minato,Shiba/Azabu/Akasaka,name_keyword,港区,Shiba; Azabu; Akasaka,minato-ku,2.1643816912263985,0,港区,35.6581,139.7516
+1944,TokyoTo,2231,○麻藥中毒者救護所,麻薬中毒者救護所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2233,○龜戸健康診斷所,龜戸健康診斷所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2234,○龜戸出張所,龜戸出張所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2272,〇五反田診療所,五反田診療所,Shinagawa,Shinagawa/Ebara,name_keyword,品川区,Shinagawa; Ebara,shinagawa-ku,7.911354355149989,0,品川区,35.6092,139.7301
+1944,TokyoTo,2273,〇八柱靈園管理事務所,八柱霊園管理事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,2274,〇八王子健康相談所,八王子健康相談所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,2275,〇八王子優生相談所,八王子優生相談所,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,2500,〓下水課,下水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2627,〓交通局,交通局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,2640,〓人事課,人事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,2658,〓企畫課,企画課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,2699,〓保線課,保線課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2718,〓健民課,健民課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2768,〓公園緑地課,公園緑地課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,2971,〓厚生課,厚生課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3040,〓商工課,商工課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3375,〓工事課,工事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3388,〓工專課,工専課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3518,〓庶務課,庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,3646,〓振興課,振興課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3700,〓教育局,教育局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,3702,〓教育第一課,教育第一課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3703,〓教育第二課,教育第二課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3734,〓文書課,文書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,3740,〓料課資材課,料課資材課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,3809,〓會計課,会計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,3969,〓林務課,林務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4024,〓業務課,業務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4105,〓水道局,水道局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,4152,〓河川課,河川課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4216,〓清掃課,清掃課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4244,〓港灣局,港湾局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4303,〓營繕課,営繕課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4399,〓用度課,用度課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4443,〓監理課,監理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4815,〓給水課,給水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4832,〓經濟局,経済局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,4840,〓經理課,経理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4900,〓考査課,考査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,4912,〓職員共濟組合,職員共済組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,5132,〓計晝局,計晝局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5288,〓資材課,資材課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5332,〓車輛課,車輛課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5375,〓運輸課,運輸課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5385,〓道路課,道路課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5407,〓都市計畫課,都市計画課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5484,〓防疫課,防疫課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5515,〓電氣課,電気課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5571,〓食料課,食料課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5577,〓飯田橋病院,飯田橋病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,5814,主事係,主事係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5817,主技係,主技係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,5852,事務所,事務所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,5876,五技所,五技所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,5890,交通局保線課,交通局保線課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5891,交通局保線課電氣課,交通局保線課電気課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5893,交通局經理課,交通局経理課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5894,交通局經理課運輪課,交通局経理課運輪課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5896,交通局車輛課,交通局車輛課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5897,交通局軍輛課保繰課,交通局軍輛課保繰課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5898,交通局運輸課,交通局運輸課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5899,交通局運輸課車輛課,交通局運輸課車輛課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5900,交通局電氣課,交通局電気課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5901,交通局電氣課水道局庶務課,交通局電気課水道局庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,5986,健康保險組合,健康保険組合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,5991,健民課,健民課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6015,公園緑地課,公園緑地課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6016,公園緑地課道路課,公園緑地課道路課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6091,北多府中馬場,北多府中馬場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,6111,千住町支部,千住町支部,Adachi,Adachi,name_keyword,足立区,Adachi,adachi-ku,11.721325980632413,0,足立区,35.775,139.8044
+1944,TokyoTo,6134,厚生課,厚生課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6135,厚生課健民課,厚生課健民課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6151,合〓山垣島山場,合〓山垣島山場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,6197,和田康,和田康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,6215,商工課,商工課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6216,商工課農務課,商工課農務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6365,學校體育課經濟局,学校体育課経済局,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6444,小石川支部,小石川支部,Bunkyo,Koishikawa/Hongo,name_keyword,文京区,Koishikawa; Hongo,bunkyo-ku,3.83498076688475,0,文京区,35.7081,139.7522
+1944,TokyoTo,6508,工事課,工事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6596,庶務班,庶務班,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6597,庶務課,庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6599,庶務課教育第一課,庶務課教育第一課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6601,庶務課都市計畫課,庶務課都市計画課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6650,所,所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,6673,技係,技係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6682,指導所,指導所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,6683,振興課,振興課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6684,振興課厚生課,振興課厚生課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6704,教育第二課,教育第二課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6712,文書課,文書課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6765,會計課,会計課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6766,會計課用度課,会計課用度課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6772,月月月月月監主心所,月月月月月監主心所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,6774,月月月雇主所,月月月雇主所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,6881,林務課,林務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6882,林務課食料課,林務課食料課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,6955,水道局下水課,水道局下水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6959,水道局工事課,水道局工事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6960,水道局庶務課,水道局庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6961,水道局庶務課業務課,水道局庶務課業務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6963,水道局業務課,水道局業務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,6964,水道局業務課給水課,水道局業務課給水課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,7000,河川課,河川課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7002,治療所,治療所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7048,清掃課,清掃課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7050,清掃課教育局庶務課,清掃課教育局庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,7052,清日課,清日課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7060,測第第係,測第第係,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7069,港灣局工事課,港湾局工事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7094,濟生會防疫課,済生会防疫課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7144,用度課,用度課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7145,用度課考査課,用度課考査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7204,矢部,矢部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7259,竹下博康,竹下博康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7377,組合班,組合班,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7439,翳生課,翳生課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7440,考査課,考査課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7446,職員共濟組合飯田橋病院,職員共済組合飯田橋病院,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7506,落合,落合,Shinjuku,Yotsuya/Ushigome/Yodobashi,name_keyword,新宿区,Yotsuya; Ushigome; Yodobashi,shinjuku-ku,5.837560049760066,0,新宿区,35.6938,139.7034
+1944,TokyoTo,7528,藤水田合,藤水田合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7564,西村康,西村康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7566,西部田田課,西部田田課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7576,計理班,計理班,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7638,財務課,財務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7644,資材課計畫局庶務課,資材課計画局庶務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,7652,赤羽町支部,赤羽町支部,Kita,Takinogawa/Oji,name_keyword,北区,Takinogawa; Oji,kita-ku,9.078380214757798,0,北区,35.7528,139.7336
+1944,TokyoTo,7677,農務課,農務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7678,農務課林務課,農務課林務課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7697,道路課,道路課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7715,都市計畫課,都市計画課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7752,金屬班,金屬班,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7774,長崎町支部,長崎町支部,Toshima,Toshima,name_keyword,豊島区,Toshima,toshima-ku,7.106416278614851,0,豊島区,35.7261,139.7166
+1944,TokyoTo,7782,長谷部,長谷部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7789,門馬康,門馬康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,7794,防火改修課,防火改修課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7796,防疫課,防疫課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7859,食料課,食料課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,7874,馬込町支部,馬込町支部,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1944,TokyoTo,7972,○大森兒童健康指導所,大森児童健康指導所,Ota,Omori/Kamata,name_keyword,大田区,Omori; Kamata,ota-ku,13.333925749206644,0,大田区,35.5614,139.7161
+1944,TokyoTo,8219,井合,井合,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8236,佐部,佐部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8326,古屋,古屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8330,吉屋,吉屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8358,土屋,土屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8381,塚部,塚部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8400,大館,大館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8407,安部,安部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8461,岩館,岩館,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8462,崎部,崎部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8467,川部,川部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8514,康,康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8529,徳部,徳部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8531,恒康,恒康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8534,戸所,戸所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8594,服部,服部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8656,森屋,森屋,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8663,樫部,樫部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8669,次部,次部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8680,水道局給水課工事課,水道局給水課工事課,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,1,千代田区,35.694,139.7536
+1944,TokyoTo,8709,清水康,清水康,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8713,渡部,渡部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8721,澤部,澤部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8754,田所,田所,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8905,衛,衛,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,8910,西室,西室,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8994,阿部,阿部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,8996,隈部,隈部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536
+1944,TokyoTo,9021,馬場,馬場,NA,NA,unassigned,NA,NA,NA,NA,0,NA,NA,NA
+1944,TokyoTo,9022,馬部,馬部,Chiyoda,Kojimachi/Kanda,central_admin_fallback,千代田区,Kojimachi; Kanda,chiyoda-ku,2.3114399109721178,0,千代田区,35.694,139.7536

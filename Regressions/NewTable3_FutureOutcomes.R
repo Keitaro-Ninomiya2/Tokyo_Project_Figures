@@ -216,7 +216,7 @@ tex <- etable(c1, c2, c3, c4,
               dict = dict,
               drop = "log",
               headers = c("Promotion", "Promotion", "Dest. F.Share", "Dest. F.Share"),
-              se.below = TRUE, fitstat = ~n + r2,
+              se.below = TRUE, fitstat = ~n + r2 + G,
               tex = TRUE)
 
 tex_out <- c(
@@ -247,7 +247,7 @@ tex_ret <- etable(r1, r2,
                   dict = dict,
                   drop = "log",
                   headers = c("Retention", "Retention"),
-                  se.below = TRUE, fitstat = ~n + r2,
+                  se.below = TRUE, fitstat = ~n + r2 + G,
                   tex = TRUE)
 
 tex_ret_out <- c(

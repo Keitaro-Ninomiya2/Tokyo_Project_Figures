@@ -7,7 +7,7 @@ library(tidyverse)
 DATA_NEW <- file.path(Sys.getenv("USERPROFILE"), "Box", "Research Notes (keitaro2@illinois.edu)",
   "Tokyo_Gender", "Processed_Data", "Tokyo_Personnel_Master_All_Years.csv")
 DATA_OLD <- file.path(Sys.getenv("USERPROFILE"), "Box", "Research Notes (keitaro2@illinois.edu)",
-  "Tokyo_Gender", "Processed_Data", "Tokyo_Personnel_Master_All_Years_v2.csv")
+  "Tokyo_Gender", "Processed_Data", "Tokyo_Personnel_Master_All_Years.csv")
 
 df_new <- read_csv(DATA_NEW, locale = locale(encoding = "UTF-8"), show_col_types = FALSE) %>%
   filter(is_name == TRUE) %>%

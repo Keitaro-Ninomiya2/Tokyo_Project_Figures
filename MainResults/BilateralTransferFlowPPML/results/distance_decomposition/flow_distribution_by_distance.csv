@@ -1,0 +1,4 @@
+distance_category,n_pairs,n_pair_years,n_positive_pair_years,total_transfers,mean_flow_if_positive,median_flow_if_positive,max_flow,transfer_share
+diff_kyoku,247010,261926,750,1142,1.5226666666666666,1,50,0.21417854463615904
+same_kyoku_diff_ka,59962,64724,486,4190,8.621399176954732,1,1007,0.785821455363841
+same_ka,1076,1451,0,0,NA,NA,0,0
