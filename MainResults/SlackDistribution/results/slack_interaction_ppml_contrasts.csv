@@ -1,0 +1,3 @@
+"outcome","low_nearby_slack_p25","high_nearby_slack_p75","mean_pred_low_slack","mean_pred_high_slack","high_minus_low","ratio_high_to_low"
+"internal_transfers",0,10,12.0413852973988,13.2975185736306,1.25613327623182,1.10431800371866
+"external_hires",0,10,30.9573860009351,4.5125132343983,-26.4448727665368,0.145765318630649
