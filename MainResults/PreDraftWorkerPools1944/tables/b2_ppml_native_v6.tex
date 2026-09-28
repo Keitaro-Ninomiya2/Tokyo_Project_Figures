@@ -1,0 +1,34 @@
+\begin{table}[!htbp]
+  \centering
+  \caption{PPML: native $\hat{b}_2$ and diagnostics (appendix)}
+  \label{tab:ppml_native_v6}
+  \begin{tabular}{lrrrrrr}
+    \hline\hline
+    Outcome & $\hat{b}_2^{\text{PPML}}$ & SE & $p$ (Wald) & $\bar{\mu}$ & OLS-scale & OLS same samp. \\
+    \hline
+    Same ka & 0.006 &  & 0.455 & 2.20 & 0.014 & 0.040 &  \\
+     & (0.008) &  &  &  &  &  &  \\
+    Other ka same kyoku & -0.001 &  & 0.960 & 1.31 & -0.001 & -0.058 &  \\
+     & (0.016) &  &  &  &  &  &  \\
+    Other kyoku & -0.012 &  & 0.345 & 0.73 & -0.009 & -0.015 &  \\
+     & (0.013) &  &  &  &  &  &  \\
+    Outside own ka & -0.006 &  & 0.662 & 1.65 & -0.009 & -0.060 &  \\
+     & (0.013) &  &  &  &  &  &  \\
+    Total internal & -0.003 &  & 0.717 & 2.60 & -0.007 & -0.003 &  \\
+     & (0.008) &  &  &  &  &  &  \\
+    \hline
+    N (PPML sample) & 240 &  &  &  &  &  &  \\
+    \hline
+    N (PPML sample) & 240 & 461 & 432 & 558 & 558 &  &  \\
+    N dropped & 336 & 115 & 144 & 18 & 18 &  &  \\
+    Converged & TRUE & TRUE & TRUE & TRUE & TRUE &  &  \\
+    \hline\hline
+  \end{tabular}
+  \\[4pt]
+  \footnotesize
+  $\hat{b}_2^{\text{PPML}}$: native coefficient on $D_i \times \log(S_i+1)$ in fepois.
+  Stars from cluster-robust Wald p (ka cluster); boottest not supported for PPML.
+  $\bar{\mu}$: mean fitted value. OLS-scale: $\bar{\mu} \times \hat{b}_2^{\text{PPML}}$.
+  OLS same sample: OLS estimated on the same observations used by fepois.
+  N dropped: cells removed because all observations in an FE group have zero outcome (separation).
+\end{table}

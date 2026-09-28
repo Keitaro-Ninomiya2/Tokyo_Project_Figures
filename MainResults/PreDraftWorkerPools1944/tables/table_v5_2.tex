@@ -1,0 +1,40 @@
+\begin{table}[!htbp]
+  \centering
+  \caption{FE comparison: kyoku$\times$ka FE vs.~kyoku-only FE (v5 with confounds)}
+  \label{tab:v5_fe_comparison}
+  \begin{tabular}{lrrrr}
+    \hline\hline
+     & Same ka & Outside own ka & Total internal & New hires \\
+    \hline
+    Panel A: kyoku x ka FE (v4 default) &  &  &  &  \\
+    b1 (D_i) & -0.590 & 0.027 & -0.563 & -0.050 \\
+     & (0.286) & (0.151) & (0.385) & (0.131) \\
+    [Webb p, kyoku] & [0.139] & [0.848] & [0.301] & [0.744] \\
+    {Webb p, ka} & {0.011} & {0.893} & {0.097} & {0.901} \\
+    b2 (D_i x log S_i+1) & 0.032** & -0.111 & -0.079 & 0.121** \\
+     & (0.022) & (0.047) & (0.057) & (0.025) \\
+    [Webb p, kyoku] & [0.036] & [0.141] & [0.231] & [0.024] \\
+    {Webb p, ka} & {0.341} & {0.127} & {0.370} & {0.113} \\
+    \hline
+    N & 576 & 576 & 576 & 576 \\
+    G (kyoku) & 6 & 6 & 6 & 6 \\
+    G (ka) & 97 & 97 & 97 & 97 \\
+    \hline
+    Panel B: kyoku FE only &  &  &  &  \\
+    b1 (D_i) & -0.513** & 0.079 & -0.434 & -0.017 \\
+     & (0.133) & (0.148) & (0.210) & (0.096) \\
+    [Webb p, kyoku] & [0.048] & [0.716] & [0.200] & [0.780] \\
+    {Webb p, ka} & {0.055} & {0.698} & {0.234} & {0.962} \\
+    b2 (D_i x log S_i+1) & 0.015 & -0.133 & -0.118 & 0.104** \\
+     & (0.048) & (0.065) & (0.110) & (0.023) \\
+    [Webb p, kyoku] & [0.804] & [0.132] & [0.746] & [0.023] \\
+    {Webb p, ka} & {0.663} & {0.065} & {0.277} & {0.090} \\
+    \hline
+    N & 583 & 583 & 583 & 583 \\
+    G (kyoku) & 6 & 6 & 6 & 6 \\
+    G (ka) & 104 & 104 & 104 & 104 \\
+    \hline\hline
+  \end{tabular}
+  \\[4pt]
+  \footnotesize Both panels use v5 confound controls. Panel A: kyoku$\times$ka FE + pos\_norm FE. Panel B: kyoku FE + pos\_norm FE. Stars use Webb bootstrap p (kyoku cluster, B=9,999). [ ]: kyoku-cluster Webb p. \{\}: ka-cluster Webb p. Note: Panel B kyoku-cluster bootstrap omitted when kyoku is the FE.
+\end{table}

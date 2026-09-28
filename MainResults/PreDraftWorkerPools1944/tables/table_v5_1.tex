@@ -1,0 +1,40 @@
+\begin{table}[!htbp]
+  \centering
+  \caption{Confounds in S: baseline vs.~rank controls and own-cell incumbents (v5)}
+  \label{tab:v5_confounds}
+  \begin{tabular}{lrrrr}
+    \hline\hline
+     & Same ka & Outside own ka & Total internal & New hires \\
+    \hline
+    Panel A: Baseline (v4 spec) &  &  &  &  \\
+    b1 (D_i) & 0.149 & 0.420* & 0.569*** & -0.104 \\
+     & (0.146) & (0.113) & (0.070) & (0.098) \\
+    [Webb p, kyoku] & [0.446] & [0.056] & [0.010] & [0.264] \\
+    {Webb p, ka} & {0.400} & {0.019} & {0.044} & {0.499} \\
+    b2 (D_i x log S_i+1) & 0.060 & -0.056 & 0.003 & 0.099** \\
+     & (0.037) & (0.017) & (0.025) & (0.013) \\
+    [Webb p, kyoku] & [0.151] & [0.118] & [0.897] & [0.019] \\
+    {Webb p, ka} & {0.091} & {0.251} & {0.964} & {0.278} \\
+    \hline
+    N & 576 & 576 & 576 & 576 \\
+    G (kyoku) & 6 & 6 & 6 & 6 \\
+    G (ka) & 97 & 97 & 97 & 97 \\
+    \hline
+    Panel B: With rank controls and own-cell incumbents &  &  &  &  \\
+    b1 (D_i) & -0.590 & 0.027 & -0.563 & -0.050 \\
+     & (0.286) & (0.151) & (0.385) & (0.131) \\
+    [Webb p, kyoku] & [0.144] & [0.848] & [0.300] & [0.745] \\
+    {Webb p, ka} & {0.011} & {0.893} & {0.096} & {0.901} \\
+    b2 (D_i x log S_i+1) & 0.032** & -0.111 & -0.079 & 0.121** \\
+     & (0.022) & (0.047) & (0.057) & (0.025) \\
+    [Webb p, kyoku] & [0.035] & [0.141] & [0.228] & [0.027] \\
+    {Webb p, ka} & {0.338} & {0.121} & {0.372} & {0.107} \\
+    \hline
+    N & 576 & 576 & 576 & 576 \\
+    G (kyoku) & 6 & 6 & 6 & 6 \\
+    G (ka) & 97 & 97 & 97 & 97 \\
+    \hline\hline
+  \end{tabular}
+  \\[4pt]
+  \footnotesize Panel A: v4 baseline. Panel B adds D$\times$rank-2, D$\times$rank-3 (rank-1 base), D$\times$log(linked incumbents+1), log(linked incumbents+1). Stars use Webb bootstrap p (kyoku cluster, B=9,999). [ ]: kyoku-cluster Webb p. \{\}: ka-cluster Webb p. FE: kyoku$\times$ka and pos\_norm.
+\end{table}

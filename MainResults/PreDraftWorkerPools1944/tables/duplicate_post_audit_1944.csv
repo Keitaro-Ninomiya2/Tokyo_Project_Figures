@@ -1,0 +1,2 @@
+raw_rows,unique_staff_ids,excess_rows,exact_duplicate_excess,ids_multiple_offices,ids_multiple_positions,primary_rule
+21671,9323,12348,8167,1257,1282,"most complete hierarchy; ties earliest page, topmost y/x, source order"

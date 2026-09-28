@@ -1,0 +1,35 @@
+\begin{table}[!htbp]
+  \centering
+  \caption{$\hat{\beta}_2 = D_i \times \log(S_i+1)$ across specifications (1944, former-Shi)}
+  \label{tab:b2_4specs}
+  \begin{tabular}{lrrrr}
+    \hline\hline
+    Outcome & (1) OLS, kyoku & (2) PPML, kyoku & (3) OLS, pos\_norm pool & (4) OLS, ka cluster \\
+    \hline
+    Same ka & 0.060 & 0.006 & 0.100 & 0.060* \\
+     & (0.037) & (0.007) & (0.054) & (0.036) \\
+    Other ka, same kyoku & -0.051 & -0.001 & -0.061** & -0.051 \\
+     & (0.032) & (0.010) & (0.049) & (0.042) \\
+    Other kyoku & -0.006 & -0.012* & 0.000 & -0.006 \\
+     & (0.018) & (0.006) & (0.005) & (0.015) \\
+    Outside own ka & -0.056 & -0.006 & -0.060*** & -0.056 \\
+     & (0.017) & (0.008) & (0.048) & (0.042) \\
+    Total internal & 0.003 & -0.003 & 0.040 & 0.003 \\
+     & (0.025) & (0.005) & (0.041) & (0.060) \\
+    \hline
+    Cells & 576 & 558 & 576 & 576 \\
+    Clusters & 6 & 6 & 6 & 97 \\
+    \hline\hline
+  \end{tabular}
+  \\[4pt]
+  \footnotesize
+  Outcome: number of 1944 arrivals of each type.
+  $S_i$ in (1)--(2)--(4): linked men in same ka group at cell rank or rank below, excl.~cell $i$.
+  $S_i$ in (3): linked men in same ka group \emph{and} same pos\_norm, excl.~cell $i$.
+  $P$ controls analogous.
+  FE: kyoku$\times$ka and pos\_norm.
+  Stars: (1)(3)(4) Webb bootstrap p; (2) cluster-robust Wald p (fwildclusterboot does not support PPML).
+  (* 0.10, ** 0.05, *** 0.01). (1)--(3) cluster by kyoku ($G=6$); (4) clusters by ka.
+  Cells for (2) shows $n$ used in the total-internal regression;
+  other PPML outcomes drop additional cells with all-zero outcomes in an FE group.
+\end{table}

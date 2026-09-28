@@ -1,0 +1,2 @@
+raw_1944_rows,distinct_workers,duplicate_excess_rows,exact_duplicate_excess,nonexact_duplicate_excess,ids_multiple_offices,ids_multiple_positions,row_rule
+21671,9323,12348,8167,4181,1257,1282,"first source-order row, as in main tables"

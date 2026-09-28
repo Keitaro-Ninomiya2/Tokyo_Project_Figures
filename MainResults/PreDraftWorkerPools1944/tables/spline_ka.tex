@@ -1,0 +1,29 @@
+\begin{table}[!htbp]
+  \centering
+  \caption{Spline Panel A: $D \times 1[S=0]$ and $D \times \log(S+1) \times 1[S>0]$ (1944, former-Shi, ka cluster)}
+  \label{tab:spline_ka}
+  \begin{tabular}{lrrrrrr}
+    \hline\hline
+    Outcome & D×1[S=0] & SE & p & D×log(S+1)×1[S>0] & SE & p \\
+    \hline
+    Same ka & 0.110 & 0.185 & 0.727 & 0.098*** & 0.013 & 0.000 \\
+     & (0.185) &  &  & (0.013) &  &  \\
+    Other ka same kyoku & 0.302 & 0.424 & 0.886 & 0.026** & 0.011 & 0.015 \\
+     & (0.424) &  &  & (0.011) &  &  \\
+    Other kyoku & -0.033 & 0.051 & 0.526 & 0.026*** & 0.007 & 0.008 \\
+     & (0.051) &  &  & (0.007) &  &  \\
+    Outside own ka & 0.269 & 0.425 & 0.905 & 0.053*** & 0.016 & 0.007 \\
+     & (0.425) &  &  & (0.016) &  &  \\
+    Total internal & 0.380 & 0.591 & 0.886 & 0.151*** & 0.018 & 0.001 \\
+     & (0.591) &  &  & (0.018) &  &  \\
+    \hline
+    Cells & 576 &  &  &  &  &  \\
+    Clusters & 97 &  &  &  &  &  \\
+    \hline\hline
+  \end{tabular}
+  \\[4pt]
+  \footnotesize
+  FE: ka\,id $\times$ pos\_norm. Pool controls: $\log(P_{\text{sameKyoku}}+1)$, $\log(P_{\text{otherKyoku}}+1)$.
+  $S$ pool: linked men (1942 \& 1944) in same 1944 ka, same rank $\pm 1$, excluding own cell.
+  Stars from Webb boottest $p$ (ka cluster, $G \approx 97$, $B=9{,}999$). (* 0.10, ** 0.05, *** 0.01).
+\end{table}

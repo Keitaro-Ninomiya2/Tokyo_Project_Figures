@@ -1,0 +1,24 @@
+family,outcome,spec,type,status,diagnostic
+lateral,lateral_same_ka,staff_ge_3,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+lateral,lateral_same_ka,high_link_kyoku,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+lateral,lateral_same_kyoku,high_link_kyoku,ols,failed,kyoku clustered covariance failed
+lateral,lateral_other_kyoku,high_link_kyoku,ols,failed,kyoku clustered covariance failed
+promotion,promotion_own_kakari,main,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_ka,main,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_own_kakari,ppml,ppml,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_ka,ppml,ppml,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_kyoku,ppml,ppml,failed,kyoku clustered covariance failed
+promotion,promotion_other_kyoku,ppml,ppml,failed,kyoku clustered covariance failed
+promotion,promotion_own_kakari,staff_ge_3,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_ka,staff_ge_3,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_kyoku,staff_ge_3,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_other_kyoku,staff_ge_3,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_own_kakari,observed_ka,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_ka,observed_ka,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_own_kakari,high_link_kyoku,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_ka,high_link_kyoku,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_kyoku,high_link_kyoku,ols,failed,kyoku clustered covariance failed
+promotion,promotion_other_kyoku,high_link_kyoku,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_own_kakari,ignore_track,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+promotion,promotion_same_ka,ignore_track,ols,failed,The dependent variable is a constant. The estimation with fixed-effects cannot be done.
+new_hires,new_hires,high_link_kyoku,ols,failed,kyoku clustered covariance failed
